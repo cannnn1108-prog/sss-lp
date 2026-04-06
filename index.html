@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SSS｜AIで稼ぐ最強コミュニティ</title>
+<meta name="description" content="スキルゼロ・顔出しなし・個人でOK。AIを使って月30万円を作る設計図を全部見せる場所。月額1,980円。">
+<meta property="og:title" content="SSS｜AIで稼ぐ最強コミュニティ">
+<meta property="og:description" content="スキルゼロ・顔出しなし・個人でOK。AIを使って月30万円を作る設計図を全部見せる場所。">
+<meta property="og:url" content="https://aisalonsss.com">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --stone-50:#fafaf9;--stone-100:#f5f5f4;--stone-200:#e7e5e4;--stone-300:#d6d3d1;
+  --stone-400:#a8a29e;--stone-500:#78716c;--stone-600:#57534e;--stone-700:#44403c;
+  --stone-800:#292524;--stone-900:#1c1917;
+  --amber-500:#f59e0b;--amber-600:#d97706;--amber-700:#b45309;
+  --gold:#c9a84c;--gold-light:#f0d080;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Noto Sans JP',sans-serif;color:var(--stone-700);line-height:1.8;background:#fff;-webkit-font-smoothing:antialiased}
+.font-mincho{font-family:'Noto Serif JP',serif}
+strong{color:var(--stone-800)}
+
+/* NAV */
+.nav{position:fixed;top:0;z-index:50;width:100%;border-bottom:1px solid var(--stone-200);background:rgba(255,255,255,.95);backdrop-filter:blur(10px)}
+.nav-inner{max-width:1000px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:14px 20px}
+.nav-logo{font-family:'Noto Serif JP',serif;font-size:20px;font-weight:700;color:var(--stone-900);text-decoration:none;letter-spacing:.08em}
+.nav-logo span{color:var(--gold)}
+.nav-links{display:flex;align-items:center;gap:28px;font-size:14px;color:var(--stone-600)}
+.nav-links a{text-decoration:none;color:inherit;transition:color .2s}
+.nav-links a:hover{color:var(--stone-900)}
+.nav-cta{display:inline-block;padding:9px 22px;border-radius:999px;background:var(--stone-900);color:#fff;font-size:14px;font-weight:700;text-decoration:none;transition:all .2s}
+.nav-cta:hover{background:var(--stone-700);transform:translateY(-1px)}
+.nav-mobile-btn{display:none;background:none;border:none;cursor:pointer;color:var(--stone-600)}
+.nav-mobile-menu{display:none}
+@media(max-width:768px){
+  .nav-links{display:none}
+  .nav-mobile-btn{display:block}
+  .nav-mobile-menu.open{display:flex;flex-direction:column;gap:14px;padding:14px 20px 18px;border-top:1px solid var(--stone-200);background:#fff;font-size:14px;color:var(--stone-600)}
+  .nav-mobile-menu a{text-decoration:none;color:inherit}
+  .nav-mobile-menu .nav-cta{text-align:center;margin-top:8px}
+}
+
+/* HERO */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;background:var(--stone-900);padding-top:64px;overflow:hidden}
+.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);background-size:60px 60px;pointer-events:none}
+.hero-glow{position:absolute;top:20%;left:50%;transform:translateX(-50%);width:600px;height:400px;background:radial-gradient(ellipse,rgba(201,168,76,.15) 0%,transparent 70%);pointer-events:none}
+.hero-inner{position:relative;max-width:1000px;margin:0 auto;padding:60px 24px 80px;text-align:center}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;margin-bottom:28px;padding:6px 18px;border:1px solid rgba(201,168,76,.4);border-radius:999px;font-size:12px;color:var(--gold-light);background:rgba(201,168,76,.08)}
+.hero-badge .dot{width:6px;height:6px;border-radius:50%;background:var(--gold);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+.hero h1{font-family:'Noto Serif JP',serif;font-size:30px;font-weight:700;line-height:1.55;color:#fff}
+.hero-hl{position:relative;display:inline-block}
+.hero-hl .t{position:relative;z-index:1}
+.hero-hl .u{position:absolute;bottom:4px;left:0;z-index:0;width:100%;height:14px;background:rgba(201,168,76,.35)}
+.hero-sub{max-width:580px;margin:28px auto 0;font-size:15px;line-height:2;color:rgba(255,255,255,.65)}
+.hero-sub strong{color:rgba(255,255,255,.95)}
+.hero-stats{display:flex;flex-wrap:wrap;justify-content:center;gap:0;margin-top:40px;border:1px solid rgba(255,255,255,.1);border-radius:16px;overflow:hidden;background:rgba(255,255,255,.04)}
+.hero-stat{flex:1;min-width:140px;padding:20px 16px;text-align:center;border-right:1px solid rgba(255,255,255,.08)}
+.hero-stat:last-child{border-right:none}
+.hero-stat .n{font-family:'Noto Serif JP',serif;font-size:26px;font-weight:700;color:var(--gold-light)}
+.hero-stat .l{margin-top:4px;font-size:12px;color:rgba(255,255,255,.4)}
+.hero-cta{margin-top:40px;display:flex;flex-direction:column;align-items:center;gap:12px}
+.btn-gold{display:inline-block;padding:18px 48px;border-radius:999px;background:linear-gradient(135deg,var(--gold),#a07830);color:#fff;font-size:17px;font-weight:700;text-decoration:none;box-shadow:0 4px 20px rgba(201,168,76,.4);transition:all .25s;letter-spacing:.05em}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(201,168,76,.5)}
+.hero-note{font-size:13px;color:rgba(255,255,255,.35)}
+.scroll-hint{margin-top:48px;font-size:12px;color:rgba(255,255,255,.25);display:flex;flex-direction:column;align-items:center;gap:8px}
+.scroll-hint .arr{animation:bounce 2s infinite}
+@keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(6px)}}
+@keyframes glow{0%{box-shadow:0 6px 30px rgba(201,168,76,.4)}100%{box-shadow:0 8px 40px rgba(201,168,76,.7)}}
+@media(min-width:640px){.hero h1{font-size:42px}}
+@media(min-width:768px){.hero h1{font-size:56px}.hero-hl .u{height:18px;bottom:8px}.hero-sub{font-size:18px}.hero-stat .n{font-size:32px}}
+
+/* SECTIONS */
+.sec{padding:64px 24px}
+.w1000{max-width:1000px;margin:0 auto}
+.w740{max-width:740px;margin:0 auto}
+.bg-w{background:#fff}
+.bg-s50{background:var(--stone-50)}
+.bg-s900{background:var(--stone-900)}
+.sec-tag{display:inline-block;padding:3px 14px;border-radius:999px;background:rgba(201,168,76,.12);border:1px solid rgba(201,168,76,.3);font-size:12px;color:var(--amber-600);font-weight:700;letter-spacing:.08em;margin-bottom:16px}
+.sec-t{font-family:'Noto Serif JP',serif;font-size:26px;font-weight:700;color:var(--stone-900);text-align:center;line-height:1.5}
+.sec-s{margin-top:14px;font-size:15px;color:var(--stone-500);text-align:center;line-height:1.9}
+@media(min-width:768px){.sec{padding:96px 24px}.sec-t{font-size:34px}}
+
+/* DIVIDER */
+.divider{display:flex;align-items:center;gap:16px;margin:40px 0}
+.divider .ln{flex:1;height:1px;background:var(--stone-200)}
+.divider span{font-size:13px;color:var(--stone-400)}
+
+/* PAIN */
+.pain-g{display:grid;gap:12px;margin-top:32px}
+@media(min-width:640px){.pain-g{grid-template-columns:1fr 1fr}}
+.pain-c{padding:18px 20px;border-left:3px solid var(--stone-300);background:var(--stone-50);border-radius:0 8px 8px 0;font-size:14px;color:var(--stone-600);line-height:1.8}
+.pain-c .lbl{font-size:11px;font-weight:700;color:var(--stone-400);margin-bottom:4px;letter-spacing:.08em}
+
+/* STORY */
+.story-body{margin-top:28px;font-size:15px;line-height:2.1;color:var(--stone-700);text-align:center}
+.story-body p+p{margin-top:18px}
+.story-box{margin-top:32px;padding:32px;border:1px solid var(--stone-200);border-radius:20px;background:linear-gradient(135deg,var(--stone-50),#fff);font-size:15px;line-height:2;color:var(--stone-700);text-align:center;box-shadow:0 2px 12px rgba(0,0,0,.05)}
+.story-box strong{color:var(--stone-900)}
+@media(min-width:768px){.story-body{font-size:18px}.story-box{font-size:18px;padding:40px}}
+
+/* RESULTS */
+.result-g{display:grid;gap:16px;margin-top:32px}
+@media(max-width:639px){.result-g{grid-template-columns:1fr!important}}
+@media(min-width:768px){.result-g{grid-template-columns:1fr 1fr 1fr}}
+.result-img{width:100%;border-radius:14px;box-shadow:0 4px 16px rgba(0,0,0,.1);transition:transform .2s}
+.result-img:hover{transform:scale(1.01)}
+.result-caption{margin-top:8px;font-size:12px;color:var(--stone-400);text-align:center}
+
+/* FEATURES */
+.feat-g{display:grid;gap:20px;margin-top:36px}
+@media(min-width:640px){.feat-g{grid-template-columns:1fr 1fr}}
+.feat-c{padding:28px;border:1px solid var(--stone-200);border-radius:20px;background:#fff;box-shadow:0 2px 8px rgba(0,0,0,.04);transition:all .25s}
+.feat-c:hover{box-shadow:0 8px 24px rgba(0,0,0,.09);transform:translateY(-2px)}
+.feat-c .em{font-size:36px}
+.feat-tag{display:inline-block;margin-top:14px;padding:3px 12px;border-radius:999px;background:var(--stone-100);font-size:11px;color:var(--stone-500);font-weight:700}
+.feat-c h3{margin-top:14px;font-family:'Noto Serif JP',serif;font-size:19px;font-weight:700;color:var(--stone-900)}
+.feat-c p{margin-top:12px;font-size:14px;line-height:1.9;color:var(--stone-600)}
+.feat-c .results{margin-top:14px;padding:12px;border-radius:10px;background:var(--stone-50);font-size:13px;color:var(--amber-700);font-weight:500}
+
+/* COMMUNITY */
+.comm-g{display:grid;gap:16px;margin-top:32px}
+@media(min-width:640px){.comm-g{grid-template-columns:1fr 1fr}}
+.comm-c{padding:24px;border:1px solid var(--stone-200);border-radius:16px;background:#fff;transition:box-shadow .2s}
+.comm-c:hover{box-shadow:0 4px 16px rgba(0,0,0,.07)}
+.comm-c .ic{font-size:32px}
+.comm-c h3{margin-top:10px;font-weight:700;font-size:16px;color:var(--stone-900)}
+.comm-c p{margin-top:10px;font-size:14px;line-height:1.9;color:var(--stone-600)}
+
+/* VOICE */
+.voice-g{display:grid;gap:16px;margin-top:32px}
+@media(min-width:640px){.voice-g{grid-template-columns:1fr 1fr}}
+@media(min-width:900px){.voice-g{grid-template-columns:1fr 1fr 1fr}}
+.voice-c{padding:22px;border:1px solid var(--stone-200);border-radius:16px;background:#fff}
+.voice-c .meta{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.voice-c .avatar{width:40px;height:40px;border-radius:50%;background:var(--stone-200);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
+.voice-c .name{font-size:13px;font-weight:700;color:var(--stone-800)}
+.voice-c .attr{font-size:12px;color:var(--stone-400)}
+.voice-c .stars{color:var(--gold);font-size:14px;margin-bottom:10px}
+.voice-c p{font-size:14px;line-height:1.9;color:var(--stone-600)}
+.voice-c .result-badge{display:inline-block;margin-top:12px;padding:4px 12px;border-radius:999px;background:rgba(201,168,76,.1);border:1px solid rgba(201,168,76,.3);font-size:12px;color:var(--amber-700);font-weight:700}
+
+/* PRICING */
+.pr-card{padding:40px;border:2px solid var(--stone-900);border-radius:24px;background:#fff;text-align:center;box-shadow:0 8px 32px rgba(0,0,0,.1);margin-top:36px}
+.pr-old-lbl{font-size:12px;color:var(--stone-400)}
+.pr-old-p{margin-top:6px;font-family:'Noto Serif JP',serif;font-size:28px;font-weight:700;color:var(--stone-300);text-decoration:line-through}
+.pr-arrow{display:flex;align-items:center;justify-content:center;gap:12px;margin:16px 0}
+.pr-arrow .ln{width:40px;height:1px;background:var(--stone-200)}
+.pr-arrow span{font-size:12px;font-weight:700;color:var(--amber-600);padding:4px 12px;border-radius:999px;background:rgba(251,191,36,.1);border:1px solid rgba(251,191,36,.3)}
+.pr-lbl{font-size:15px;color:var(--stone-500)}
+.pr-price{margin-top:6px;font-family:'Noto Serif JP',serif;font-size:64px;font-weight:700;color:var(--stone-900);line-height:1}
+.pr-price .unit{font-size:18px;font-weight:400;color:var(--stone-500);margin-left:4px}
+.pr-daily{margin-top:10px;font-size:14px;color:var(--stone-400)}
+.pr-inc{max-width:520px;margin:32px auto 0;text-align:left}
+.pr-cat{margin-top:24px;font-size:11px;font-weight:700;letter-spacing:.12em;color:var(--amber-600)}
+.pr-items{margin-top:10px;list-style:none}
+.pr-items li{display:flex;align-items:flex-start;gap:10px;font-size:14px;color:var(--stone-600);padding:5px 0;border-bottom:1px solid var(--stone-100)}
+.pr-items li:last-child{border-bottom:none}
+.pr-items .ck{flex-shrink:0;color:var(--amber-500);margin-top:2px;font-weight:700}
+.pr-note{margin-top:36px;padding:20px;border-radius:14px;background:var(--stone-50);border:1px solid var(--stone-100);font-size:14px;color:var(--stone-600);text-align:left;line-height:1.9}
+.pr-note strong{color:var(--stone-900)}
+.pr-comp{margin-top:32px;display:grid;gap:12px;text-align:center}
+@media(min-width:640px){.pr-comp{grid-template-columns:1fr 1fr 1fr}}
+.comp-c{padding:16px;border:1px solid var(--stone-200);border-radius:12px;background:var(--stone-50)}
+.comp-c .cl{font-size:12px;color:var(--stone-500)}
+.comp-c .cp{margin-top:4px;font-size:15px;font-weight:700;color:var(--stone-400);text-decoration:line-through}
+.comp-c .cv{margin-top:6px;font-size:12px;font-weight:700;color:var(--amber-600)}
+@media(min-width:768px){.pr-card{padding:56px}.pr-price{font-size:80px}}
+
+/* FAQ */
+.faq-list{margin-top:32px;display:flex;flex-direction:column;gap:12px}
+.faq-i{overflow:hidden;border:1px solid var(--stone-200);border-radius:14px;background:#fff}
+.faq-q{display:flex;align-items:center;justify-content:space-between;width:100%;padding:20px 22px;background:none;border:none;cursor:pointer;text-align:left;font-size:15px;font-weight:700;color:var(--stone-800);transition:background .2s;font-family:'Noto Sans JP',sans-serif}
+.faq-q:hover{background:var(--stone-50)}
+.faq-ic{flex-shrink:0;width:22px;height:22px;color:var(--stone-400);transition:transform .25s}
+.faq-i.open .faq-ic{transform:rotate(45deg)}
+.faq-a{display:none;padding:14px 22px 20px;border-top:1px solid var(--stone-100);font-size:14px;line-height:1.9;color:var(--stone-600)}
+.faq-i.open .faq-a{display:block}
+
+/* CTA */
+.cta-b{text-align:center}
+.cta-b h2{font-family:'Noto Serif JP',serif;font-size:26px;font-weight:700;color:#fff;line-height:1.6}
+.cta-b .ds{margin-top:20px;font-size:15px;line-height:2.1;color:rgba(255,255,255,.55)}
+.cta-b .ds strong{color:rgba(255,255,255,.95)}
+.cta-st{display:flex;flex-wrap:wrap;justify-content:center;gap:32px;margin-top:36px}
+.cta-st .n{font-family:'Noto Serif JP',serif;font-size:26px;font-weight:700;color:rgba(255,255,255,.35)}
+.cta-st .l{margin-top:4px;font-size:12px;color:rgba(255,255,255,.3)}
+@media(min-width:768px){.cta-b h2{font-size:36px}}
+
+/* FOOTER */
+.ft{border-top:1px solid var(--stone-200);background:#fff;padding:40px 24px}
+.ft-in{max-width:1000px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:20px;font-size:14px;color:var(--stone-400)}
+.ft-logo{font-family:'Noto Serif JP',serif;font-size:18px;font-weight:700;color:var(--stone-800)}
+.ft-logo span{color:var(--gold)}
+.ft-lk{display:flex;gap:24px;flex-wrap:wrap;justify-content:center}
+.ft-lk a{text-decoration:none;color:inherit;transition:color .2s}
+.ft-lk a:hover{color:var(--stone-700)}
+.ft-cp{font-size:12px;color:var(--stone-300);text-align:center;margin-top:16px}
+@media(min-width:768px){.ft-in{flex-direction:row;justify-content:space-between}}
+
+/* UTILS */
+.fade-in{opacity:0;transform:translateY(24px);transition:opacity .65s,transform .65s}
+.fade-in.visible{opacity:1;transform:translateY(0)}
+.mt-16{margin-top:16px}.mt-24{margin-top:24px}.mt-32{margin-top:32px}.mt-40{margin-top:40px}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="#top" class="nav-logo">S<span>S</span>S</a>
+    <button class="nav-mobile-btn" onclick="document.getElementById('mm').classList.toggle('open')" aria-label="メニュー">
+      <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+    </button>
+    <div class="nav-links">
+      <a href="#story">ストーリー</a>
+      <a href="#features">稼ぎ方</a>
+      <a href="#community">コミュニティ</a>
+      <a href="#pricing">料金</a>
+      <a href="#faq">FAQ</a>
+      <a href="【TODO:申込URL】" target="_blank" rel="noopener noreferrer" class="nav-cta">参加する</a>
+    </div>
+  </div>
+  <div class="nav-mobile-menu" id="mm">
+    <a href="#story">ストーリー</a>
+    <a href="#features">稼ぎ方</a>
+    <a href="#community">コミュニティ</a>
+    <a href="#pricing">料金</a>
+    <a href="#faq">FAQ</a>
+    <a href="【TODO:申込URL】" target="_blank" rel="noopener noreferrer" class="nav-cta">参加する</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="top" class="hero">
+  <div class="hero-grid"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-inner">
+    <p class="hero-badge"><span class="dot"></span>スキルゼロ・顔出しなし・個人でOK</p>
+    <h1 class="font-mincho">
+      AIで稼ぐ、<br>
+      <span class="hero-hl"><span class="t">最強の設計図がここにある。</span><span class="u"></span></span>
+    </h1>
+    <p class="hero-sub">
+      noteで有料記事。アフィリエイトで不労所得。AIで動画量産。<br>
+      実際にやっている手法を全部お見せしながら、<br>
+      <strong>「何から始めて、どう組み合わせるか」</strong>をリアルタイムで学べます。
+    </p>
+    <div class="hero-cta" style="margin-top:56px">
+      <a href="【TODO:申込URL】" target="_blank" rel="noopener noreferrer" class="btn-gold" style="padding:22px 64px;font-size:20px;box-shadow:0 6px 30px rgba(201,168,76,.5);animation:glow 2s infinite alternate">今すぐSSSに参加する</a>
+      <p class="hero-note" style="margin-top:16px;font-size:14px">月額1,980円（税込）・いつでも解約OK・違約金なし</p>
+    </div>
+    <div class="scroll-hint"><span>scroll</span><span class="arr">↓</span></div>
+  </div>
+</section>
+
+<!-- PAIN -->
+<section class="sec bg-w">
+  <div class="w740">
+    <div style="text-align:center"><span class="sec-tag">こんな悩み、ありませんか？</span></div>
+    <div class="pain-g mt-24 fade-in">
+      <div class="pain-c"><div class="lbl">PROBLEM 01</div>AIで稼ぎたいけど、何から始めればいいか分からない</div>
+      <div class="pain-c"><div class="lbl">PROBLEM 02</div>ノウハウを買っても結局行動できず積ん読になってる</div>
+      <div class="pain-c"><div class="lbl">PROBLEM 03</div>一人でやってると孤独で、続けられない</div>
+      <div class="pain-c"><div class="lbl">PROBLEM 04</div>AIに記事を書かせてるのに1円にもならない</div>
+      <div class="pain-c"><div class="lbl">PROBLEM 05</div>副業スクールに高額を払うのが怖い</div>
+      <div class="pain-c"><div class="lbl">PROBLEM 06</div>顔出し・スキルなしでも本当に稼げるか不安</div>
+    </div>
+    <div class="story-box mt-32 fade-in">
+      その悩みを全部解決するために、<strong>SSSを作りました。</strong><br>
+      月1,980円。高額スクールの<strong>1/100以下</strong>で、全部お渡しします。
+    </div>
+  </div>
+</section>
+
+<!-- STORY -->
+<section id="story" class="sec bg-s50">
+  <div class="w740">
+    <div style="text-align:center"><span class="sec-tag">Story</span></div>
+    <h2 class="sec-t font-mincho mt-16">行動できるノウハウと環境</h2>
+    <div class="story-body fade-in">
+      <p>今まで買ってきたノウハウの価値を<strong>圧倒的に凌駕</strong>する場所を作りました。</p>
+      <p>noteの有料記事を出したら<strong>初週で◯万円</strong>売れました。<br>アフィリエイト記事を30本AIで量産したら、<strong>月3.8万円の不労所得</strong>が生まれました。<br>「え、こんなに簡単だったの？」というのが正直な感想です。</p>
+      <p>でも、ただAIに丸投げしても稼げません。<br><strong>「何を作って、どこに出して、どう売るか」</strong>の設計が全てです。<br>そこを間違えると、AIで100記事書いても1円にもなりません。</p>
+      <p>このサロンは、その<strong>「稼げる設計図」</strong>を共有する場所です。</p>
+    </div>
+    <div style="text-align:center;margin-top:40px"><span class="sec-tag">運営者の実績</span></div>
+    <div class="result-g mt-24" style="grid-template-columns:1fr">
+      <div>
+        <img src="result-2024.png" alt="2024年 年間総売上 3,855,690円" class="result-img">
+        <p class="result-caption">2024年 年間総売上</p>
+      </div>
+      <div>
+        <img src="messageImage_1775449305619.jpg" alt="2025年 年間総売上 3,194,800円" class="result-img">
+        <p class="result-caption">2025年 年間総売上</p>
+      </div>
+      <div>
+        <img src="messageImage_1775449292499.jpg" alt="月間売上 1,488,900円" class="result-img">
+        <p class="result-caption">月間最高売上</p>
+      </div>
+      <div>
+        <img src="result2.jpg" alt="副業初心者の実績" class="result-img">
+        <p class="result-caption">副業初心者メンバーの実績</p>
+      </div>
+      <div>
+        <img src="result-ai-income.png" alt="AIで稼ぎまくった実績" class="result-img">
+        <p class="result-caption">メンバーの声「AI○○で稼ぎまくった」</p>
+      </div>
+    </div>
+    <div class="divider"><div class="ln"></div><span>だから、SSSを作りました</span><div class="ln"></div></div>
+    <div class="story-box fade-in">
+      YouTube170万人で培った<strong>コンテンツの作り方</strong>。<br>
+      AIを使って<strong>個人で月200万以上</strong>稼いでいるノウハウ。<br>
+      note、アフィリエイト、動画、全部の<strong>収益化ルート</strong>。<br><br>
+      全部、<strong>「今日から自分でできる形」</strong>でお渡しします。<br>
+      スキルも、顔出しも、初期投資もいりません。<strong>AIとやる気だけです。</strong>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section id="features" class="sec bg-w">
+  <div class="w1000">
+    <div style="text-align:center"><span class="sec-tag">How to Earn</span></div>
+    <h2 class="sec-t font-mincho mt-16">AIで稼ぐルート、全部お見せします。</h2>
+    <p class="sec-s">「何をすればいいか分からない」は今日で終わりです。</p>
+    <div class="feat-g">
+      <div class="feat-c fade-in">
+        <span class="em">📝</span><span class="feat-tag">NOTE収益化</span>
+        <h3 class="font-mincho">noteで収益源を作る</h3>
+        <p>有料記事、有料マガジン、メンバーシップ。noteの収益化ルートを全部お教えします。AIで記事を量産する方法、売れるタイトルの付け方、値段設定のコツまでお伝えします。</p>
+        <div class="results">💡 実績：初月で月20万超えのメンバーあり</div>
+      </div>
+      <div class="feat-c fade-in">
+        <span class="em">💰</span><span class="feat-tag">アフィリエイト</span>
+        <h3 class="font-mincho">アフィリエイトで不労所得を作る</h3>
+        <p>AIで記事を量産→放置で稼ぐ仕組みの作り方です。ジャンル選定、キーワード設計、記事テンプレートまで全部共有します。「100記事書いたのに月500円」にならない設計図があります。</p>
+        <div class="results">💡 実績：30記事で月3.8万円の不労所得</div>
+      </div>
+      <div class="feat-c fade-in">
+        <span class="em">🎬</span><span class="feat-tag">YouTube / 動画</span>
+        <h3 class="font-mincho">AI動画で収益を得る</h3>
+        <p>顔出しなし、声出しなし、編集スキルなし。AIだけでYouTubeチャンネルを作って広告収益を得る方法をお伝えします。台本→映像→サムネまで全工程AI化できます。</p>
+        <div class="results">💡 170万人チャンネル運営ノウハウをそのままお渡しします</div>
+      </div>
+      <div class="feat-c fade-in">
+        <span class="em">🔄</span><span class="feat-tag">収益の掛け算</span>
+        <h3 class="font-mincho">複数の収入源を組み合わせる</h3>
+        <p>note×アフィリ×動画×SNS。1つのコンテンツを複数の収益源に変える方法です。「1記事書いたら5箇所で稼げる」仕組みを作ると、月30万は現実的な数字になります。</p>
+        <div class="results">💡 掛け算で月収が3〜5倍になったケースあり</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMMUNITY -->
+<section id="community" class="sec bg-s50">
+  <div class="w1000">
+    <div style="text-align:center"><span class="sec-tag">Community</span></div>
+    <h2 class="sec-t font-mincho mt-16">一人でやると、99%挫折します。</h2>
+    <p class="sec-s">稼ぎ方は分かっても、<strong>続けられない</strong>のが一番の壁です。<br>「今月いくら稼いだ？」を報告し合う仲間がいるだけで、<strong>継続率が全然違います。</strong></p>
+    <div class="comm-g">
+      <div class="comm-c fade-in"><span class="ic">💬</span><h3>Discordコミュニティ</h3><p>「今月これで3万稼げた」「このプロンプト神」みたいなリアルタイムの共有が飛び交っています。ジャンル別チャンネルで自分に関係ある情報だけ追えます。</p></div>
+      <div class="comm-c fade-in"><span class="ic">🟢</span><h3>LINEオープンチャット</h3><p>Discordが苦手な方向けです。スマホでサクッと確認できます。「今日note1本出した」「アフィリ初成果出た」みたいな報告が毎日流れてきてモチベ維持になります。</p></div>
+      <div class="comm-c fade-in"><span class="ic">📹</span><h3>月6回以上のZOOMセッション</h3><p>画面共有しながら「自分のnote見てほしい」「このアフィリ記事どう？」を直接相談できます。他の方の相談を聞いているだけでも「あ、それ自分もやろう」が見つかります。</p></div>
+      <div class="comm-c fade-in"><span class="ic">🍻</span><h3>リアル懇親会</h3><p>不定期開催です。同じ方向を向いている方と会えるのはモチベになります。ここで出会った方同士でコラボして稼いでいるケースもあります。</p></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- PRICING -->
+<section id="pricing" class="sec bg-s50">
+  <div class="w740">
+    <div style="text-align:center"><span class="sec-tag">Pricing</span></div>
+    <h2 class="sec-t font-mincho mt-16">料金</h2>
+    <div class="pr-card fade-in">
+      <p class="pr-lbl">月額</p>
+      <p class="pr-price font-mincho">¥1,980<span class="unit">（税込）</span></p>
+      <div class="pr-inc">
+        <p class="pr-cat">📚 教材・コンテンツ</p>
+        <ul class="pr-items">
+          <li><span class="ck">✓</span><span>AI×note収益化の完全マニュアル</span></li>
+          <li><span class="ck">✓</span><span>アフィリエイト記事テンプレート＋プロンプト集</span></li>
+          <li><span class="ck">✓</span><span>顔出しなしYouTubeの始め方講座</span></li>
+          <li><span class="ck">✓</span><span>YouTube教材を全開放（チャンネル設計・SEO・サムネ・Shorts・投稿戦略など20本以上）</span></li>
+          <li><span class="ck">✓</span><span>ZOOMセミナーのアーカイブ動画が見放題</span></li>
+        </ul>
+        <p class="pr-cat">👥 コミュニティ</p>
+        <ul class="pr-items">
+          <li><span class="ck">✓</span><span>毎日最新情報が流れるDiscordコミュニティ</span></li>
+          <li><span class="ck">✓</span><span>LINEオープンチャット</span></li>
+          <li><span class="ck">✓</span><span>月6回以上のZOOMセッション（質問・相談し放題）</span></li>
+          <li><span class="ck">✓</span><span>リアル懇親会への参加権（不定期開催）</span></li>
+        </ul>
+        <p class="pr-cat">⭐ SSS参加者限定</p>
+        <ul class="pr-items">
+          <li><span class="ck">✓</span><span>高単価案件の優先紹介</span></li>
+          <li><span class="ck">✓</span><span>メンバー限定の案件・コラボ情報</span></li>
+        </ul>
+      </div>
+      <div class="pr-note">
+        <strong>正直、最初は月30万円でやろうと思っていました。</strong><br>
+        コンサルの相場を考えれば妥当ですし、実際その価格でも来る方はいました。<br>
+        でも、「本業の給料だけじゃキツい」という方が月30万払えるわけがありません。<br>
+        だから月1,980円にしました。<strong>ここで学んで月5万稼げたら、投資回収率25倍です。</strong>
+      </div>
+      <a href="【TODO:申込URL】" target="_blank" rel="noopener noreferrer" class="btn-gold mt-32" style="display:inline-block;padding:18px 48px;border-radius:999px;background:linear-gradient(135deg,#c9a84c,#a07830);color:#fff;font-size:17px;font-weight:700;text-decoration:none;box-shadow:0 4px 20px rgba(201,168,76,.4)">SSSに参加する</a>
+      <p style="margin-top:12px;font-size:13px;color:var(--stone-400)">解約はいつでも可能。違約金なし。</p>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="sec bg-w">
+  <div class="w740">
+    <div style="text-align:center"><span class="sec-tag">FAQ</span></div>
+    <h2 class="sec-t font-mincho mt-16">よくある質問</h2>
+    <div class="faq-list">
+      <div class="faq-i"><button class="faq-q" onclick="toggleFaq(this)"><span>正直、怪しくないですか？</span><svg class="faq-ic" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg></button><div class="faq-a">「AIで稼ぐ」って聞くと情報商材っぽく聞こえますよね。分かります。でもSSSは月1,980円です。高額商材を売りつける必要がありません。中身が微妙なら辞めていただいて大丈夫です。合わないと思ったら初月で辞めていただいて全然OKです。</div></div>
+      <div class="faq-i"><button class="faq-q" onclick="toggleFaq(this)"><span>スキルゼロでも大丈夫？</span><svg class="faq-ic" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg></button><div class="faq-a">むしろスキルゼロの方が一番結果を出しています。変にプライドがないから、テンプレ通りにやれるからです。「ChatGPTって何？」レベルから始めて3ヶ月で月5万超えた方が実際にいます。</div></div>
+      <div class="faq-i"><button class="faq-q" onclick="toggleFaq(this)"><span>1日どれくらい時間が必要？</span><svg class="faq-ic" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg></button><div class="faq-a">1日1〜2時間あれば十分です。通勤中にネタを考えて、帰ったらAIに書かせて、寝る前に投稿。このルーティンで月5〜10万は現実的です。本業しながらやっている方がほとんどです。</div></div>
+      <div class="faq-i"><button class="faq-q" onclick="toggleFaq(this)"><span>途中で辞められますか？</span><svg class="faq-ic" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg></button><div class="faq-a">いつでも辞められます。違約金もありません。解約ページから3クリックで完了です。引き止めメールも送りません。</div></div>
+      <div class="faq-i"><button class="faq-q" onclick="toggleFaq(this)"><span>本当に稼げますか？</span><svg class="faq-ic" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg></button><div class="faq-a">正直に言います。やらない方は稼げません。でも、やる方にはテンプレ、プロンプト、フィードバック、仲間、全部揃っています。「やり方が分からない」は言い訳にできなくなる環境です。</div></div>
+      <div class="faq-i"><button class="faq-q" onclick="toggleFaq(this)"><span>参加しない方がいい人は？</span><svg class="faq-ic" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg></button><div class="faq-a">「入れば自動で稼げる」と思っている方です。AIは魔法ではありません。最低1ヶ月は本気でやる覚悟で来ていただきたいです。1ヶ月本気でやれば「これいけるな」という感覚は掴めます。</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="sec bg-s900">
+  <div class="w740 cta-b">
+    <h2 class="font-mincho">「あの時始めてればよかった」を、なくす。</h2>
+    <p class="ds">AIの進化は待ってくれません。<br>今日始めた方と、3ヶ月後に始めた方の差は想像以上に大きいです。<br><strong>月1,980円。飲み会1回我慢するだけで、人生の選択肢が増えます。</strong></p>
+    <a href="【TODO:申込URL】" target="_blank" rel="noopener noreferrer" class="btn-gold mt-40" style="display:inline-block;padding:18px 48px;border-radius:999px;background:linear-gradient(135deg,#c9a84c,#a07830);color:#fff;font-size:17px;font-weight:700;text-decoration:none;box-shadow:0 4px 20px rgba(201,168,76,.4)">SSSに参加する（月額1,980円）</a>
+    <p style="margin-top:14px;font-size:13px;color:rgba(255,255,255,.3)">いつでも解約OK・違約金なし・初月から全コンテンツ利用可</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="ft">
+  <div class="ft-in">
+    <p class="ft-logo font-mincho">S<span>S</span>S</p>
+    <div class="ft-lk">
+      <a href="【TODO:特商法URL】">特定商取引法に基づく表記</a>
+      <a href="【TODO:プライバシーポリシーURL】">プライバシーポリシー</a>
+      <a href="【TODO:お問い合わせURL】">お問い合わせ</a>
+    </div>
+  </div>
+  <p class="ft-cp">&copy; 2026 SSS. All rights reserved.</p>
+</footer>
+
+<script>
+function toggleFaq(btn){
+  const item=btn.parentElement;
+  const isOpen=item.classList.contains('open');
+  document.querySelectorAll('.faq-i').forEach(e=>e.classList.remove('open'));
+  if(!isOpen)item.classList.add('open');
+}
+const obs=new IntersectionObserver(entries=>{
+  entries.forEach(el=>{if(el.isIntersecting)el.target.classList.add('visible')});
+},{threshold:0.1,rootMargin:'0px 0px -50px 0px'});
+document.querySelectorAll('.fade-in').forEach(el=>obs.observe(el));
+document.querySelectorAll('.nav-mobile-menu a').forEach(a=>{
+  a.addEventListener('click',()=>document.getElementById('mm').classList.remove('open'));
+});
+</script>
+</body>
+</html>
+<!-- placeholder -->
