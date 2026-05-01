@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>お問い合わせ｜SSS</title>
+<meta name="description" content="SSSコミュニティのお問い合わせ窓口">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --stone-50:#fafaf9;--stone-100:#f5f5f4;--stone-200:#e7e5e4;--stone-300:#d6d3d1;
+  --stone-400:#a8a29e;--stone-500:#78716c;--stone-600:#57534e;--stone-700:#44403c;
+  --stone-800:#292524;--stone-900:#1c1917;
+  --gold:#c9a84c;--gold-light:#f0d080;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Noto Sans JP',sans-serif;color:var(--stone-700);line-height:1.9;background:#fff;-webkit-font-smoothing:antialiased}
+.font-mincho{font-family:'Noto Serif JP',serif}
+
+/* NAV */
+.nav{position:sticky;top:0;z-index:50;width:100%;border-bottom:1px solid var(--stone-200);background:rgba(255,255,255,.95);backdrop-filter:blur(10px)}
+.nav-inner{max-width:1000px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:14px 20px}
+.nav-logo{font-family:'Noto Serif JP',serif;font-size:20px;font-weight:700;color:var(--stone-900);text-decoration:none;letter-spacing:.08em}
+.nav-logo span{color:var(--gold)}
+.nav-back{font-size:13px;color:var(--stone-500);text-decoration:none;transition:color .2s}
+.nav-back:hover{color:var(--stone-900)}
+
+/* PAGE */
+.page-head{padding:64px 24px 40px;background:var(--stone-50);border-bottom:1px solid var(--stone-200)}
+.page-head-inner{max-width:740px;margin:0 auto;text-align:center}
+.page-tag{display:inline-block;padding:3px 14px;border-radius:999px;background:rgba(201,168,76,.12);border:1px solid rgba(201,168,76,.3);font-size:12px;color:#b45309;font-weight:700;letter-spacing:.08em;margin-bottom:16px}
+.page-title{font-family:'Noto Serif JP',serif;font-size:28px;font-weight:700;color:var(--stone-900);line-height:1.5}
+@media(min-width:768px){.page-title{font-size:36px}}
+
+/* CONTENT */
+.content{padding:56px 24px 80px}
+.content-inner{max-width:740px;margin:0 auto}
+.content .lead{font-size:16px;color:var(--stone-600);margin-bottom:36px;text-align:center;line-height:2}
+.contact-card{padding:32px 28px;background:var(--stone-50);border:1px solid var(--stone-200);border-radius:12px;margin-bottom:24px}
+.contact-card .lbl{font-size:12px;font-weight:700;color:var(--stone-400);letter-spacing:.08em;margin-bottom:8px}
+.contact-card .val{font-family:'Noto Serif JP',serif;font-size:22px;font-weight:700;color:var(--stone-900);word-break:break-all}
+.contact-card .val a{color:#b45309;text-decoration:none;transition:opacity .2s}
+.contact-card .val a:hover{opacity:.7}
+.content h2{font-family:'Noto Serif JP',serif;font-size:18px;font-weight:700;color:var(--stone-900);margin:32px 0 12px;padding-bottom:8px;border-bottom:2px solid var(--gold)}
+.content p{font-size:15px;color:var(--stone-600);margin-bottom:12px}
+.content ul{margin:8px 0 14px 24px;font-size:15px;color:var(--stone-600)}
+.content ul li{margin-bottom:6px;line-height:1.8}
+.content .meta-note{margin-top:32px;padding:16px 20px;background:var(--stone-50);border-left:3px solid var(--gold);border-radius:0 8px 8px 0;font-size:13px;color:var(--stone-500);line-height:1.8}
+
+/* FOOTER */
+.ft{border-top:1px solid var(--stone-200);background:#fff;padding:40px 24px}
+.ft-in{max-width:1000px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:20px;font-size:14px;color:var(--stone-400)}
+.ft-logo{font-family:'Noto Serif JP',serif;font-size:18px;font-weight:700;color:var(--stone-800)}
+.ft-logo span{color:var(--gold)}
+.ft-lk{display:flex;gap:24px;flex-wrap:wrap;justify-content:center}
+.ft-lk a{text-decoration:none;color:inherit;transition:color .2s}
+.ft-lk a:hover{color:var(--stone-700)}
+.ft-cp{font-size:12px;color:var(--stone-300);text-align:center;margin-top:16px}
+@media(min-width:768px){.ft-in{flex-direction:row;justify-content:space-between}}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">S<span>S</span>S</a>
+    <a href="/" class="nav-back">← トップへ戻る</a>
+  </div>
+</nav>
+
+<header class="page-head">
+  <div class="page-head-inner">
+    <span class="page-tag">CONTACT</span>
+    <h1 class="page-title">お問い合わせ</h1>
+  </div>
+</header>
+
+<main class="content">
+  <div class="content-inner">
+    <p class="lead">SSSコミュニティに関するご質問・ご相談は、<br>下記メールアドレスまでご連絡ください。</p>
+
+    <div class="contact-card">
+      <p class="lbl">運営</p>
+      <p class="val">合同会社サン</p>
+    </div>
+
+    <div class="contact-card">
+      <p class="lbl">📧 メールアドレス</p>
+      <p class="val"><a href="mailto:info.sunnnn@gmail.com">info.sunnnn@gmail.com</a></p>
+    </div>
+
+    <h2>⏱ ご返信について</h2>
+    <p>原則として3営業日以内にご返信いたします。土日祝日にいただいたお問い合わせは、翌営業日以降の対応となります。</p>
+
+    <h2>📋 お問い合わせ内容の例</h2>
+    <ul>
+      <li>サービス内容についてのご質問</li>
+      <li>お申込・決済に関するご相談</li>
+      <li>ご退会・キャンセルに関するお問い合わせ</li>
+      <li>その他ご不明な点</li>
+    </ul>
+
+    <div class="meta-note">
+      ※ 個人情報の取扱いについては、<a href="/privacy.html" style="color:#b45309;text-decoration:underline">プライバシーポリシー</a>をご確認ください。
+    </div>
+  </div>
+</main>
+
+<footer class="ft">
+  <div class="ft-in">
+    <p class="ft-logo font-mincho">S<span>S</span>S</p>
+    <div class="ft-lk">
+      <a href="/tokushoho.html">特定商取引法に基づく表記</a>
+      <a href="/privacy.html">プライバシーポリシー</a>
+      <a href="/contact.html">お問い合わせ</a>
+    </div>
+  </div>
+  <p class="ft-cp">&copy; 2026 SSS. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
