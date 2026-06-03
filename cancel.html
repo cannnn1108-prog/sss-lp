@@ -258,10 +258,8 @@ body{font-family:'Noto Sans JP',sans-serif;color:var(--stone-700);line-height:1.
 <script>
 // フォーム送信処理
 // Cloudflare Worker 経由で Notion DB「📝 SSS解約理由DB」に登録される。
-// 設定可能（ローカルテスト時はこのままモック動作）:
-//   ① 本番URL  : 'https://sss-cancel-form.<your-subdomain>.workers.dev/api/cancel'
-//   ② 未設定/null : ローカルでの動作確認モード（送信成功扱い・Notion登録なし）
-const FORM_ENDPOINT = null; // ← Worker デプロイ後にここを書き換え
+// （ローカルテストする場合は null にすればモック動作）
+const FORM_ENDPOINT = 'https://sss-cancel-form.cannnn1108.workers.dev/api/cancel';
 
 const form = document.getElementById('cancel-form');
 const submitBtn = document.getElementById('submit-btn');
