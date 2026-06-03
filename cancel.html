@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>退会手続き｜SSS</title>
+<meta name="description" content="SSSコミュニティ退会のお手続きページ">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<!-- Microsoft Clarity -->
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "wk1r1aplnd");
+</script>
+<!-- Umami (self-hosted) -->
+<script defer src="https://analytics.aisalonsss.com/script.js" data-website-id="b3ce03ea-2d2e-4fac-8942-688d0f0a4100"></script>
+<style>
+:root{
+  --stone-50:#fafaf9;--stone-100:#f5f5f4;--stone-200:#e7e5e4;--stone-300:#d6d3d1;
+  --stone-400:#a8a29e;--stone-500:#78716c;--stone-600:#57534e;--stone-700:#44403c;
+  --stone-800:#292524;--stone-900:#1c1917;
+  --gold:#c9a84c;--gold-light:#f0d080;
+  --red:#b91c1c;--green:#15803d;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Noto Sans JP',sans-serif;color:var(--stone-700);line-height:1.9;background:#fff;-webkit-font-smoothing:antialiased}
+.font-mincho{font-family:'Noto Serif JP',serif}
+
+.nav{position:sticky;top:0;z-index:50;width:100%;border-bottom:1px solid var(--stone-200);background:rgba(255,255,255,.95);backdrop-filter:blur(10px)}
+.nav-inner{max-width:1000px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:14px 20px}
+.nav-logo{font-family:'Noto Serif JP',serif;font-size:20px;font-weight:700;color:var(--stone-900);text-decoration:none;letter-spacing:.08em}
+.nav-logo span{color:var(--gold)}
+.nav-back{font-size:13px;color:var(--stone-500);text-decoration:none;transition:color .2s}
+.nav-back:hover{color:var(--stone-900)}
+
+.page-head{padding:64px 24px 40px;background:var(--stone-50);border-bottom:1px solid var(--stone-200)}
+.page-head-inner{max-width:740px;margin:0 auto;text-align:center}
+.page-tag{display:inline-block;padding:3px 14px;border-radius:999px;background:rgba(185,28,28,.08);border:1px solid rgba(185,28,28,.2);font-size:12px;color:var(--red);font-weight:700;letter-spacing:.08em;margin-bottom:16px}
+.page-title{font-family:'Noto Serif JP',serif;font-size:26px;font-weight:700;color:var(--stone-900);line-height:1.5}
+@media(min-width:768px){.page-title{font-size:32px}}
+.page-sub{font-size:14px;color:var(--stone-500);margin-top:12px;line-height:1.8}
+
+.content{padding:48px 24px 80px}
+.content-inner{max-width:680px;margin:0 auto}
+
+/* ステップ表示 */
+.steps{display:flex;align-items:center;justify-content:center;gap:8px;margin-bottom:36px;font-size:13px}
+.step{display:flex;align-items:center;gap:6px;color:var(--stone-400)}
+.step.active{color:var(--stone-900);font-weight:700}
+.step.done{color:var(--green)}
+.step-num{display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:999px;background:var(--stone-200);color:var(--stone-500);font-size:12px;font-weight:700}
+.step.active .step-num{background:var(--gold);color:#fff}
+.step.done .step-num{background:var(--green);color:#fff}
+.step-arrow{color:var(--stone-300)}
+
+/* メッセージカード */
+.notice{padding:18px 22px;border-left:3px solid var(--gold);background:var(--stone-50);border-radius:0 8px 8px 0;margin-bottom:32px;font-size:14px;color:var(--stone-600);line-height:1.9}
+
+/* フォーム */
+.form-card{padding:32px 28px;background:#fff;border:1px solid var(--stone-200);border-radius:12px;box-shadow:0 1px 3px rgba(0,0,0,.04)}
+.form-group{margin-bottom:24px}
+.form-label{display:block;font-size:14px;font-weight:700;color:var(--stone-800);margin-bottom:10px}
+.form-label .req{color:var(--red);font-size:12px;margin-left:6px}
+.form-hint{font-size:12px;color:var(--stone-500);margin-bottom:8px}
+
+/* ラジオ */
+.radio-list{display:flex;flex-direction:column;gap:8px}
+.radio-item{display:flex;align-items:flex-start;gap:10px;padding:12px 14px;border:1px solid var(--stone-200);border-radius:8px;cursor:pointer;transition:all .15s;background:#fff}
+.radio-item:hover{border-color:var(--gold);background:var(--stone-50)}
+.radio-item input{margin-top:4px;cursor:pointer;accent-color:var(--gold)}
+.radio-item input:checked + .radio-text{color:var(--stone-900);font-weight:700}
+.radio-text{font-size:14px;color:var(--stone-700);line-height:1.6;flex:1}
+
+/* テキスト入力 */
+.form-input,.form-textarea{width:100%;padding:12px 14px;border:1px solid var(--stone-200);border-radius:8px;font-family:inherit;font-size:14px;color:var(--stone-800);background:#fff;transition:border .15s}
+.form-input:focus,.form-textarea:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(201,168,76,.1)}
+.form-textarea{resize:vertical;min-height:120px;line-height:1.8}
+
+/* ボタン */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 32px;border:none;border-radius:8px;font-family:inherit;font-size:15px;font-weight:700;cursor:pointer;transition:all .15s;text-decoration:none}
+.btn-primary{background:var(--stone-900);color:#fff}
+.btn-primary:hover{background:var(--stone-700)}
+.btn-primary:disabled{background:var(--stone-300);color:var(--stone-500);cursor:not-allowed}
+.btn-danger{background:var(--red);color:#fff}
+.btn-danger:hover{background:#991b1b}
+.btn-ghost{background:transparent;color:var(--stone-500);border:1px solid var(--stone-300)}
+.btn-ghost:hover{background:var(--stone-100)}
+.btn-row{display:flex;gap:12px;justify-content:flex-end;margin-top:32px;flex-wrap:wrap}
+
+/* 完了画面 */
+.complete-card{padding:48px 32px;text-align:center;background:linear-gradient(135deg,var(--stone-50),#fff);border:1px solid var(--stone-200);border-radius:12px}
+.complete-icon{font-size:48px;margin-bottom:16px}
+.complete-title{font-family:'Noto Serif JP',serif;font-size:22px;font-weight:700;color:var(--stone-900);margin-bottom:12px}
+.complete-msg{font-size:14px;color:var(--stone-600);line-height:1.9;margin-bottom:28px}
+
+/* エラー */
+.error-msg{color:var(--red);font-size:13px;margin-top:6px;display:none}
+.error-msg.show{display:block}
+
+/* 状態切り替え */
+.section{display:none}
+.section.active{display:block}
+
+/* FOOTER */
+.ft{border-top:1px solid var(--stone-200);background:#fff;padding:40px 24px}
+.ft-in{max-width:1000px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:20px;font-size:14px;color:var(--stone-400)}
+.ft-logo{font-family:'Noto Serif JP',serif;font-size:18px;font-weight:700;color:var(--stone-800)}
+.ft-logo span{color:var(--gold)}
+.ft-lk{display:flex;gap:24px;flex-wrap:wrap;justify-content:center}
+.ft-lk a{text-decoration:none;color:inherit;transition:color .2s}
+.ft-lk a:hover{color:var(--stone-700)}
+.ft-cp{font-size:12px;color:var(--stone-300);text-align:center;margin-top:16px}
+@media(min-width:768px){.ft-in{flex-direction:row;justify-content:space-between}}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">S<span>S</span>S</a>
+    <a href="/" class="nav-back">← トップへ戻る</a>
+  </div>
+</nav>
+
+<header class="page-head">
+  <div class="page-head-inner">
+    <span class="page-tag">CANCELLATION</span>
+    <h1 class="page-title">退会のお手続き</h1>
+    <p class="page-sub">いただいたご意見はサービス改善に活用させていただきます</p>
+  </div>
+</header>
+
+<main class="content">
+  <div class="content-inner">
+
+    <!-- ステップ表示 -->
+    <div class="steps">
+      <div class="step active" id="step-1">
+        <span class="step-num">1</span>
+        <span>理由をお聞かせください</span>
+      </div>
+      <span class="step-arrow">→</span>
+      <div class="step" id="step-2">
+        <span class="step-num">2</span>
+        <span>退会手続き</span>
+      </div>
+    </div>
+
+    <!-- ============ Section 1: アンケート ============ -->
+    <section class="section active" id="section-survey">
+      <div class="notice">
+        💬 <strong>退会前にひとことだけお聞かせください。</strong><br>
+        ここでいただいた声は今後のSSSの改善に直接活かします。<br>
+        匿名でのご記入もOKです（メールアドレスは任意）。
+      </div>
+
+      <form class="form-card" id="cancel-form" novalidate>
+
+        <div class="form-group">
+          <label class="form-label">退会される主な理由は？<span class="req">必須</span></label>
+          <div class="radio-list" id="reason-list">
+            <label class="radio-item"><input type="radio" name="reason" value="料金が高い" required><span class="radio-text">料金が高い</span></label>
+            <label class="radio-item"><input type="radio" name="reason" value="内容が期待と違った" required><span class="radio-text">内容が期待と違った</span></label>
+            <label class="radio-item"><input type="radio" name="reason" value="時間が取れない" required><span class="radio-text">時間が取れない・忙しい</span></label>
+            <label class="radio-item"><input type="radio" name="reason" value="Discordが使いにくい" required><span class="radio-text">Discord・運用が使いにくい</span></label>
+            <label class="radio-item"><input type="radio" name="reason" value="他コミュニティに移行" required><span class="radio-text">他のコミュニティ・サービスに移行する</span></label>
+            <label class="radio-item"><input type="radio" name="reason" value="一時休会" required><span class="radio-text">一時休会（やめたわけではない）</span></label>
+            <label class="radio-item"><input type="radio" name="reason" value="その他" required><span class="radio-text">その他</span></label>
+          </div>
+          <p class="error-msg" id="error-reason">いずれか1つお選びください</p>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="detail">具体的なご意見・改善要望（自由記述）</label>
+          <p class="form-hint">「こうなっていたら続けていた」「こんな機能が欲しかった」など、率直にお書きください</p>
+          <textarea class="form-textarea" id="detail" name="detail" placeholder="任意記入欄"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">将来また使いたいと思いますか？<span class="req">必須</span></label>
+          <div class="radio-list">
+            <label class="radio-item"><input type="radio" name="comeback" value="いつかまた使いたい" required><span class="radio-text">いつかまた使いたい</span></label>
+            <label class="radio-item"><input type="radio" name="comeback" value="分からない" required><span class="radio-text">今は分からない</span></label>
+            <label class="radio-item"><input type="radio" name="comeback" value="もう使わない" required><span class="radio-text">もう使わない</span></label>
+          </div>
+          <p class="error-msg" id="error-comeback">いずれか1つお選びください</p>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="email">メールアドレス（任意）</label>
+          <p class="form-hint">入会時にご利用のメールアドレス。記入があるとSSS側で個別フォローが可能になります</p>
+          <input type="email" class="form-input" id="email" name="email" placeholder="例: yourname@example.com">
+        </div>
+
+        <div class="btn-row">
+          <button type="submit" class="btn btn-primary" id="submit-btn">
+            送信して次へ進む →
+          </button>
+        </div>
+
+      </form>
+    </section>
+
+    <!-- ============ Section 2: 退会手続き案内 ============ -->
+    <section class="section" id="section-cancel">
+      <div class="complete-card">
+        <div class="complete-icon">✅</div>
+        <h2 class="complete-title">ご回答ありがとうございました</h2>
+        <p class="complete-msg">
+          いただいたご意見は今後のSSS改善に必ず活かします。<br>
+          下記より退会のお手続きにお進みください。
+        </p>
+
+        <div style="text-align:left;background:var(--stone-50);padding:20px 22px;border-radius:8px;margin-bottom:24px">
+          <p style="font-size:13px;color:var(--stone-700);line-height:1.9;margin-bottom:8px"><strong>退会のお手続き方法：</strong></p>
+          <ol style="font-size:13px;color:var(--stone-600);line-height:2;padding-left:20px">
+            <li>下のボタンから運営宛にメールでご連絡ください</li>
+            <li>運営側でUnivaPay定期課金の停止処理を行います</li>
+            <li>処理完了後、Discordの会員ロールを解除します</li>
+            <li>完了メールが届いたら手続き完了です（通常1〜2営業日）</li>
+          </ol>
+        </div>
+
+        <div class="btn-row" style="justify-content:center">
+          <a href="mailto:info@sun-shien.com?subject=SSS退会希望&body=SSSを退会希望です。%0D%0A%0D%0A%E2%96%A0%E3%81%94%E5%A9%9A%E5%85%A5%E6%99%82%E3%81%AE%E3%83%A1%E3%83%BC%E3%83%AB%EF%BC%9A%0D%0A%E2%96%A0%E3%81%8A%E5%90%8D%E5%89%8D%EF%BC%9A%0D%0A%E2%96%A0Discord%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BCID%EF%BC%88%E5%88%86%E3%81%8B%E3%82%8C%E3%81%B0%EF%BC%89%EF%BC%9A%0D%0A%0D%0A%E3%81%94%E5%AF%BE%E5%BF%9C%E3%82%88%E3%82%8D%E3%81%97%E3%81%8F%E3%81%8A%E9%A1%98%E3%81%84%E3%81%84%E3%81%9F%E3%81%97%E3%81%BE%E3%81%99%E3%80%82" class="btn btn-danger">
+            ✉️ 運営に退会を申請する
+          </a>
+          <a href="/" class="btn btn-ghost">トップに戻る（やっぱりやめる）</a>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer class="ft">
+  <div class="ft-in">
+    <div>
+      <div class="ft-logo">S<span>S</span>S</div>
+      <p style="font-size:12px;color:var(--stone-400);margin-top:8px">合同会社サン</p>
+    </div>
+    <div class="ft-lk">
+      <a href="/">トップ</a>
+      <a href="/contact.html">お問い合わせ</a>
+      <a href="/tokushoho.html">特定商取引法</a>
+      <a href="/privacy.html">プライバシーポリシー</a>
+    </div>
+  </div>
+  <p class="ft-cp">© 2026 合同会社サン. All rights reserved.</p>
+</footer>
+
+<script>
+// フォーム送信処理
+// Cloudflare Worker 経由で Notion DB「📝 SSS解約理由DB」に登録される。
+// 設定可能（ローカルテスト時はこのままモック動作）:
+//   ① 本番URL  : 'https://sss-cancel-form.<your-subdomain>.workers.dev/api/cancel'
+//   ② 未設定/null : ローカルでの動作確認モード（送信成功扱い・Notion登録なし）
+const FORM_ENDPOINT = null; // ← Worker デプロイ後にここを書き換え
+
+const form = document.getElementById('cancel-form');
+const submitBtn = document.getElementById('submit-btn');
+const sectionSurvey = document.getElementById('section-survey');
+const sectionCancel = document.getElementById('section-cancel');
+const step1 = document.getElementById('step-1');
+const step2 = document.getElementById('step-2');
+
+function showError(id, show) {
+  document.getElementById(id).classList.toggle('show', show);
+}
+
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+
+  // バリデーション
+  const reason = form.querySelector('input[name="reason"]:checked');
+  const comeback = form.querySelector('input[name="comeback"]:checked');
+
+  let valid = true;
+  if (!reason) { showError('error-reason', true); valid = false; } else { showError('error-reason', false); }
+  if (!comeback) { showError('error-comeback', true); valid = false; } else { showError('error-comeback', false); }
+
+  if (!valid) {
+    submitBtn.scrollIntoView({behavior: 'smooth', block: 'center'});
+    return;
+  }
+
+  // 送信データ
+  const payload = {
+    reason: reason.value,
+    detail: form.detail.value.trim(),
+    comeback: comeback.value,
+    email: form.email.value.trim(),
+    submitted_at: new Date().toISOString(),
+    user_agent: navigator.userAgent,
+  };
+
+  submitBtn.disabled = true;
+  submitBtn.textContent = '送信中...';
+
+  // 誤クリック対策で localStorage 退避
+  localStorage.setItem('sss_cancel_draft', JSON.stringify(payload));
+
+  try {
+    if (FORM_ENDPOINT) {
+      // 本番: Cloudflare Worker → Notion DB
+      const res = await fetch(FORM_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+      const body = await res.json().catch(() => ({ok: false}));
+      if (!res.ok || !body.ok) {
+        throw new Error('server-error: ' + (body.error || res.status));
+      }
+    } else {
+      // ローカル動作確認モード（Worker URL未設定時）
+      await new Promise(r => setTimeout(r, 600));
+    }
+
+    // Umami / Clarity にイベント送信（任意）
+    if (window.umami) {
+      window.umami.track('cancel_form_submit', { reason: payload.reason });
+    }
+
+    // 送信成功 → 次画面へ
+    sectionSurvey.classList.remove('active');
+    sectionCancel.classList.add('active');
+    step1.classList.remove('active');
+    step1.classList.add('done');
+    step2.classList.add('active');
+    window.scrollTo({top: 0, behavior: 'smooth'});
+
+    // 成功したらドラフトクリア
+    localStorage.removeItem('sss_cancel_draft');
+
+  } catch (err) {
+    submitBtn.disabled = false;
+    submitBtn.textContent = '送信して次へ進む →';
+    alert('送信に失敗しました。お手数ですが直接 info@sun-shien.com までご連絡ください。\n（' + err.message + '）');
+    console.error(err);
+  }
+});
+</script>
+
+</body>
+</html>
