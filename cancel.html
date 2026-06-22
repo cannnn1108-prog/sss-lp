@@ -193,9 +193,10 @@ body{font-family:'Noto Sans JP',sans-serif;color:var(--stone-700);line-height:1.
         </div>
 
         <div class="form-group">
-          <label class="form-label" for="email">メールアドレス（任意）</label>
-          <p class="form-hint">入会時にご利用のメールアドレス。記入があるとSSS側で個別フォローが可能になります</p>
-          <input type="email" class="form-input" id="email" name="email" placeholder="例: yourname@example.com">
+          <label class="form-label" for="email">ご入会時のメールアドレス<span class="req">必須</span></label>
+          <p class="form-hint">このメールアドレスで定期課金を照合し、<strong>送信するとその場で停止処理まで完了</strong>します。入会時に登録したメールアドレスをご入力ください。</p>
+          <input type="email" class="form-input" id="email" name="email" placeholder="例: yourname@example.com" required>
+          <p class="error-msg" id="error-email">入会時のメールアドレスをご入力ください</p>
         </div>
 
         <div class="btn-row">
@@ -207,31 +208,61 @@ body{font-family:'Noto Sans JP',sans-serif;color:var(--stone-700);line-height:1.
       </form>
     </section>
 
-    <!-- ============ Section 2: 退会手続き案内 ============ -->
-    <section class="section" id="section-cancel">
+    <!-- ============ Section 2A: 停止完了（即時解約フロー） ============ -->
+    <section class="section" id="section-done">
       <div class="complete-card">
         <div class="complete-icon">✅</div>
-        <h2 class="complete-title">ご回答ありがとうございました</h2>
+        <h2 class="complete-title">ただいま手続きが完了しました</h2>
         <p class="complete-msg">
-          いただいたご意見は今後のSSS改善に必ず活かします。<br>
-          下記より退会のお手続きにお進みください。
+          UnivaPayの定期課金を<strong>停止しました</strong>。<br>
+          次回以降の月額のご請求は発生いたしません。
         </p>
 
         <div style="text-align:left;background:var(--stone-50);padding:20px 22px;border-radius:8px;margin-bottom:24px">
-          <p style="font-size:13px;color:var(--stone-700);line-height:1.9;margin-bottom:8px"><strong>退会のお手続き方法：</strong></p>
           <ol style="font-size:13px;color:var(--stone-600);line-height:2;padding-left:20px">
-            <li>下のボタンから運営宛にメールでご連絡ください</li>
-            <li>運営側でUnivaPay定期課金の停止処理を行います</li>
-            <li>処理完了後、Discordの会員ロールを解除します</li>
-            <li>完了メールが届いたら手続き完了です（通常1〜2営業日）</li>
+            <li>定期課金の停止が完了しました（次回以降のご請求はありません）</li>
+            <li>Discordの有料会員ロールは自動で解除されます</li>
+            <li>これをもちまして、退会のお手続きはすべて完了です</li>
           </ol>
+          <p style="font-size:12px;color:var(--stone-500);line-height:1.8;margin-top:10px">
+            ※決済のタイミングによっては、当月分までのご請求が発生している場合がございます。<br>
+            ※すでにDiscordをご退出済みの場合、ロール解除の操作は不要です。
+          </p>
         </div>
 
         <div class="btn-row" style="justify-content:center">
-          <a href="mailto:info@sun-shien.com?subject=SSS退会希望&body=SSSを退会希望です。%0D%0A%0D%0A%E2%96%A0%E3%81%94%E5%A9%9A%E5%85%A5%E6%99%82%E3%81%AE%E3%83%A1%E3%83%BC%E3%83%AB%EF%BC%9A%0D%0A%E2%96%A0%E3%81%8A%E5%90%8D%E5%89%8D%EF%BC%9A%0D%0A%E2%96%A0Discord%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BCID%EF%BC%88%E5%88%86%E3%81%8B%E3%82%8C%E3%81%B0%EF%BC%89%EF%BC%9A%0D%0A%0D%0A%E3%81%94%E5%AF%BE%E5%BF%9C%E3%82%88%E3%82%8D%E3%81%97%E3%81%8F%E3%81%8A%E9%A1%98%E3%81%84%E3%81%84%E3%81%9F%E3%81%97%E3%81%BE%E3%81%99%E3%80%82" class="btn btn-danger">
-            ✉️ 運営に退会を申請する
+          <a href="/" class="btn btn-ghost">トップに戻る</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Section 2: 該当する定期課金が見つからない場合 ============ -->
+    <section class="section" id="section-cancel">
+      <div class="complete-card">
+        <div class="complete-icon">📩</div>
+        <h2 class="complete-title">ご回答ありがとうございました</h2>
+        <p class="complete-msg">
+          いただいたご意見は今後のSSS改善に必ず活かします。<br>
+          ただ、<strong>ご入力のメールアドレスでは有効な定期課金が確認できませんでした</strong>。
+        </p>
+
+        <div style="text-align:left;background:var(--stone-50);padding:20px 22px;border-radius:8px;margin-bottom:24px">
+          <p style="font-size:13px;color:var(--stone-700);line-height:1.9;margin-bottom:8px"><strong>次のいずれかの可能性があります：</strong></p>
+          <ol style="font-size:13px;color:var(--stone-600);line-height:2;padding-left:20px">
+            <li>入会時と異なるメールアドレスを入力された</li>
+            <li>定期課金がすでに停止・解約済み</li>
+            <li>別のお支払い方法でご契約されている</li>
+          </ol>
+          <p style="font-size:12px;color:var(--stone-500);line-height:1.8;margin-top:10px">
+            入会時のメールアドレスをご確認のうえ、お手数ですが前の画面から再度お試しいただくか、下記より運営までご連絡ください。
+          </p>
+        </div>
+
+        <div class="btn-row" style="justify-content:center">
+          <a href="mailto:info@sun-shien.com?subject=SSS%E9%80%80%E4%BC%9A%E3%81%AE%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B&body=SSS%E3%81%AE%E9%80%80%E4%BC%9A%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B%E3%81%A7%E3%81%99%E3%80%82%0D%0A%0D%0A%E2%96%A0%E3%81%94%E5%85%A5%E4%BC%9A%E6%99%82%E3%81%AE%E3%83%A1%E3%83%BC%E3%83%AB%EF%BC%9A%0D%0A%E2%96%A0%E3%81%8A%E5%90%8D%E5%89%8D%EF%BC%9A%0D%0A%0D%0A%E3%81%94%E5%AF%BE%E5%BF%9C%E3%82%88%E3%82%8D%E3%81%97%E3%81%8F%E3%81%8A%E9%A1%98%E3%81%84%E3%81%84%E3%81%9F%E3%81%97%E3%81%BE%E3%81%99%E3%80%82" class="btn btn-danger">
+            ✉️ 運営に問い合わせる
           </a>
-          <a href="/" class="btn btn-ghost">トップに戻る（やっぱりやめる）</a>
+          <a href="/" class="btn btn-ghost">トップに戻る</a>
         </div>
       </div>
     </section>
@@ -265,6 +296,7 @@ const form = document.getElementById('cancel-form');
 const submitBtn = document.getElementById('submit-btn');
 const sectionSurvey = document.getElementById('section-survey');
 const sectionCancel = document.getElementById('section-cancel');
+const sectionDone = document.getElementById('section-done');
 const step1 = document.getElementById('step-1');
 const step2 = document.getElementById('step-2');
 
@@ -278,10 +310,13 @@ form.addEventListener('submit', async (e) => {
   // バリデーション
   const reason = form.querySelector('input[name="reason"]:checked');
   const comeback = form.querySelector('input[name="comeback"]:checked');
+  const emailVal = form.email.value.trim();
+  const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailVal);
 
   let valid = true;
   if (!reason) { showError('error-reason', true); valid = false; } else { showError('error-reason', false); }
   if (!comeback) { showError('error-comeback', true); valid = false; } else { showError('error-comeback', false); }
+  if (!emailOk) { showError('error-email', true); valid = false; } else { showError('error-email', false); }
 
   if (!valid) {
     submitBtn.scrollIntoView({behavior: 'smooth', block: 'center'});
@@ -304,17 +339,18 @@ form.addEventListener('submit', async (e) => {
   // 誤クリック対策で localStorage 退避
   localStorage.setItem('sss_cancel_draft', JSON.stringify(payload));
 
+  let result = {};
   try {
     if (FORM_ENDPOINT) {
-      // 本番: Cloudflare Worker → Notion DB
+      // 本番: Cloudflare Worker
       const res = await fetch(FORM_ENDPOINT, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload),
       });
-      const body = await res.json().catch(() => ({ok: false}));
-      if (!res.ok || !body.ok) {
-        throw new Error('server-error: ' + (body.error || res.status));
+      result = await res.json().catch(() => ({ok: false}));
+      if (!res.ok || !result.ok) {
+        throw new Error('server-error: ' + (result.error || res.status));
       }
     } else {
       // ローカル動作確認モード（Worker URL未設定時）
@@ -328,10 +364,17 @@ form.addEventListener('submit', async (e) => {
 
     // 送信成功 → 次画面へ
     sectionSurvey.classList.remove('active');
-    sectionCancel.classList.add('active');
     step1.classList.remove('active');
     step1.classList.add('done');
     step2.classList.add('active');
+
+    if (result.canceled) {
+      // 即時解約フロー: その場で定期課金が停止された
+      sectionDone.classList.add('active');
+    } else {
+      // 該当する定期課金が見つからない（メール相違 / 既に停止 / 別決済）
+      sectionCancel.classList.add('active');
+    }
     window.scrollTo({top: 0, behavior: 'smooth'});
 
     // 成功したらドラフトクリア
