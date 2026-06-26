@@ -1,0 +1,6 @@
+
+# launchd出力・バックアップ（移行時push対象外）
+*.bak_*
+*.err
+*.out
+price_switch_*.log
