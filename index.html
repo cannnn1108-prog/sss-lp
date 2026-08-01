@@ -264,6 +264,25 @@ img{max-width:100%;display:block}
   .fade-in{opacity:1;transform:none}
   .gold-rule{width:120px}
 }
+
+/* 追従CTA（スマホ）：ヒーローのCTAから料金まで72ポイントぶん、申し込む手段が画面から消えていたので常に出す */
+.sticky-cta{position:fixed;left:0;right:0;bottom:0;z-index:60;display:none;
+  padding:10px 14px calc(10px + env(safe-area-inset-bottom));
+  background:rgba(20,18,16,.94);backdrop-filter:blur(10px);border-top:1px solid rgba(212,175,55,.35)}
+.sticky-cta a{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;
+  min-height:52px;border-radius:6px;font-size:15px;font-weight:700;text-decoration:none;
+  background:linear-gradient(135deg,#d4af37,#b8952e);color:#141210}
+.sticky-cta .sc-sub{font-size:12px;font-weight:400;opacity:.85}
+@media(max-width:820px){
+  .sticky-cta{display:block}
+  body{padding-bottom:84px}   /* バーが本文の末尾を隠さないようにする */
+}
+/* 中盤に置いた料金の要点 */
+.peek-card{border:1px solid var(--stone-200);border-radius:10px;padding:28px 24px;text-align:center;background:#fff}
+.peek-price{font-size:34px;letter-spacing:.02em}
+.peek-unit{font-size:14px;opacity:.7;margin-left:4px}
+.peek-list{list-style:none;padding:0;margin:16px 0 22px;font-size:14px;line-height:2}
+.peek-btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 28px}
 </style>
 </head>
 <body>
@@ -323,46 +342,13 @@ img{max-width:100%;display:block}
     <div class="hero-cta">
       <a href="https://univa.cc/SlJd_Q" target="_blank" rel="noopener noreferrer" class="btn-gold" style="animation:glow 2.4s infinite alternate">今すぐSSSに参加する</a>
       <p class="hero-note">月額2,980円（税込）・いつでも解約OK・違約金なし</p>
-      <p class="hero-fine">※決済ページの店舗名が「ゴリ塾」となっておりますが、SSSの決済ページで間違いありませんのでご安心ください。</p>
     </div>
     <div class="scroll-hint"><span>scroll</span><span class="arr">↓</span></div>
   </div>
 </section>
 
 <!-- FOUNDERS -->
-<section id="founders" class="sec bg-w">
-  <div class="w760">
-    <div class="sec-head"><span class="kicker c">Who runs SSS</span></div>
-    <h2 class="sec-t mincho mt-16">運営しているのは、<span class="g">松任谷とゴリラ</span>の二人です。</h2>
-    <div class="gold-rule mt-24"></div>
-    <p class="sec-s">「誰が中にいるか分からないサロン」ではありません。<br>実際にAIで稼ぎ、仕組みをつくってきた二人が、毎日いっしょに動いています。</p>
-    <div class="founders">
-      <div class="founder fade-in">
-        <div class="founder-top">
-          <div class="mono">ゴ</div>
-          <div>
-            <div class="founder-name">ゴリラ</div>
-            <div class="founder-role">SSS運営 / 実践会ホスト</div>
-          </div>
-        </div>
-        <p>note・アフィリエイト・コンテンツ販売（Tips など）や占いといったジャンルで、AIを使った収益化を実践してきました。加えて、法人向けのAI導入の推進やDX化の支援も手がけています。稼ぐルートと、AIで作業を効率化して仕組みをつくるところ。その両方を、実例ごと共有します。毎朝のAI実践会・もくもく作業会のホストです。</p>
-        <div class="founder-tags"><span class="tag">note・アフィリエイト</span><span class="tag">コンテンツ販売（Tips等）</span><span class="tag">占い</span><span class="tag">法人AI・DX支援</span><span class="tag">実践会ホスト</span></div>
-      </div>
-      <div class="founder fade-in">
-        <div class="founder-top">
-          <div class="mono">松</div>
-          <div>
-            <div class="founder-name">松任谷</div>
-            <div class="founder-role">SSS共同運営 / コンテンツ・個別相談</div>
-          </div>
-        </div>
-        <p>YouTube170万人チャンネルの運営で培ったコンテンツづくりと集客の知見を持ち、いまはAI教材の制作や、一人ひとりに合わせた個別サポートを担当。月1回・30分のAI個別相談で、いまやっていることとAI活用の可能性をすり合わせ、その人にとっての最適解を一緒に見つけます。「まず何を作るか」で迷う人の、最初の一歩の設計が得意です。</p>
-        <div class="founder-tags"><span class="tag">YouTube170万人運営</span><span class="tag">AI教材制作</span><span class="tag">月1・個別相談</span><span class="tag">初手の設計</span></div>
-      </div>
-    </div>
-    <p class="founders-note">二人で運営しているので、講義・実践会・個別相談・毎日の情報配信が、無理なく回り続けます。</p>
-  </div>
-</section>
+
 
 <!-- PAIN -->
 <section class="sec bg-s50">
@@ -384,6 +370,29 @@ img{max-width:100%;display:block}
     </div>
   </div>
 </section>
+
+<!-- VOICE-EARLY：判断材料を上位40%に入れるため、声を2件だけ前倒しした（残りは下の「参加メンバーの声。」に置いたまま） -->
+<section id="voice-early" class="sec bg-w">
+  <div class="w1040">
+    <div class="sec-head"><span class="kicker c">Voice</span></div>
+    <h2 class="sec-t mincho mt-16">先に入った人は、こう言っています。</h2>
+    <div class="gold-rule mt-24"></div>
+    <div class="voice-g mt-32">
+      <div class="voice-c fade-in">
+        <div class="meta"><div class="avatar">K</div><div><div class="name">Kさん</div><div class="attr">海外在住・Webフリーランス</div></div></div>
+        <div class="stars">★★★★★</div>
+        <p>スピ系のショート動画を毎日、自動で作っています。SSSに入ってから作業の幅が広がって、もくもく会にも顔を出すように。海外にいても置いていかれない距離感がありがたいです。</p>
+      </div>
+      <div class="voice-c fade-in">
+        <div class="meta"><div class="avatar">Y</div><div><div class="name">Yさん</div><div class="attr">滋賀・AI動画/開発</div></div></div>
+        <div class="stars">★★★★★</div>
+        <p>外注なしで、リサーチから投稿まで全部AIに任せるYouTubeチャンネルに挑戦しています。稼ぐより先に、仕組みをつくること自体が面白い。実践会でその場で詰まりを聞けるのが大きいです。</p>
+      </div>
+    </div>
+    <p class="sec-s mt-24" style="text-align:center">ほかのメンバーの声は<a href="#voices" style="text-decoration:underline">こちら</a>。</p>
+  </div>
+</section>
+
 
 <!-- AXES (2本柱) -->
 <section id="axes" class="sec bg-w">
@@ -416,6 +425,41 @@ img{max-width:100%;display:block}
         </ul>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- FOUNDERS（価値提案のあとに置く。運営者は信頼の補強なので順序は後ろ） -->
+<section id="founders" class="sec bg-w">
+  <div class="w760">
+    <div class="sec-head"><span class="kicker c">Who runs SSS</span></div>
+    <h2 class="sec-t mincho mt-16">運営しているのは、<span class="g">松任谷とゴリラ</span>の二人です。</h2>
+    <div class="gold-rule mt-24"></div>
+    <p class="sec-s">「誰が中にいるか分からないサロン」ではありません。<br>実際にAIで稼ぎ、仕組みをつくってきた二人が、毎日いっしょに動いています。</p>
+    <div class="founders">
+      <div class="founder fade-in">
+        <div class="founder-top">
+          <div class="mono">ゴ</div>
+          <div>
+            <div class="founder-name">ゴリラ</div>
+            <div class="founder-role">SSS運営 / 実践会ホスト</div>
+          </div>
+        </div>
+        <p>note・アフィリエイト・コンテンツ販売（Tips など）や占いといったジャンルで、AIを使った収益化を実践してきました。加えて、法人向けのAI導入の推進やDX化の支援も手がけています。稼ぐルートと、AIで作業を効率化して仕組みをつくるところ。その両方を、実例ごと共有します。毎朝のAI実践会・もくもく作業会のホストです。</p>
+        <div class="founder-tags"><span class="tag">note・アフィリエイト</span><span class="tag">コンテンツ販売（Tips等）</span><span class="tag">占い</span><span class="tag">法人AI・DX支援</span><span class="tag">実践会ホスト</span></div>
+      </div>
+      <div class="founder fade-in">
+        <div class="founder-top">
+          <div class="mono">松</div>
+          <div>
+            <div class="founder-name">松任谷</div>
+            <div class="founder-role">SSS共同運営 / コンテンツ・個別相談</div>
+          </div>
+        </div>
+        <p>YouTube170万人チャンネルの運営で培ったコンテンツづくりと集客の知見を持ち、いまはAI教材の制作や、一人ひとりに合わせた個別サポートを担当。月1回・30分のAI個別相談で、いまやっていることとAI活用の可能性をすり合わせ、その人にとっての最適解を一緒に見つけます。「まず何を作るか」で迷う人の、最初の一歩の設計が得意です。</p>
+        <div class="founder-tags"><span class="tag">YouTube170万人運営</span><span class="tag">AI教材制作</span><span class="tag">月1・個別相談</span><span class="tag">初手の設計</span></div>
+      </div>
+    </div>
+    <p class="founders-note">二人で運営しているので、講義・実践会・個別相談・毎日の情報配信が、無理なく回り続けます。</p>
   </div>
 </section>
 
@@ -455,6 +499,21 @@ img{max-width:100%;display:block}
   </div>
 </section>
 
+<!-- PRICE-PEEK：料金の要点だけを、読まれている範囲（上位40%）の中に置く。詳細は下の「料金」のまま -->
+<section id="price-peek" class="sec bg-w">
+  <div class="w760">
+    <div class="peek-card">
+      <p class="peek-price mincho">月額 ¥2,980<span class="peek-unit">（税込）</span></p>
+      <ul class="peek-list">
+        <li>いつでも解約できます</li>
+        <li>違約金はありません</li>
+        <li>1日あたり約100円。飲み会1回ぶんで、1ヶ月まるごと</li>
+      </ul>
+      <a class="btn btn-gold peek-btn" href="#pricing">料金の中身を見る</a>
+    </div>
+  </div>
+</section>
+
 <!-- PILLAR 2: 実践・仕組み化 (NEW) -->
 <section id="practice" class="sec bg-ink">
   <div class="w1040">
@@ -490,6 +549,9 @@ img{max-width:100%;display:block}
     </div>
   </div>
 </section>
+
+
+
 
 <!-- STORY -->
 <section id="story" class="sec bg-w">
@@ -619,24 +681,7 @@ img{max-width:100%;display:block}
 </section>
 
 <!-- INFO CHANNELS -->
-<section id="channels" class="sec bg-w">
-  <div class="w1040">
-    <div class="sec-head"><span class="kicker c">Daily Info</span></div>
-    <h2 class="sec-t mincho mt-16">毎日流れる、AI情報とお得情報。</h2>
-    <div class="gold-rule mt-24"></div>
-    <p class="sec-s">Discordに専用チャンネルを用意。<strong>運営が一次情報をキュレーション</strong>して共有しています。<br>「届いたらチェック」のスタンスで、情報収集の負担を軽くする運用です。</p>
-    <div class="comm-g">
-      <div class="comm-c fade-in"><div class="idx">CHANNEL 01</div><h3>最新AI情報</h3><p>Claude / ChatGPT / Geminiの新機能・新モデル・実用プロンプトを毎日共有。AIの最新動向を追う時間を、一緒に減らしていきます。</p></div>
-      <div class="comm-c fade-in"><div class="idx">CHANNEL 02</div><h3>楽天お得情報</h3><p>SPU・スーパーセール・ポイントアップ・ふるさと納税の旬をキュレーション。「気づいたら終わってた」を減らせます。</p></div>
-      <div class="comm-c fade-in"><div class="idx">CHANNEL 03</div><h3>Amazonお得情報</h3><p>タイムセール・プライム特典・クーポンをチェックして共有。買うタイミングの参考にしていただけます。</p></div>
-      <div class="comm-c fade-in"><div class="idx">CHANNEL 04</div><h3>ポケカ情報</h3><p>新弾発売・抽選販売スケジュール・相場の動きを共有。トレカに興味がある方には参考になる情報源です。</p></div>
-    </div>
-    <div class="callout fade-in" style="margin-top:32px;text-align:center">
-      情報チャンネルだけでも、節約や情報収集の時短に十分役立ちます。<br>
-      SSSは稼ぐだけでなく、<strong>賢く使う・賢く貯める・最新を知る</strong>まで、まとめてカバーする場です。
-    </div>
-  </div>
-</section>
+
 
 <!-- PRICING -->
 <section id="pricing" class="sec bg-s50">
@@ -716,6 +761,26 @@ img{max-width:100%;display:block}
   </div>
 </section>
 
+<!-- CHANNELS（入会判断の材料としては弱いので、FAQのあとへ下げた） -->
+<section id="channels" class="sec bg-w">
+  <div class="w1040">
+    <div class="sec-head"><span class="kicker c">Daily Info</span></div>
+    <h2 class="sec-t mincho mt-16">毎日流れる、AI情報とお得情報。</h2>
+    <div class="gold-rule mt-24"></div>
+    <p class="sec-s">Discordに専用チャンネルを用意。<strong>運営が一次情報をキュレーション</strong>して共有しています。<br>「届いたらチェック」のスタンスで、情報収集の負担を軽くする運用です。</p>
+    <div class="comm-g">
+      <div class="comm-c fade-in"><div class="idx">CHANNEL 01</div><h3>最新AI情報</h3><p>Claude / ChatGPT / Geminiの新機能・新モデル・実用プロンプトを毎日共有。AIの最新動向を追う時間を、一緒に減らしていきます。</p></div>
+      <div class="comm-c fade-in"><div class="idx">CHANNEL 02</div><h3>楽天お得情報</h3><p>SPU・スーパーセール・ポイントアップ・ふるさと納税の旬をキュレーション。「気づいたら終わってた」を減らせます。</p></div>
+      <div class="comm-c fade-in"><div class="idx">CHANNEL 03</div><h3>Amazonお得情報</h3><p>タイムセール・プライム特典・クーポンをチェックして共有。買うタイミングの参考にしていただけます。</p></div>
+      <div class="comm-c fade-in"><div class="idx">CHANNEL 04</div><h3>ポケカ情報</h3><p>新弾発売・抽選販売スケジュール・相場の動きを共有。トレカに興味がある方には参考になる情報源です。</p></div>
+    </div>
+    <div class="callout fade-in" style="margin-top:32px;text-align:center">
+      情報チャンネルだけでも、節約や情報収集の時短に十分役立ちます。<br>
+      SSSは稼ぐだけでなく、<strong>賢く使う・賢く貯める・最新を知る</strong>まで、まとめてカバーする場です。
+    </div>
+  </div>
+</section>
+
 <!-- CTA -->
 <section class="sec bg-ink">
   <div class="w760 cta-b">
@@ -757,5 +822,10 @@ document.querySelectorAll('.nav-mobile-menu a').forEach(function(a){
   a.addEventListener('click',function(){document.getElementById('mm').classList.remove('open');});
 });
 </script>
+
+<!-- 追従CTA（スマホのみ表示） -->
+<div class="sticky-cta">
+  <a href="#pricing">SSSに参加する<span class="sc-sub">月2,980円・いつでも解約OK</span></a>
+</div>
 </body>
 </html>
