@@ -237,6 +237,35 @@ body{font-family:'Noto Sans JP',sans-serif;color:var(--stone-700);line-height:1.
     </section>
 
     <!-- ============ Section 2: 該当する定期課金が見つからない場合 ============ -->
+    <!-- 本人確認メールを送った状態（Worker v4 / 2026-09-06） -->
+    <section class="section" id="section-verify">
+      <div class="complete-card">
+        <div class="complete-icon">✉️</div>
+        <h2 class="complete-title">確認メールをお送りしました</h2>
+        <p class="complete-msg">
+          ご入力のメールアドレス（<strong id="verify-email-masked"></strong>）宛に、<br>
+          退会を確定するためのリンクをお送りしました。
+        </p>
+
+        <div style="text-align:left;background:var(--stone-50);padding:20px 22px;border-radius:8px;margin-bottom:24px">
+          <ol style="font-size:13px;color:var(--stone-600);line-height:2;padding-left:20px">
+            <li>メールを開き、「退会を確定する」リンクを押してください</li>
+            <li>その時点で定期課金が停止します（次回以降のご請求はありません）</li>
+            <li>Discordの有料会員ロールは自動で解除されます</li>
+          </ol>
+          <p style="font-size:12px;color:var(--stone-500);line-height:1.8;margin-top:10px">
+            ※リンクの有効期限は48時間です。<br>
+            ※ご本人以外の操作で退会にならないよう、メールでの確認をお願いしています。<br>
+            ※メールが届かない場合は迷惑メールフォルダをご確認のうえ、下記より運営までご連絡ください。
+          </p>
+        </div>
+
+        <div class="btn-row" style="justify-content:center">
+          <a href="/" class="btn btn-ghost">トップに戻る</a>
+        </div>
+      </div>
+    </section>
+
     <section class="section" id="section-cancel">
       <div class="complete-card">
         <div class="complete-icon">📩</div>
@@ -296,6 +325,7 @@ const form = document.getElementById('cancel-form');
 const submitBtn = document.getElementById('submit-btn');
 const sectionSurvey = document.getElementById('section-survey');
 const sectionCancel = document.getElementById('section-cancel');
+const sectionVerify = document.getElementById('section-verify');
 const sectionDone = document.getElementById('section-done');
 const step1 = document.getElementById('step-1');
 const step2 = document.getElementById('step-2');
@@ -369,8 +399,14 @@ form.addEventListener('submit', async (e) => {
     step2.classList.add('active');
 
     if (result.canceled) {
-      // 即時解約フロー: その場で定期課金が停止された
+      // 既に停止済みの応答（互換のため残す）
       sectionDone.classList.add('active');
+    } else if (result.verification_sent) {
+      // 本人確認メールを送った。実際の停止はメールのリンクを踏んだ時点。
+      // フォームに入力しただけで他人の課金が止まらないようにするための一段。
+      const maskedEl = document.getElementById('verify-email-masked');
+      if (maskedEl) maskedEl.textContent = result.email_masked || payload.email || '';
+      sectionVerify.classList.add('active');
     } else {
       // 該当する定期課金が見つからない（メール相違 / 既に停止 / 別決済）
       sectionCancel.classList.add('active');
