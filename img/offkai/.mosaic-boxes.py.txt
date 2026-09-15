@@ -1,0 +1,42 @@
+import cv2, json, sys, os
+from PIL import Image
+U="/Users/test/.claude/uploads/e0d1e38d-2a39-440d-99f9-faa0f771525a/"
+OUT=os.path.join(os.path.dirname(__file__),"out")
+# boxes in display coords (landscape basis 2000 wide / portrait basis 1500 wide): x1,y1,x2,y2
+J={
+ "13fbea37":("offkai-2-toast",2000,[(0,760,190,1060),(180,660,390,860),(380,700,520,850),(470,560,1880,960),(1300,690,1500,930)]),
+ "7c0dc719":("offkai-2-talk",2000,[(0,660,200,880),(270,560,450,740),(520,600,680,760),(560,540,1920,820),(1370,730,1600,950),(1660,640,1860,820)]),
+ "9f99ea41":("offkai-2-cheers",2000,[(40,620,480,900),(600,540,1480,800),(1280,570,1460,740)]),
+ "c636bc04":("offkai-2-window",2000,[(230,560,620,800),(690,500,970,680),(1030,500,1270,660),(1660,520,1840,710),(420,880,580,1120),(0,720,470,1120)]),
+ "95aaf79a":("offkai-2-lounge",2000,[]),
+ "0539b4d7":("offkai-1-home-cheers",1500,[(1230,1180,1500,1650)]),
+ "633b4b2a":("offkai-1-izakaya",1500,[]),
+ "4601c91d":("offkai-1-home-cheers2",1500,[]),
+}
+cas=[cv2.CascadeClassifier(cv2.data.haarcascades+n) for n in ("haarcascade_frontalface_default.xml","haarcascade_profileface.xml")]
+report={}
+for k,(name,basis,boxes) in J.items():
+    img=cv2.imread(U+k+"-image.jpg"); H,W=img.shape[:2]; s=W/basis
+    rects=[(int(a*s),int(b*s),int(c*s),int(d*s)) for a,b,c,d in boxes]
+    small=cv2.resize(img,(W//2,H//2)); g=cv2.cvtColor(small,cv2.COLOR_BGR2GRAY)
+    auto=[]
+    for c in cas:
+        for (x,y,w,h) in c.detectMultiScale(g,1.08,6,minSize=(24,24)):
+            x,y,w,h=[v*2 for v in (x,y,w,h)]; p=int(w*0.4)
+            auto.append((max(0,x-p),max(0,y-p),min(W,x+w+p),min(H,y+h+p)))
+    # auto detections not covered by manual boxes -> also mosaic, and report
+    def inside(r):
+        cx,cy=(r[0]+r[2])/2,(r[1]+r[3])/2
+        return any(a<=cx<=c and b<=cy<=d for a,b,c,d in rects)
+    extra=[r for r in auto if not inside(r)] if boxes and name.startswith("offkai-2") else []
+    for x1,y1,x2,y2 in rects+extra:
+        x1,y1=max(0,x1),max(0,y1); x2,y2=min(W,x2),min(H,y2)
+        roi=img[y1:y2,x1:x2]; blk=max(W,H)//70; bw=max(2,(x2-x1)//blk); bh=max(2,(y2-y1)//blk)
+        tiny=cv2.resize(roi,(max(1,bw),max(1,bh)),interpolation=cv2.INTER_LINEAR)
+        img[y1:y2,x1:x2]=cv2.resize(tiny,(x2-x1,y2-y1),interpolation=cv2.INTER_NEAREST)
+    tw=1600 if W>H else 1200
+    im=Image.fromarray(cv2.cvtColor(img,cv2.COLOR_BGR2RGB)).resize((tw,int(H*tw/W)),Image.LANCZOS)
+    im.save(f"{OUT}/{name}.jpg",quality=82,optimize=True)   # no exif written
+    im.resize((800,int(im.height*800/im.width))).save(f"{OUT}/_check-{name}.jpg",quality=70)
+    report[name]={"manual":len(rects),"auto_extra":[list(map(int,r)) for r in extra]}
+print(json.dumps(report,ensure_ascii=False))

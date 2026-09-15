@@ -1,9 +1,10 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
 <head>
-<meta charset="UTF-8">
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SSS｜AIで稼ぎ、AIで仕組みをつくるコミュニティ</title>
+<meta name="description" content="参加メンバー100名突破。実践的なAI Tipsが毎日Discordに届く。毎週水曜のZOOM講義、毎日開催のもくもく作業会、日中のAI実践会で、AIで稼ぐルートと仕組みづくりを一緒に。松任谷×ゴリラの共同運営、月額2,980円。">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="/icon-32.png">
 <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
@@ -16,7 +17,6 @@
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://aisalonsss.com/og-image.png">
-<meta name="description" content="スキルゼロ・顔出しなし・個人でOK。AIで稼ぐルートと、日々の作業を効率化して仕組み化するところまで。松任谷×ゴリラの共同運営、月額2,980円。">
 <meta property="og:title" content="SSS｜AIで稼ぎ、AIで仕組みをつくるコミュニティ">
 <meta property="og:description" content="AIで稼ぐ。そして、効率化して仕組みまでつくる。松任谷×ゴリラの共同運営。スキルゼロ・顔出しなし・個人でOK。">
 <meta property="og:url" content="https://aisalonsss.com">
@@ -39,705 +39,1240 @@
   --stone-50:#fafaf9;--stone-100:#f5f5f4;--stone-200:#e7e5e4;--stone-300:#d6d3d1;
   --stone-400:#a8a29e;--stone-500:#78716c;--stone-600:#57534e;--stone-700:#44403c;
   --stone-800:#292524;--stone-900:#1c1917;--ink:#141210;
-  --amber-500:#f59e0b;--amber-600:#d97706;--amber-700:#b45309;
-  --gold:#c9a84c;--gold-deep:#a07830;--gold-light:#f0d080;
+  --gold:#c9a84c;--gold-deep:#a07830;--gold-light:#f0d080;--gold-wash:#fbf6e9;
+  --serif:'Noto Serif JP',serif;--sans:'Noto Sans JP',sans-serif;
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{font-family:'Noto Sans JP',sans-serif;color:var(--stone-700);line-height:1.85;background:#fff;-webkit-font-smoothing:antialiased;font-feature-settings:"palt" 1;text-rendering:optimizeLegibility}
-.mincho{font-family:'Noto Serif JP',serif}
-strong{color:var(--stone-900);font-weight:700}
+body{font-family:var(--sans);color:var(--stone-700);line-height:1.85;background:#fff;-webkit-font-smoothing:antialiased;font-feature-settings:"palt" 1;overflow-x:hidden}
 img{max-width:100%;display:block}
-
-/* KICKER + GOLD RULE (設計図モチーフ) */
-.kicker{display:inline-flex;align-items:center;gap:10px;font-size:12px;font-weight:700;letter-spacing:.22em;color:var(--gold-deep);text-transform:uppercase}
-.kicker::before{content:"";width:26px;height:1px;background:linear-gradient(90deg,transparent,var(--gold))}
-.kicker.c{justify-content:center}
-.kicker.c::after{content:"";width:26px;height:1px;background:linear-gradient(90deg,var(--gold),transparent)}
-.gold-rule{width:0;height:1px;margin:0 auto;background:linear-gradient(90deg,transparent,var(--gold),transparent);transition:width 1.1s cubic-bezier(.22,1,.36,1)}
-.gold-rule.visible{width:120px}
-
-/* NAV */
-.nav{position:fixed;top:0;z-index:50;width:100%;border-bottom:1px solid var(--stone-200);background:rgba(255,255,255,.9);backdrop-filter:blur(12px)}
-.nav-inner{max-width:1040px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:14px 22px}
-.nav-logo{font-family:'Noto Serif JP',serif;font-size:21px;font-weight:700;color:var(--stone-900);text-decoration:none;letter-spacing:.14em}
-.nav-logo span{color:var(--gold)}
-.nav-links{display:flex;align-items:center;gap:26px;font-size:13.5px;color:var(--stone-600)}
-.nav-links a{text-decoration:none;color:inherit;transition:color .2s}
-.nav-links a:hover{color:var(--stone-900)}
-.nav-cta{display:inline-block;padding:9px 22px;border-radius:999px;background:var(--stone-900);color:#fff;font-size:13.5px;font-weight:700;text-decoration:none;transition:all .2s}
-.nav-cta:hover{background:var(--stone-700);transform:translateY(-1px)}
-.nav-mobile-btn{display:none;background:none;border:none;cursor:pointer;color:var(--stone-600)}
-.nav-mobile-menu{display:none}
-@media(max-width:820px){
-  .nav-links{display:none}
-  .nav-mobile-btn{display:block}
-  .nav-mobile-menu.open{display:flex;flex-direction:column;gap:14px;padding:14px 22px 18px;border-top:1px solid var(--stone-200);background:#fff;font-size:14px;color:var(--stone-600)}
-  .nav-mobile-menu a{text-decoration:none;color:inherit}
-  .nav-mobile-menu .nav-cta{text-align:center;margin-top:8px}
+strong{color:var(--stone-900);font-weight:700}
+a{color:inherit}
+.serif{font-family:var(--serif)}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+.narrow{max-width:760px;margin:0 auto;padding:0 20px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.nav{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(20,18,16,.72);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.08)}
+.nav-in{max-width:1080px;margin:0 auto;height:56px;display:flex;align-items:center;justify-content:space-between;padding:0 20px;gap:16px}
+.logo{font-family:var(--serif);font-size:20px;font-weight:700;color:#fff;text-decoration:none;letter-spacing:.14em}
+.logo span{color:var(--gold)}
+.nav-links{display:none;align-items:center;gap:22px;font-size:13px;color:rgba(255,255,255,.72)}
+.nav-links a{text-decoration:none}
+.nav-links a:hover{color:#fff}
+.nav-count{font-size:11.5px;color:var(--gold-light);letter-spacing:.04em}
+.nav-cta{display:inline-block;padding:8px 20px;border-radius:999px;background:linear-gradient(135deg,var(--gold),var(--gold-deep));color:#fff!important;font-weight:700;text-decoration:none}
+.nav-btn{background:none;border:0;color:#fff;cursor:pointer;padding:6px}
+.nav-menu{display:none;flex-direction:column;gap:2px;padding:6px 20px 16px;background:var(--ink);border-top:1px solid rgba(255,255,255,.08)}
+.nav-menu.open{display:flex}
+.nav-menu a{padding:10px 0;color:rgba(255,255,255,.82);text-decoration:none;font-size:14px;border-bottom:1px solid rgba(255,255,255,.06)}
+.nav-menu a.nav-cta{margin-top:10px;text-align:center;border:0;padding:12px}
+@media(min-width:900px){.nav-links{display:flex}.nav-btn,.nav-menu{display:none!important}}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:56px;padding:0 36px;border-radius:999px;background:linear-gradient(135deg,var(--gold),var(--gold-deep));color:#fff;font-size:16.5px;font-weight:700;text-decoration:none;letter-spacing:.04em;box-shadow:0 6px 24px rgba(201,168,76,.38);transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 32px rgba(201,168,76,.5)}
+.btn .arr{font-size:14px}
+.btn-block{display:flex;width:100%}
+.hero{position:relative;background:var(--ink);color:#fff;overflow:hidden;padding-top:56px}
+.hero-photo{position:relative;height:clamp(190px,31svh,320px)}
+.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 80%}
+.hero-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,18,16,0) 45%,rgba(20,18,16,.7) 80%,var(--ink) 100%)}
+.hero-cap{position:absolute;top:68px;right:14px;z-index:2;font-size:10.5px;color:rgba(255,255,255,.78);background:rgba(20,18,16,.55);padding:3px 10px;border-radius:999px;letter-spacing:.03em}
+.hero-in{position:relative;z-index:1;width:100%;max-width:1080px;margin:-40px auto 0;padding:0 20px 34px}
+.count-chip{display:inline-flex;align-items:baseline;gap:6px;padding:8px 18px 8px 14px;border-radius:12px;background:rgba(20,18,16,.82);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);border:1px solid rgba(201,168,76,.55)}
+.count-chip .lbl{font-size:12.5px;color:rgba(255,255,255,.85);font-weight:500}
+.count-chip .big{font-family:var(--serif);font-size:38px;font-weight:700;line-height:1;color:var(--gold-light)}
+.count-chip .suf{font-size:15px;font-weight:700;color:var(--gold-light)}
+.live{display:inline-block;width:7px;height:7px;border-radius:50%;background:#7bd88f;margin-right:4px;transform:translateY(-3px);box-shadow:0 0 0 0 rgba(123,216,143,.6);animation:ping 2.2s infinite}
+@keyframes ping{0%{box-shadow:0 0 0 0 rgba(123,216,143,.55)}70%{box-shadow:0 0 0 8px rgba(123,216,143,0)}100%{box-shadow:0 0 0 0 rgba(123,216,143,0)}}
+.hero-note{margin-top:6px;font-size:10.5px;color:rgba(255,255,255,.5);line-height:1.6}
+.hero h1{margin-top:14px;font-family:var(--serif);font-size:27px;line-height:1.45;font-weight:700;letter-spacing:.01em}
+.hero h1 .g{color:var(--gold-light)}
+.hero-sub{margin-top:10px;font-size:14px;line-height:1.85;color:rgba(255,255,255,.74)}
+.hero-sub strong{color:#fff}
+.hero-cta{margin-top:18px}
+.hero-fine{margin-top:10px;font-size:12px;color:rgba(255,255,255,.55);text-align:center}
+.hero-by{margin-top:16px;display:flex;flex-wrap:wrap;gap:6px 14px;font-size:11.5px;color:rgba(255,255,255,.55)}
+.hero-by span::before{content:"";display:inline-block;width:12px;height:1px;background:var(--gold);vertical-align:middle;margin-right:6px}
+@media(min-width:420px){.hero h1{font-size:31px}}
+@media(min-width:900px){
+  .hero{padding:120px 0 90px}
+  .hero-photo{display:none}
+  .hero-cap{display:none}
+  .hero-in{display:grid;grid-template-columns:1.1fr 1fr;gap:48px;align-items:center;padding-bottom:0;margin-top:0}
+  .hero h1{font-size:40px}
+  .hero-sub{font-size:16px}
+  .hero-cta .btn{display:inline-flex;width:auto}
+  .hero-fine{text-align:left}
+  .hero-visual{display:block!important}
 }
-
-/* HERO */
-.hero{position:relative;min-height:100vh;display:flex;align-items:center;background:var(--ink);padding-top:64px;overflow:hidden}
-.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(201,168,76,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(201,168,76,.06) 1px,transparent 1px);background-size:56px 56px;mask-image:radial-gradient(ellipse 80% 70% at 50% 40%,#000 40%,transparent 100%);-webkit-mask-image:radial-gradient(ellipse 80% 70% at 50% 40%,#000 40%,transparent 100%);pointer-events:none}
-.hero-glow{position:absolute;top:14%;left:50%;transform:translateX(-50%);width:680px;height:440px;max-width:120vw;background:radial-gradient(ellipse,rgba(201,168,76,.16) 0%,transparent 70%);pointer-events:none}
-.hero-inner{position:relative;max-width:920px;margin:0 auto;padding:56px 24px 72px;text-align:center}
-.hero-badges{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-bottom:28px}
-.hero-badge{display:inline-flex;align-items:center;gap:8px;padding:6px 16px;border:1px solid rgba(201,168,76,.34);border-radius:999px;font-size:12px;color:var(--gold-light);background:rgba(201,168,76,.07)}
-.hero-badge .dot{width:6px;height:6px;border-radius:50%;background:var(--gold);animation:pulse 2.4s infinite}
-.hero-badge.run{border-color:rgba(255,255,255,.22);color:rgba(255,255,255,.82);background:rgba(255,255,255,.04);font-weight:700;letter-spacing:.03em}
-@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
-.hero h1{font-family:'Noto Serif JP',serif;font-size:31px;font-weight:700;line-height:1.5;color:#fff;letter-spacing:.01em}
-.hero-hl{position:relative;display:inline-block}
-.hero-hl .t{position:relative;z-index:1}
-.hero-hl .u{position:absolute;bottom:2px;left:0;z-index:0;width:100%;height:13px;background:rgba(201,168,76,.34)}
-.hero-sub{max-width:600px;margin:26px auto 0;font-size:15px;line-height:2.05;color:rgba(255,255,255,.66)}
-.hero-sub strong{color:rgba(255,255,255,.96)}
-.hero-stats{display:flex;flex-wrap:wrap;justify-content:center;margin-top:40px;border:1px solid rgba(255,255,255,.1);border-radius:16px;overflow:hidden;background:rgba(255,255,255,.03)}
-.hero-stat{flex:1;min-width:130px;padding:20px 16px;text-align:center;border-right:1px solid rgba(255,255,255,.08)}
-.hero-stat:last-child{border-right:none}
-.hero-stat .n{font-family:'Noto Serif JP',serif;font-size:25px;font-weight:700;color:var(--gold-light)}
-.hero-stat .l{margin-top:4px;font-size:11.5px;color:rgba(255,255,255,.42);letter-spacing:.02em}
-.hero-cta{margin-top:44px;display:flex;flex-direction:column;align-items:center;gap:12px}
-.btn-gold{display:inline-block;padding:18px 52px;border-radius:999px;background:linear-gradient(135deg,var(--gold),var(--gold-deep));color:#fff;font-size:17px;font-weight:700;text-decoration:none;box-shadow:0 6px 26px rgba(201,168,76,.42);transition:all .25s;letter-spacing:.04em}
-.btn-gold:hover{transform:translateY(-2px);box-shadow:0 10px 34px rgba(201,168,76,.55)}
-.btn-line{display:inline-block;padding:16px 44px;border-radius:999px;background:linear-gradient(135deg,var(--gold),var(--gold-deep));color:#fff;font-size:16px;font-weight:700;text-decoration:none;box-shadow:0 4px 20px rgba(201,168,76,.4);transition:all .25s}
-.btn-line:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(201,168,76,.5)}
-.hero-note{font-size:13px;color:rgba(255,255,255,.4)}
-.hero-fine{font-size:11.5px;color:rgba(255,255,255,.32);max-width:460px;line-height:1.7}
-.scroll-hint{margin-top:46px;font-size:11px;letter-spacing:.2em;color:rgba(255,255,255,.28);display:flex;flex-direction:column;align-items:center;gap:8px;text-transform:uppercase}
-.scroll-hint .arr{animation:bounce 2.2s infinite}
-@keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(6px)}}
-@keyframes glow{0%{box-shadow:0 6px 26px rgba(201,168,76,.4)}100%{box-shadow:0 10px 40px rgba(201,168,76,.68)}}
-@media(min-width:640px){.hero h1{font-size:44px}}
-@media(min-width:768px){.hero h1{font-size:54px;line-height:1.42}.hero-hl .u{height:16px;bottom:6px}.hero-sub{font-size:17.5px}.hero-stat .n{font-size:31px}}
-
-/* SECTIONS */
-.sec{padding:66px 24px;position:relative}
-.w1040{max-width:1040px;margin:0 auto}
-.w760{max-width:760px;margin:0 auto}
-.bg-w{background:#fff}
-.bg-s50{background:var(--stone-50)}
-.bg-ink{background:var(--ink)}
-.sec-head{text-align:center;margin-bottom:8px}
-.sec-t{font-family:'Noto Serif JP',serif;font-size:26px;font-weight:700;color:var(--stone-900);text-align:center;line-height:1.5;letter-spacing:.01em}
-.sec-t .g{color:var(--gold-deep)}
-.sec-s{margin-top:16px;font-size:14.5px;color:var(--stone-500);text-align:center;line-height:1.95}
-.mt-16{margin-top:16px}.mt-24{margin-top:24px}.mt-32{margin-top:32px}.mt-40{margin-top:40px}
-@media(min-width:768px){.sec{padding:100px 24px}.sec-t{font-size:33px}}
-
-/* FOUNDERS */
-.founders{display:grid;gap:18px;margin-top:36px}
-@media(min-width:720px){.founders{grid-template-columns:1fr 1fr}}
-.founder{position:relative;padding:30px 28px;border:1px solid var(--stone-200);border-radius:20px;background:linear-gradient(160deg,var(--stone-50),#fff);box-shadow:0 2px 14px rgba(0,0,0,.04)}
-.founder-top{display:flex;align-items:center;gap:16px}
-.mono{width:60px;height:60px;flex-shrink:0;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Noto Serif JP',serif;font-size:24px;font-weight:700;color:#fff;background:linear-gradient(135deg,var(--gold),var(--gold-deep));box-shadow:0 4px 14px rgba(201,168,76,.35);letter-spacing:.02em}
-.founder-name{font-family:'Noto Serif JP',serif;font-size:20px;font-weight:700;color:var(--stone-900)}
-.founder-role{margin-top:2px;font-size:12.5px;color:var(--gold-deep);font-weight:700;letter-spacing:.04em}
-.founder p{margin-top:16px;font-size:14px;line-height:1.95;color:var(--stone-600)}
-.founder-tags{margin-top:16px;display:flex;flex-wrap:wrap;gap:7px}
-.tag{padding:4px 12px;border-radius:999px;background:var(--stone-100);font-size:11.5px;color:var(--stone-500);font-weight:500}
-.founders-note{margin-top:22px;text-align:center;font-size:13.5px;color:var(--stone-500);line-height:1.9}
-
-/* AXES (2本柱) */
-.axes{display:grid;gap:16px;margin-top:36px}
-@media(min-width:720px){.axes{grid-template-columns:1fr 1fr}}
-.axis{position:relative;padding:32px 30px;border:1px solid var(--stone-200);border-radius:22px;background:#fff;box-shadow:0 3px 16px rgba(0,0,0,.05);overflow:hidden}
-.axis::before{content:"";position:absolute;top:0;left:0;width:100%;height:3px;background:linear-gradient(90deg,var(--gold),var(--gold-deep))}
-.axis .num{font-family:'Noto Serif JP',serif;font-size:14px;font-weight:700;color:var(--gold-deep);letter-spacing:.1em}
-.axis h3{margin-top:8px;font-family:'Noto Serif JP',serif;font-size:22px;font-weight:700;color:var(--stone-900);line-height:1.5}
-.axis .lead{margin-top:12px;font-size:14px;line-height:1.95;color:var(--stone-600)}
-.axis ul{margin-top:18px;list-style:none;display:flex;flex-direction:column;gap:9px}
-.axis li{display:flex;align-items:flex-start;gap:10px;font-size:13.5px;color:var(--stone-700)}
-.axis li .mk{flex-shrink:0;color:var(--gold-deep);font-weight:700;margin-top:1px}
-
-/* PAIN */
-.pain-g{display:grid;gap:12px;margin-top:32px}
-@media(min-width:640px){.pain-g{grid-template-columns:1fr 1fr}}
-.pain-c{padding:18px 22px;border-left:3px solid var(--stone-300);background:var(--stone-50);border-radius:0 10px 10px 0;font-size:14px;color:var(--stone-600);line-height:1.8;transition:border-color .3s}
-.pain-c:hover{border-left-color:var(--gold)}
-.pain-c .lbl{font-size:11px;font-weight:700;color:var(--stone-400);margin-bottom:5px;letter-spacing:.14em}
-.callout{margin-top:32px;padding:32px;border:1px solid var(--stone-200);border-radius:20px;background:linear-gradient(160deg,var(--stone-50),#fff);font-size:15px;line-height:2;color:var(--stone-700);text-align:center;box-shadow:0 2px 12px rgba(0,0,0,.05)}
-.callout strong{color:var(--stone-900)}
-@media(min-width:768px){.callout{font-size:17px;padding:40px}}
-
-/* STORY */
-.story-body{margin-top:28px;font-size:15px;line-height:2.15;color:var(--stone-700);text-align:center}
-.story-body p+p{margin-top:18px}
-@media(min-width:768px){.story-body{font-size:17.5px}}
-.result-g{display:grid;gap:16px;margin-top:28px;grid-template-columns:1fr}
-@media(min-width:768px){.result-g{grid-template-columns:1fr 1fr 1fr}}
-.result-img{width:100%;border-radius:14px;box-shadow:0 4px 16px rgba(0,0,0,.1);transition:transform .2s}
-.result-img:hover{transform:scale(1.01)}
-.result-caption{margin-top:8px;font-size:12px;color:var(--stone-400);text-align:center}
-
-/* FEATURES / cards */
-.feat-g{display:grid;gap:18px;margin-top:36px}
-@media(min-width:640px){.feat-g{grid-template-columns:1fr 1fr}}
-.feat-c{position:relative;padding:28px;border:1px solid var(--stone-200);border-radius:20px;background:#fff;box-shadow:0 2px 8px rgba(0,0,0,.04);transition:all .25s}
-.feat-c:hover{box-shadow:0 10px 26px rgba(0,0,0,.09);transform:translateY(-3px)}
-.feat-c .idx{font-family:'Noto Serif JP',serif;font-size:13px;font-weight:700;color:var(--gold-deep);letter-spacing:.14em}
-.feat-c h3{margin-top:8px;font-family:'Noto Serif JP',serif;font-size:19px;font-weight:700;color:var(--stone-900)}
-.feat-c p{margin-top:12px;font-size:13.5px;line-height:1.95;color:var(--stone-600)}
-.feat-c .results{margin-top:16px;padding:12px 14px;border-radius:10px;background:var(--stone-50);border-left:2px solid var(--gold);font-size:13px;color:var(--gold-deep);font-weight:500}
-
-/* COMMUNITY / channels */
-.comm-g{display:grid;gap:16px;margin-top:32px}
-@media(min-width:640px){.comm-g{grid-template-columns:1fr 1fr}}
-.comm-c{padding:24px 26px;border:1px solid var(--stone-200);border-radius:16px;background:#fff;transition:box-shadow .2s,transform .2s}
-.comm-c:hover{box-shadow:0 6px 18px rgba(0,0,0,.07);transform:translateY(-2px)}
-.comm-c .idx{font-family:'Noto Serif JP',serif;font-size:12.5px;font-weight:700;color:var(--gold-deep);letter-spacing:.12em}
-.comm-c h3{margin-top:6px;font-weight:700;font-size:16px;color:var(--stone-900)}
-.comm-c p{margin-top:10px;font-size:13.5px;line-height:1.9;color:var(--stone-600)}
-
-/* WINS (メンバーの動き) */
-.wins-wrap{margin-top:32px;border:1px solid rgba(201,168,76,.3);border-radius:20px;background:linear-gradient(160deg,#fffdf7,#fff);padding:8px 8px}
-.win{display:flex;gap:16px;align-items:flex-start;padding:20px 22px;border-bottom:1px solid var(--stone-100)}
-.win:last-child{border-bottom:none}
-.win .mk{flex-shrink:0;width:38px;height:38px;border-radius:50%;background:rgba(201,168,76,.12);border:1px solid rgba(201,168,76,.35);display:flex;align-items:center;justify-content:center;font-family:'Noto Serif JP',serif;font-weight:700;color:var(--gold-deep);font-size:15px}
-.win .body{flex:1}
-.win .h{font-size:15px;font-weight:700;color:var(--stone-900);line-height:1.6}
-.win .d{margin-top:6px;font-size:13.5px;color:var(--stone-600);line-height:1.85}
-.win .d .who{color:var(--gold-deep);font-weight:700}
-.wins-foot{margin-top:18px;text-align:center;font-size:13px;color:var(--stone-500);line-height:1.9}
-
-/* VOICE */
-.voice-g{display:grid;gap:16px;margin-top:28px}
-@media(min-width:640px){.voice-g{grid-template-columns:1fr 1fr}}
-@media(min-width:900px){.voice-g{grid-template-columns:1fr 1fr 1fr}}
-.voice-c{padding:22px 24px;border:1px solid var(--stone-200);border-radius:16px;background:#fff}
-.voice-c .meta{display:flex;align-items:center;gap:12px;margin-bottom:12px}
-.voice-c .avatar{width:40px;height:40px;border-radius:50%;background:var(--stone-100);display:flex;align-items:center;justify-content:center;font-family:'Noto Serif JP',serif;font-weight:700;color:var(--stone-500);font-size:16px;flex-shrink:0}
-.voice-c .name{font-size:13px;font-weight:700;color:var(--stone-800)}
-.voice-c .attr{font-size:12px;color:var(--stone-400)}
-.voice-c .stars{color:var(--gold);font-size:14px;margin-bottom:10px;letter-spacing:.1em}
-.voice-c p{font-size:13.5px;line-height:1.95;color:var(--stone-600)}
-
-/* PRICING */
-.pr-card{padding:40px 32px;border:1px solid var(--stone-200);border-radius:24px;background:#fff;text-align:center;box-shadow:0 10px 40px rgba(0,0,0,.08);margin-top:36px;position:relative;overflow:hidden}
-.pr-card::before{content:"";position:absolute;top:0;left:0;width:100%;height:4px;background:linear-gradient(90deg,var(--gold),var(--gold-deep))}
-.pr-lbl{font-size:15px;color:var(--stone-500);letter-spacing:.06em}
-.pr-price{margin-top:6px;font-family:'Noto Serif JP',serif;font-size:64px;font-weight:700;color:var(--stone-900);line-height:1}
-.pr-price .unit{font-size:18px;font-weight:400;color:var(--stone-500);margin-left:4px}
-.pr-daily{margin-top:12px;font-size:13.5px;color:var(--stone-400)}
-.pr-inc{max-width:540px;margin:32px auto 0;text-align:left}
-.pr-cat{margin-top:24px;font-size:11.5px;font-weight:700;letter-spacing:.14em;color:var(--gold-deep)}
-.pr-cat:first-child{margin-top:0}
-.pr-items{margin-top:12px;list-style:none}
-.pr-items li{display:flex;align-items:flex-start;gap:11px;font-size:13.5px;color:var(--stone-600);padding:7px 0;border-bottom:1px solid var(--stone-100)}
-.pr-items li:last-child{border-bottom:none}
-.pr-items .ck{flex-shrink:0;color:var(--gold-deep);margin-top:2px;font-weight:700}
-.pr-note{margin-top:32px;padding:22px;border-radius:14px;background:var(--stone-50);border:1px solid var(--stone-100);font-size:13.5px;color:var(--stone-600);text-align:left;line-height:1.95}
-.pr-note strong{color:var(--stone-900)}
-.pr-warn{margin-top:22px;padding:22px;background:#fffaf0;border:1px solid #e6c780;border-radius:14px;text-align:left}
-.pr-warn h4{margin:0 0 12px;color:#7a4a00;font-size:14.5px;font-weight:700}
-.pr-warn p{margin:0 0 10px;color:#5a3a00;font-size:13px;line-height:1.8}
-.pr-warn ul{margin:0 0 10px;padding-left:18px;color:#5a3a00;font-size:13px;line-height:1.85}
-.pr-warn a{color:#0d4a8a;text-decoration:underline}
-.pr-fine{margin-top:12px;font-size:11.5px;color:var(--stone-400);line-height:1.7}
-@media(min-width:768px){.pr-card{padding:56px}.pr-price{font-size:78px}}
-
-/* FAQ */
-.faq-list{margin-top:32px;display:flex;flex-direction:column;gap:12px}
-.faq-i{overflow:hidden;border:1px solid var(--stone-200);border-radius:14px;background:#fff}
-.faq-q{display:flex;align-items:center;justify-content:space-between;width:100%;padding:20px 22px;background:none;border:none;cursor:pointer;text-align:left;font-size:14.5px;font-weight:700;color:var(--stone-800);transition:background .2s;font-family:'Noto Sans JP',sans-serif;gap:14px}
-.faq-q:hover{background:var(--stone-50)}
-.faq-ic{flex-shrink:0;width:22px;height:22px;color:var(--gold-deep);transition:transform .25s}
-.faq-i.open .faq-ic{transform:rotate(45deg)}
-.faq-a{display:none;padding:14px 22px 20px;border-top:1px solid var(--stone-100);font-size:13.5px;line-height:1.95;color:var(--stone-600)}
-.faq-i.open .faq-a{display:block}
-.faq-a a{color:#0d4a8a;text-decoration:underline}
-
-/* CTA */
-.cta-b{text-align:center}
-.cta-b h2{font-family:'Noto Serif JP',serif;font-size:26px;font-weight:700;color:#fff;line-height:1.55}
-.cta-b .ds{margin-top:20px;font-size:15px;line-height:2.1;color:rgba(255,255,255,.6)}
-.cta-b .ds strong{color:rgba(255,255,255,.96)}
-@media(min-width:768px){.cta-b h2{font-size:35px}}
-
-/* FOOTER */
-.ft{border-top:1px solid var(--stone-200);background:#fff;padding:40px 24px}
-.ft-in{max-width:1040px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:20px;font-size:14px;color:var(--stone-400)}
-.ft-logo{font-family:'Noto Serif JP',serif;font-size:19px;font-weight:700;color:var(--stone-800);letter-spacing:.12em}
+.hero-visual{display:none;position:relative}
+.hero-visual .main{border-radius:18px;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.5);border:1px solid rgba(255,255,255,.1)}
+.hero-visual .main img{aspect-ratio:16/10;object-fit:cover;object-position:50% 100%;width:100%}
+.hero-visual .sub{position:absolute;left:-34px;bottom:-40px;width:36%;border-radius:14px;overflow:hidden;border:4px solid var(--ink);box-shadow:0 12px 30px rgba(0,0,0,.5)}
+.hero-visual .sub img{aspect-ratio:3/4;object-fit:cover;width:100%}
+.hero-visual figcaption{position:absolute;right:12px;bottom:12px;font-size:11px;color:#fff;background:rgba(20,18,16,.6);padding:3px 10px;border-radius:999px}
+.sec{padding:64px 0}
+.bg-paper{background:var(--stone-100)}
+.bg-white{background:#fff}
+.bg-ink{background:var(--ink);color:rgba(255,255,255,.78)}
+.head{display:grid;grid-template-columns:auto 1fr;gap:6px 12px;align-items:center;margin-bottom:28px}
+.head h2,.head p.lead{grid-column:1/-1}
+.head .no{font-family:var(--serif);font-size:15px;font-weight:700;color:var(--gold-deep);border-bottom:2px solid var(--gold);padding-bottom:2px;min-width:30px;letter-spacing:.06em}
+.head .en{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--stone-400);font-weight:700}
+.head h2{font-family:var(--serif);font-size:24px;line-height:1.5;font-weight:700;color:var(--stone-900)}
+.head h2 .g{color:var(--gold-deep)}
+.head p.lead{margin-top:4px;font-size:14px;color:var(--stone-500);line-height:1.9}
+.bg-ink .head h2{color:#fff}
+.bg-ink .head .en{color:rgba(255,255,255,.4)}
+.bg-ink .head .no{color:var(--gold-light)}
+.bg-ink .head p.lead{color:rgba(255,255,255,.6)}
+@media(min-width:768px){.sec{padding:96px 0}.head h2{font-size:32px}.head{margin-bottom:40px}.head h2,.head p.lead{grid-column:2}.head .no{grid-row:span 3;align-self:start;margin-top:6px}}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.stat{background:#fff;border:1px solid var(--stone-200);border-radius:14px;padding:18px 14px 16px;position:relative;overflow:hidden}
+.stat::before{content:"";position:absolute;left:0;top:0;height:3px;width:40px;background:var(--gold)}
+.stat .v{font-family:var(--serif);font-weight:700;color:var(--stone-900);line-height:1.1;font-size:34px;font-variant-numeric:tabular-nums}
+.stat .v small{font-size:14px;font-weight:700;margin-left:2px;color:var(--stone-700)}
+.stat .k{margin-top:8px;font-size:12.5px;color:var(--stone-600);line-height:1.6}
+.stat.wide{grid-column:span 2;display:flex;align-items:center;justify-content:space-between;gap:12px;background:var(--ink);border-color:var(--ink)}
+.stat.wide .v{color:var(--gold-light);font-size:40px}
+.stat.wide .v small{color:var(--gold-light)}
+.stat.wide .k{margin-top:0;color:rgba(255,255,255,.75);text-align:right;font-size:13px}
+@media(min-width:768px){.stats{grid-template-columns:repeat(4,1fr);gap:14px}.stat.wide{grid-column:span 4}.stat{padding:24px 22px}.stat .v{font-size:44px}}
+.chart{margin-top:22px;background:#fff;border:1px solid var(--stone-200);border-radius:14px;padding:20px 16px 16px}
+.chart-t{display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap}
+.chart-t h3{font-size:14.5px;font-weight:700;color:var(--stone-900)}
+.chart-t span{font-size:11.5px;color:var(--stone-500)}
+.plot{position:relative;margin-top:18px;height:200px;border-bottom:1px solid var(--stone-400)}
+.gridline{position:absolute;left:0;right:0;border-top:1px dashed var(--stone-200);font-size:10px;color:var(--stone-400)}
+.gridline i{position:absolute;left:0;top:-8px;font-style:normal;background:#fff;padding-right:4px;line-height:1}
+.bars{position:absolute;inset:0 0 0 26px;display:flex;align-items:flex-end;justify-content:space-around;gap:8px}
+.bar{flex:1;max-width:56px;height:100%;display:flex;flex-direction:column;justify-content:flex-end;align-items:center}
+.bar .fill{width:100%;height:var(--h);background:linear-gradient(180deg,var(--gold),var(--gold-deep));border-radius:6px 6px 0 0;position:relative;transition:height 1s cubic-bezier(.22,1,.36,1)}
+.bar:not(.last) .fill{background:linear-gradient(180deg,#d9c38a,#b89a58)}
+.bar .num{font-size:12.5px;font-weight:700;color:var(--stone-800);margin-bottom:4px;font-variant-numeric:tabular-nums}
+.bar.last .num{color:var(--gold-deep);font-size:14px}
+.js .plot:not(.on) .fill{height:0}
+.months{display:flex;justify-content:space-around;gap:8px;margin-left:26px;margin-top:6px}
+.months span{flex:1;max-width:56px;text-align:center;font-size:11.5px;color:var(--stone-500)}
+.fine{margin-top:12px;font-size:11px;line-height:1.75;color:var(--stone-500)}
+.bg-ink .fine{color:rgba(255,255,255,.45)}
+.rhythm{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}
+.rhythm span{font-size:12.5px;font-weight:700;color:var(--stone-800);background:#fff;border:1px solid var(--stone-200);border-radius:999px;padding:5px 14px}
+.rhythm b{color:var(--gold-deep)}
+.feature{position:relative;border-radius:18px;background:var(--ink);color:rgba(255,255,255,.8);padding:26px 22px 24px;overflow:hidden;border:1px solid rgba(201,168,76,.45)}
+.feature::after{content:"";position:absolute;right:-60px;top:-60px;width:220px;height:220px;background:radial-gradient(circle,rgba(201,168,76,.22),transparent 70%);pointer-events:none}
+.ribbon{display:inline-block;font-size:11.5px;font-weight:700;letter-spacing:.06em;color:var(--ink);background:var(--gold-light);padding:3px 12px;border-radius:999px}
+.feature .when{margin-top:14px;font-size:12.5px;color:var(--gold-light);font-weight:700;letter-spacing:.04em}
+.feature h3{margin-top:4px;font-family:var(--serif);font-size:26px;line-height:1.45;color:#fff}
+.feature p.d{margin-top:12px;font-size:14px;line-height:1.95}
+.feature p.d strong{color:#fff}
+.flow{margin-top:18px;list-style:none;display:grid;gap:8px;counter-reset:f}
+.flow li{counter-increment:f;display:flex;gap:12px;align-items:flex-start;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:12px 14px;font-size:13.5px;line-height:1.7;color:rgba(255,255,255,.86)}
+.flow li::before{content:counter(f);flex-shrink:0;width:24px;height:24px;border-radius:50%;background:var(--gold);color:var(--ink);font-weight:700;font-size:12.5px;display:flex;align-items:center;justify-content:center;margin-top:1px}
+.feature .tags{margin-top:16px;display:flex;flex-wrap:wrap;gap:6px}
+.feature .tags span{font-size:11.5px;color:rgba(255,255,255,.7);border:1px solid rgba(255,255,255,.18);border-radius:999px;padding:2px 10px}
+@media(min-width:768px){.feature{padding:40px 40px 36px}.feature h3{font-size:32px}.flow{grid-template-columns:repeat(3,1fr)}}
+.week{margin-top:14px;list-style:none;background:#fff;border:1px solid var(--stone-200);border-radius:16px;overflow:hidden}
+.week li{display:grid;grid-template-columns:92px 1fr;gap:12px;padding:16px;border-bottom:1px solid var(--stone-100)}
+.week li:last-child{border-bottom:0}
+.week .fq{font-size:12px;font-weight:700;color:var(--gold-deep);line-height:1.5}
+.week .fq b{display:block;font-family:var(--serif);font-size:17px;color:var(--stone-900)}
+.week h4{font-size:15px;font-weight:700;color:var(--stone-900);line-height:1.5}
+.week p{margin-top:4px;font-size:13px;line-height:1.8;color:var(--stone-600)}
+.week .pill{display:inline-block;margin-left:6px;font-size:10.5px;font-weight:700;color:var(--stone-500);background:var(--stone-100);border-radius:4px;padding:1px 6px;vertical-align:2px}
+@media(min-width:768px){.week li{grid-template-columns:150px 1fr;padding:20px 26px}}
+.meets{display:grid;gap:26px}
+.meet-h{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:10px}
+.meet-h .n{font-family:var(--serif);font-size:18px;font-weight:700;color:var(--gold-light)}
+.meet-h .d{font-size:12.5px;color:rgba(255,255,255,.6)}
+.ph{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.ph figure{border-radius:12px;overflow:hidden;background:#222;position:relative}
+.ph img{width:100%;height:100%;object-fit:cover}
+.ph .w2{grid-column:span 2;aspect-ratio:16/10}
+.ph .sq{aspect-ratio:4/5}
+.ph figcaption{position:absolute;left:8px;bottom:8px;font-size:10.5px;color:#fff;background:rgba(20,18,16,.6);padding:2px 8px;border-radius:999px}
+@media(min-width:900px){.ph{gap:12px}.ph .w2{grid-column:auto;aspect-ratio:3/2}.ph .sq{aspect-ratio:3/2}}
+.meet-arrow{display:flex;align-items:center;gap:10px;font-size:12px;color:rgba(255,255,255,.5);margin:0 0 4px}
+.meet-arrow::before,.meet-arrow::after{content:"";flex:1;height:1px;background:rgba(255,255,255,.14)}
+.quotes{margin-top:26px;display:grid;gap:10px}
+@media(min-width:768px){.quotes{grid-template-columns:1fr 1fr}}
+.quote{border-left:3px solid var(--gold);background:rgba(255,255,255,.05);border-radius:0 12px 12px 0;padding:14px 18px}
+.quote p{font-family:var(--serif);font-size:16px;color:#fff;line-height:1.7}
+.quote span{display:block;margin-top:4px;font-size:11.5px;color:rgba(255,255,255,.5)}
+.next{margin-top:18px;padding:14px 18px;border:1px dashed rgba(201,168,76,.5);border-radius:12px;font-size:14px;color:#fff}
+.next b{color:var(--gold-light)}
+.pain{position:relative;overflow:hidden;background:var(--ink);color:rgba(255,255,255,.78)}
+.pain::before{content:"";position:absolute;left:-20%;right:-20%;top:210px;height:340px;background:linear-gradient(90deg,rgba(201,168,76,.16),rgba(201,168,76,.05));transform:skewY(-9deg);pointer-events:none}
+.pain::after{content:"";position:absolute;left:-20%;right:-20%;bottom:-120px;height:260px;background:rgba(201,168,76,.08);transform:skewY(-9deg);pointer-events:none}
+.pain .wrap{position:relative;z-index:1;max-width:980px}
+.pain .head h2{font-size:26px;color:#fff}
+.pain .head h2 .g{color:var(--gold-light)}
+.pain .head p.lead{font-size:15px}
+.pn-list{list-style:none;display:grid;gap:22px}
+.pn{min-width:0}
+.pn-voice{position:relative;display:grid;grid-template-columns:48px minmax(0,1fr);gap:12px;align-items:center;background:#fff;border-radius:22px;padding:18px 16px 18px 14px;box-shadow:0 14px 34px rgba(0,0,0,.28)}
+.pn-voice::after{content:"";position:absolute;left:38px;bottom:-13px;width:26px;height:26px;background:#fff;border-radius:0 0 6px 0;transform:rotate(45deg)}
+.pn-ic{width:48px;height:48px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:var(--gold-wash);color:var(--gold-deep);border:1.5px solid rgba(201,168,76,.5)}
+.pn-ic svg{width:26px;height:26px}
+.pn-no{display:block;font-size:11px;font-weight:700;letter-spacing:.18em;color:var(--stone-400);line-height:1.4}
+.pn-q{text-wrap:balance;margin-top:2px;font-size:22px;line-height:1.45;font-weight:700;color:var(--stone-900);letter-spacing:.01em}
+.pn-arrow{display:block;width:22px;height:22px;margin:18px 0 6px 40px;color:var(--gold)}
+.pn-ans{display:flex;flex-wrap:wrap;align-items:center;gap:6px 10px;padding:12px 16px;border-radius:16px;background:rgba(201,168,76,.13);border:1px solid rgba(201,168,76,.45)}
+.pn-tag{flex-shrink:0;display:inline-block;padding:3px 12px;border-radius:999px;background:linear-gradient(135deg,var(--gold-light),var(--gold));color:var(--ink);font-size:13px;font-weight:700;letter-spacing:.06em;line-height:1.6}
+.pn-a{font-size:16px;line-height:1.65;font-weight:700;color:#fff;text-wrap:balance}
+.pn-next{margin-top:34px;text-align:center}
+.pn-next-t{font-family:var(--serif);font-size:22px;line-height:1.6;font-weight:700;color:#fff}
+.pn-next-t .g{color:var(--gold-light)}
+.pn-next-s{margin:12px auto 0;max-width:620px;font-size:15px;line-height:1.95;color:rgba(255,255,255,.72)}
+.pn-next-s strong{color:#fff}
+.pn-next-a{display:inline-flex;align-items:center;gap:8px;margin-top:18px;min-height:48px;padding:0 24px;border-radius:999px;border:1.5px solid var(--gold);color:var(--gold-light);font-size:15px;font-weight:700;text-decoration:none}
+.pn-next-a svg{width:18px;height:18px}
+.pn-next-a:hover{background:rgba(201,168,76,.14)}
+@media(min-width:768px){
+  .pain .head h2{font-size:34px}
+  .pain::before{top:260px;height:460px}
+  .pn-list{grid-template-columns:1fr 1fr;gap:34px 26px}
+  .pn-voice{grid-template-columns:56px minmax(0,1fr);gap:16px;padding:22px 22px 22px 18px}
+  .pn-ic{width:56px;height:56px}.pn-ic svg{width:30px;height:30px}
+  .pn-q{font-size:25px}
+  .pn-voice::after{left:44px}
+  .pn-arrow{margin-left:46px}
+  .pn-a{font-size:17px}
+  .pn-next-t{font-size:28px}
+  .pn-next-s{font-size:16px}
+}
+@media (prefers-reduced-motion: reduce){.pn-next-a{transition:none}}
+.axes{display:grid;gap:12px}
+@media(min-width:768px){.axes{grid-template-columns:1fr 1fr;gap:16px}}
+.axis{border-radius:16px;padding:24px 22px;border:1px solid var(--stone-200);background:#fff}
+.axis .t{display:flex;align-items:center;gap:10px}
+.axis .t i{font-style:normal;font-family:var(--serif);font-size:12px;font-weight:700;color:#fff;background:var(--stone-900);border-radius:6px;padding:2px 8px;letter-spacing:.08em}
+.axis:nth-child(2) .t i{background:var(--gold-deep)}
+.axis h3{font-family:var(--serif);font-size:21px;line-height:1.5;color:var(--stone-900)}
+.axis p{margin-top:10px;font-size:13.5px;line-height:1.9;color:var(--stone-600)}
+.axis ul{margin-top:14px;list-style:none;display:grid;gap:6px}
+.axis li{font-size:13.5px;color:var(--stone-700);padding-left:16px;position:relative;line-height:1.7}
+.axis li::before{content:"";position:absolute;left:0;top:.8em;width:8px;height:1px;background:var(--gold-deep)}
+.founders{display:grid;gap:12px}
+@media(min-width:768px){.founders{grid-template-columns:1fr 1fr;gap:16px}}
+.founder{border-radius:16px;padding:24px 22px;background:var(--stone-50);border:1px solid var(--stone-200)}
+.founder .top{display:flex;align-items:center;gap:14px}
+.mono{width:54px;height:54px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:22px;font-weight:700;color:#fff;background:linear-gradient(135deg,var(--gold),var(--gold-deep))}
+.mono.photo{background:none;padding:0;overflow:hidden;width:72px;height:72px;box-shadow:0 0 0 2px #fff,0 0 0 4px var(--gold,#c9a84c)}
+.mono.photo img{width:100%;height:100%;object-fit:cover;display:block}
+@media(min-width:768px){.mono.photo{width:84px;height:84px}}
+.founder .nm{font-family:var(--serif);font-size:19px;font-weight:700;color:var(--stone-900)}
+.founder .rl{font-size:12px;font-weight:700;color:var(--gold-deep)}
+.founder p{margin-top:12px;font-size:13.5px;line-height:1.95;color:var(--stone-600)}
+.founder .tags{margin-top:12px;display:flex;flex-wrap:wrap;gap:6px}
+.founder .tags span{font-size:11px;color:var(--stone-500);background:#fff;border:1px solid var(--stone-200);border-radius:999px;padding:2px 10px}
+.proof{margin-top:22px}
+.proof h3{font-size:13px;font-weight:700;color:var(--stone-500);letter-spacing:.08em}
+.proof-g{margin-top:10px;display:grid;gap:10px}
+@media(min-width:768px){.proof-g{grid-template-columns:1fr 1fr;align-items:start}}
+.proof-g figure img{width:100%;border-radius:10px;border:1px solid var(--stone-200)}
+.proof-g figcaption{margin-top:4px;font-size:11.5px;color:var(--stone-400);text-align:center}
+.proof-g .stack{display:grid;gap:10px}
+.rail-wrap{position:relative}
+.rail{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-inline:20px;padding:4px 20px 18px;margin:0 -20px;scrollbar-width:thin;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain}
+.rail::-webkit-scrollbar{height:4px}
+.rail::-webkit-scrollbar-thumb{background:var(--stone-300);border-radius:4px}
+.vc{flex:0 0 84%;scroll-snap-align:center;background:#fff;border:1px solid var(--stone-200);border-radius:16px;padding:20px 20px 22px;display:flex;flex-direction:column}
+@media(min-width:600px){.vc{flex-basis:46%;scroll-snap-align:start}}
+@media(min-width:1000px){.vc{flex-basis:calc((100% - 24px)/3)}}
+.vc .m{display:flex;align-items:center;gap:10px}
+.vc .av{width:38px;height:38px;border-radius:50%;background:var(--stone-100);border:1px solid var(--stone-200);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-weight:700;color:var(--stone-500)}
+.vc .nm{font-size:13px;font-weight:700;color:var(--stone-800);line-height:1.4}
+.vc .at{font-size:11.5px;color:var(--stone-400);line-height:1.4}
+.vc p{margin-top:12px;font-size:13.5px;line-height:1.95;color:var(--stone-600)}
+.vc img.av{object-fit:cover;padding:0}
+.vc .hl{margin-top:14px;font-family:var(--serif);font-weight:700;font-size:15.5px;line-height:1.65;color:var(--stone-900)}
+.vc .hl+p{margin-top:8px}
+.rail-ctl{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:4px}
+.rail-hint{font-size:12px;color:var(--stone-500)}
+.rail-btns{display:flex;gap:8px}
+.rail-btns button{width:40px;height:40px;border-radius:50%;border:1px solid var(--stone-300);background:#fff;color:var(--stone-700);font-size:16px;cursor:pointer}
+.rail-btns button:hover{border-color:var(--gold);color:var(--gold-deep)}
+.rail-btns button:disabled{opacity:.35;cursor:default}
+.cmp-scroll{overflow-x:auto;margin:0 -20px;padding:0 20px 6px;-webkit-overflow-scrolling:touch}
+.cmp{width:100%;min-width:560px;table-layout:fixed;border-collapse:separate;border-spacing:0;font-size:13px;line-height:1.6}
+.cmp th,.cmp td{padding:12px 10px;border-bottom:1px solid var(--stone-200);text-align:left;vertical-align:top;background:#fff}
+.cmp thead th{font-size:12.5px;font-weight:700;color:var(--stone-600);background:var(--stone-100);border-bottom:0}
+.cmp tbody th{font-weight:700;color:var(--stone-800);position:sticky;left:0;z-index:1;box-shadow:1px 0 0 var(--stone-200)}
+.cmp thead th:first-child{position:sticky;left:0;z-index:2;width:96px}
+.cmp .sss{background:var(--gold-wash);color:var(--stone-900);font-weight:700;border-left:2px solid var(--gold);border-right:2px solid var(--gold)}
+.cmp thead .sss{background:var(--ink);color:var(--gold-light);border-radius:10px 10px 0 0;border-color:var(--ink);font-family:var(--serif);font-size:15px}
+.cmp tbody tr:last-child .sss{border-bottom:2px solid var(--gold)}
+.cmp td:not(.sss){color:var(--stone-500)}
+.cmp-hint{font-size:11.5px;color:var(--stone-400);margin-bottom:8px}
+@media(min-width:600px){.cmp-hint{display:none}}
+.price{position:relative;border-radius:22px;background:#fff;border:1px solid var(--stone-200);box-shadow:0 10px 40px rgba(0,0,0,.07);padding:32px 20px 28px;text-align:center;overflow:hidden}
+.price::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--gold),var(--gold-deep))}
+.price .lb{font-size:14px;color:var(--stone-500)}
+.price .yen{margin-top:4px;font-family:var(--serif);font-size:58px;font-weight:700;color:var(--stone-900);line-height:1}
+.price .yen small{font-size:16px;font-weight:400;color:var(--stone-500);margin-left:4px}
+.price .per{margin-top:10px;font-size:12.5px;color:var(--stone-500)}
+.price .social{margin:16px auto 0;display:inline-block;font-size:12.5px;font-weight:700;color:var(--gold-deep);background:var(--gold-wash);border-radius:999px;padding:4px 14px}
+.inc{margin-top:24px;text-align:left;display:grid;gap:18px}
+@media(min-width:768px){.price{padding:48px 48px 40px}.inc{grid-template-columns:1fr 1fr;gap:18px 32px}}
+.inc h4{font-size:11.5px;font-weight:700;letter-spacing:.12em;color:var(--gold-deep);padding-bottom:6px;border-bottom:1px solid var(--stone-200)}
+.inc ul{list-style:none;margin-top:6px}
+.inc li{position:relative;padding:6px 0 6px 22px;font-size:13.5px;color:var(--stone-700);line-height:1.7}
+.inc li::before{content:"";position:absolute;left:3px;top:13px;width:10px;height:5px;border-left:2px solid var(--gold-deep);border-bottom:2px solid var(--gold-deep);transform:rotate(-45deg)}
+.warn{margin-top:24px;padding:20px;background:#fffaf0;border:1px solid #e6c780;border-radius:14px;text-align:left}
+.warn h4{margin:0 0 10px;color:#7a4a00;font-size:14.5px;font-weight:700}
+.warn p{margin:0 0 10px;color:#5a3a00;font-size:13px;line-height:1.8}
+.warn ul{margin:0 0 10px;padding-left:18px;color:#5a3a00;font-size:13px;line-height:1.85}
+.warn strong{color:#5a3a00}
+.warn a{color:#0d4a8a;text-decoration:underline}
+.price .btn{margin-top:26px}
+.price .fn{margin-top:12px;font-size:11.5px;color:var(--stone-400);line-height:1.7}
+.faq{display:grid;gap:8px}
+.faq details{background:#fff;border:1px solid var(--stone-200);border-radius:12px;overflow:hidden}
+.faq summary{list-style:none;cursor:pointer;display:flex;gap:12px;align-items:flex-start;justify-content:space-between;padding:16px 18px;font-size:14.5px;font-weight:700;color:var(--stone-800);line-height:1.6}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary .q{color:var(--gold-deep);font-family:var(--serif);margin-right:4px}
+.faq summary::after{content:"+";flex-shrink:0;font-size:20px;line-height:1.1;color:var(--gold-deep);transition:transform .2s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq .a{padding:0 18px 18px;font-size:13.5px;line-height:1.95;color:var(--stone-600)}
+.faq .a a{color:#0d4a8a;text-decoration:underline}
+.final{position:relative;overflow:hidden;background:var(--ink);color:#fff;text-align:center;padding:72px 0 76px}
+.final .bgimg{position:absolute;inset:0;opacity:.22}
+.final .bgimg img{width:100%;height:100%;object-fit:cover;object-position:50% 40%}
+.final .bgimg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,var(--ink) 0%,rgba(20,18,16,.6) 45%,var(--ink) 100%)}
+.final .in{position:relative}
+.final .chip{display:inline-block;font-size:13px;font-weight:700;color:var(--gold-light);border:1px solid rgba(201,168,76,.5);border-radius:999px;padding:4px 16px}
+.final h2{margin-top:18px;font-family:var(--serif);font-size:26px;line-height:1.55}
+.final p.ds{margin-top:16px;font-size:14.5px;line-height:2;color:rgba(255,255,255,.66)}
+.final p.ds strong{color:#fff}
+.final .btn{margin-top:30px}
+.final .fn{margin-top:12px;font-size:12px;color:rgba(255,255,255,.4);line-height:1.7}
+@media(min-width:768px){.final{padding:110px 0}.final h2{font-size:36px}}
+.ft{border-top:1px solid var(--stone-200);background:#fff;padding:36px 20px}
+.ft-in{max-width:1080px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:16px;font-size:13.5px;color:var(--stone-400)}
+.ft-logo{font-family:var(--serif);font-size:19px;font-weight:700;color:var(--stone-800);letter-spacing:.12em}
 .ft-logo span{color:var(--gold)}
-.ft-lk{display:flex;gap:24px;flex-wrap:wrap;justify-content:center}
-.ft-lk a{text-decoration:none;color:inherit;transition:color .2s}
+.ft-lk{display:flex;gap:10px 22px;flex-wrap:wrap;justify-content:center}
+.ft-lk a{text-decoration:none}
 .ft-lk a:hover{color:var(--stone-700)}
-.ft-cp{font-size:12px;color:var(--stone-300);text-align:center;margin-top:16px}
+.ft-cp{font-size:12px;color:var(--stone-300);text-align:center;margin-top:14px}
 @media(min-width:768px){.ft-in{flex-direction:row;justify-content:space-between}}
-
-/* UTIL */
-.fade-in{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
-.fade-in.visible{opacity:1;transform:translateY(0)}
-
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:60;display:none;padding:8px 12px calc(8px + env(safe-area-inset-bottom));background:rgba(20,18,16,.95);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-top:1px solid rgba(212,175,55,.35);transition:transform .3s ease}
+.sticky.hide{transform:translateY(110%)}
+.sticky a{display:flex;align-items:center;justify-content:space-between;gap:10px;min-height:54px;border-radius:10px;padding:6px 8px 6px 16px;text-decoration:none;background:linear-gradient(135deg,#d4af37,#b8952e);color:#141210}
+.sticky .l{display:flex;flex-direction:column;line-height:1.3;text-align:left}
+.sticky .l b{font-size:15.5px}
+.sticky .l small{font-size:11px;opacity:.85}
+.sticky .r{flex-shrink:0;font-size:11px;font-weight:700;background:rgba(20,18,16,.88);color:var(--gold-light);border-radius:7px;padding:5px 9px;line-height:1.35;text-align:center}
+@media(max-width:899px){.sticky{display:block}body{padding-bottom:80px}}
+.sp-br{display:inline}
+@media(min-width:768px){.sp-br{display:none}}
+.mk{background:linear-gradient(transparent 62%,rgba(240,208,128,.6) 62%);padding:0 2px}
+.bg-ink .mk{background:linear-gradient(transparent 66%,rgba(201,168,76,.45) 66%)}
+.cta-block{margin-top:36px;text-align:center}
+.say{display:inline-flex;align-items:center;gap:12px;font-size:14px;font-weight:700;color:var(--stone-800);letter-spacing:.03em;margin-bottom:10px;line-height:1.5}
+.say::before,.say::after{content:"";flex-shrink:0;width:16px;height:2px;border-radius:2px;background:var(--gold-deep)}
+.say::before{transform:rotate(55deg)}
+.say::after{transform:rotate(-55deg)}
+.bg-ink .say,.hero .say,.final .say{color:#fff}
+.bg-ink .say::before,.bg-ink .say::after,.hero .say::before,.hero .say::after,.final .say::before,.final .say::after{background:var(--gold-light)}
+.cta-block .btn{width:100%;max-width:440px}
+.cta-note{margin-top:10px;font-size:12px;color:var(--stone-500);line-height:1.7}
+.bg-ink .cta-note,.hero .cta-note,.final .cta-note{color:rgba(255,255,255,.5)}
+.hero .say{margin-bottom:8px;font-size:13px}
+@media(min-width:900px){.hero .cta-block{text-align:left;margin-top:22px}.hero .cta-block .btn{width:auto}}
+:root{--c-news:#5f7590;--c-moku:#4f8470;--c-zoom:#a07830;--c-jissen:#141210;--c-off:#9a5f4f}
+.rhythm{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+.rhythm span{font-size:12.5px;font-weight:700;color:var(--stone-800);background:#fff;border:1px solid var(--stone-200);border-radius:999px;padding:5px 14px}
+.rhythm b{color:var(--gold-deep)}
+.cal{background:#fff;border:1px solid var(--stone-200);border-radius:18px;padding:16px 12px 14px;box-shadow:0 8px 30px rgba(28,25,23,.05)}
+.cal-title{display:flex;align-items:baseline;justify-content:space-between;gap:8px;flex-wrap:wrap;padding:0 4px 12px}
+.cal-title h3{font-family:var(--serif);font-size:17px;color:var(--stone-900)}
+.cal-title span{font-size:11.5px;color:var(--stone-500)}
+.lane{display:grid;grid-template-columns:1fr;gap:6px;padding:10px 0;border-top:1px solid var(--stone-100)}
+.lane.days{border-top:0;padding:0 0 4px}
+.lane.days .lane-label{display:none}
+.lane-label{display:flex;align-items:center;gap:8px;min-width:0;padding:0 4px}
+.lane-label .ic{flex-shrink:0;width:26px;height:26px;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff;background:var(--lc)}
+.lane-label .ic svg{width:15px;height:15px}
+.lane-label .nm{font-size:13.5px;font-weight:700;color:var(--stone-900);line-height:1.35}
+.lane-label .fq{font-size:11.5px;font-weight:700;color:var(--lc);white-space:nowrap}
+.lane-label .best{font-size:10.5px;font-weight:700;color:var(--ink);background:var(--gold-light);border-radius:999px;padding:1px 8px;white-space:nowrap}
+.track{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:4px;position:relative}
+.track .c{grid-row:1;height:44px;border-radius:8px;background:var(--stone-100)}
+.track .c:nth-child(1){grid-column:1}.track .c:nth-child(2){grid-column:2}.track .c:nth-child(3){grid-column:3}.track .c:nth-child(4){grid-column:4}.track .c:nth-child(5){grid-column:5}.track .c:nth-child(6){grid-column:6}.track .c:nth-child(7){grid-column:7}
+.track .c.we{background:#f1efed}
+.dayhead{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:4px}
+.dayhead span{text-align:center;font-size:12.5px;font-weight:700;color:var(--stone-700);padding:6px 0;border-radius:8px;background:var(--stone-50)}
+.dayhead span.we{color:var(--stone-400)}
+.dayhead span.wed{color:#fff;background:var(--c-zoom)}
+.band{grid-row:1;z-index:1;height:44px;border-radius:8px;display:flex;align-items:center;justify-content:center;gap:6px;color:#fff;font-size:12px;font-weight:700;line-height:1.2;text-align:center;padding:0 6px;background:var(--lc);min-width:0;overflow:hidden}
+.band svg{width:14px;height:14px;flex-shrink:0}
+.band.full{grid-column:1/8}
+.band.wed{grid-column:3/4;flex-direction:column;gap:2px;padding:0 2px;font-size:11px;box-shadow:0 4px 12px rgba(160,120,48,.35)}
+.band.wed svg{width:13px;height:13px}
+.lane.news{--lc:var(--c-news)}
+.lane.moku{--lc:var(--c-moku)}
+.lane.zoom{--lc:var(--c-zoom)}
+.lane.jissen{--lc:var(--c-jissen)}
+.lane.off{--lc:var(--c-off)}
+.cal-sep{display:flex;align-items:center;gap:10px;margin:8px 4px 0;font-size:11.5px;font-weight:700;color:var(--stone-500);letter-spacing:.04em}
+.cal-sep::after{content:"";flex:1;height:1px;border-top:1px dashed var(--stone-300)}
+.float{height:auto;min-height:44px;border-radius:10px;display:flex;align-items:center;gap:8px;padding:8px 12px;font-size:12.5px;line-height:1.5;border:1.5px dashed var(--lc);color:var(--stone-800);background:#fff}
+.lane.jissen .float{border:1.5px solid var(--gold);background:linear-gradient(135deg,#1c1917,#2b2622);color:#fff}
+.lane.jissen .float b{color:var(--gold-light)}
+.lane.off .float b{color:var(--c-off)}
+.float .dots{display:flex;gap:4px;flex-shrink:0}
+.float .dots i{width:7px;height:7px;border-radius:50%;background:var(--lc);opacity:.85}
+.lane.jissen .float .dots i{background:var(--gold-light)}
+.legend{margin-top:12px;padding:10px 4px 0;border-top:1px solid var(--stone-100);display:flex;flex-wrap:wrap;gap:6px 14px;font-size:11.5px;color:var(--stone-600)}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.legend i{width:14px;height:10px;border-radius:3px;background:var(--lc)}
+.legend .dash i{background:#fff;border:1.5px dashed var(--stone-500)}
+.cal-fine{margin-top:8px;padding:0 4px;font-size:11px;color:var(--stone-500);line-height:1.7}
+@media(min-width:768px){
+  .cal{padding:24px 24px 18px}
+  .cal-title h3{font-size:19px}
+  .lane{grid-template-columns:250px 1fr;align-items:center;gap:14px;padding:10px 0}
+  .lane.days .lane-label{display:block}
+  .track .c,.band{height:48px}
+  .band{font-size:13px}
+  .band.wed{font-size:12px}
+  .dayhead span{font-size:13.5px}
+  .cal-sep{margin-left:0}
+}
+.kai{margin-top:18px;display:grid;gap:10px}
+@media(min-width:600px){.kai{grid-template-columns:1fr 1fr}}
+@media(min-width:1000px){.kai{grid-template-columns:repeat(4,1fr)}}
+.kc{background:#fff;border:1px solid var(--stone-200);border-radius:14px;padding:16px 16px 18px;border-top:3px solid var(--lc)}
+.kc.news{--lc:var(--c-news)}.kc.moku{--lc:var(--c-moku)}.kc.zoom{--lc:var(--c-zoom)}.kc.off{--lc:var(--c-off)}
+.kc .t{display:flex;align-items:center;gap:10px}
+.kc .ic{flex-shrink:0;width:34px;height:34px;border-radius:10px;display:flex;align-items:center;justify-content:center;color:#fff;background:var(--lc)}
+.kc .ic svg{width:18px;height:18px}
+.kc h4{font-size:15px;font-weight:700;color:var(--stone-900);line-height:1.4}
+.kc .w{display:block;font-size:11.5px;font-weight:700;color:var(--lc);line-height:1.4}
+.kc p{margin-top:10px;font-size:13px;line-height:1.85;color:var(--stone-600)}
+.kc a{color:var(--c-off);font-weight:700}
+.kai-note{margin-top:12px;font-size:13px;color:var(--stone-600)}
+.kai-note b{color:var(--stone-900)}
+.feature{margin-top:18px}
+.work{margin-top:18px}
+.work h3{font-size:14px;font-weight:700;color:var(--stone-700);letter-spacing:.04em;margin-bottom:10px}
+.work-g{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.work-g figure{position:relative;border-radius:12px;overflow:hidden;aspect-ratio:4/3;background:var(--stone-100)}
+.work-g figure:first-child{grid-column:span 2;aspect-ratio:16/9}
+.work-g img{width:100%;height:100%;object-fit:cover}
+@media(min-width:768px){.work-g{grid-template-columns:repeat(3,1fr);gap:12px}.work-g figure:first-child{grid-column:auto;aspect-ratio:4/3}}
+.work-g figcaption{position:absolute;left:0;right:0;bottom:0;padding:18px 10px 8px;font-size:11.5px;font-weight:700;color:#fff;background:linear-gradient(transparent,rgba(0,0,0,.65))}
+.work .work-note{margin-top:8px;font-size:11px;color:var(--stone-500)}
+.slot{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;border:2px dashed var(--stone-300);border-radius:12px;color:var(--stone-500);font-size:12px;font-weight:700;text-align:center;padding:8px;line-height:1.5;background:repeating-linear-gradient(135deg,var(--stone-50) 0 10px,#f3f2f0 10px 20px)}
+.slot svg{width:26px;height:26px;color:var(--stone-400)}
+.slot small{font-size:10.5px;font-weight:400;color:var(--stone-400)}
+.bg-gift{background:linear-gradient(180deg,var(--gold-wash),#fff 70%)}
+.gift-lead{display:flex;align-items:center;gap:14px;background:var(--ink);color:#fff;border-radius:16px;padding:16px 18px;margin-bottom:16px;border:1px solid rgba(201,168,76,.5)}
+.gift-lead .n{flex-shrink:0;font-family:var(--serif);font-weight:700;color:var(--gold-light);font-size:46px;line-height:1}
+.gift-lead .n small{font-size:16px;margin-left:2px}
+.gift-lead p{font-size:13.5px;line-height:1.75;color:rgba(255,255,255,.82)}
+.gift-lead p b{color:#fff;font-size:15px}
+.gifts{display:grid;gap:18px;list-style:none}
+.gifts-2{margin-top:18px}
+.gift{position:relative;background:#fff;border:1px solid var(--stone-200);border-radius:18px;overflow:hidden;box-shadow:0 10px 30px rgba(28,25,23,.06);min-width:0}
+.gift-img{position:relative;aspect-ratio:3/2;background:var(--stone-100)}
+.gift-img img{width:100%;height:100%;object-fit:cover}
+.gift-img .slot{border-radius:0;border-width:0 0 2px;font-size:14px;gap:8px}
+.gift-img .slot svg{width:40px;height:40px}
+.gift-img .slot small{font-size:11px}
+.gift-body{padding:16px 18px 22px;min-width:0}
+.gift-num{display:flex;align-items:baseline;gap:10px;line-height:1}
+.gift-num small{font-size:11.5px;font-weight:700;letter-spacing:.22em;color:var(--gold-deep)}
+.gift-num b{font-family:var(--serif);font-size:52px;font-weight:700;color:var(--gold-deep);letter-spacing:.02em;background:linear-gradient(transparent 64%,rgba(240,208,128,.55) 64%);padding:0 4px}
+.gift-t{margin-top:12px;font-size:20px;font-weight:700;color:var(--stone-900);line-height:1.5}
+.gift-d{margin-top:10px;font-size:15.5px;line-height:1.85;color:var(--stone-600)}
+.ph-text{color:var(--stone-400);border:1px dashed var(--stone-300);border-radius:8px;padding:8px 12px;display:block}
+.gift-d.ph-text{min-height:calc(1.85em * 3 + 16px)}
+.gift-mid{margin:30px 0 30px}
+@media(min-width:900px){
+  .gifts{gap:28px}
+  .gifts-2{margin-top:28px}
+  .gift{display:grid;grid-template-columns:6fr 4fr;align-items:center}
+  .gift.rev{grid-template-columns:4fr 6fr}
+  .gift.rev .gift-img{order:2}
+  .gift-img{min-width:0}
+  .gift-img .slot{border-width:0 2px 0 0;font-size:15px}
+  .gift.rev .gift-img .slot{border-width:0 0 0 2px}
+  .gift-body{padding:30px 36px}
+  .gift-num b{font-size:72px}
+  .gift-t{margin-top:16px;font-size:24px}
+  .gift-d{font-size:16px}
+  .gift-d.ph-text{min-height:calc(1.85em * 4 + 16px)}
+  .gift-mid{margin:44px 0}
+}
+.final .kick{font-size:12px;letter-spacing:.24em;color:var(--gold-light);font-weight:700}
+.final .msg{margin-top:18px;font-size:15px;line-height:2.1;color:rgba(255,255,255,.78)}
+.final .msg p+p{margin-top:14px}
+.final .msg strong{color:#fff}
+.final .cta-block{margin-top:30px}
+@media(min-width:768px){.final .msg{font-size:16px}}
+.cta-block .btn,.final .cta-block .btn{margin-top:0}
+.cta-block .say{display:flex;justify-content:center;width:fit-content;max-width:100%;margin:0 auto 10px}
+@media(min-width:900px){.hero .cta-block .say{margin-left:0}}
+.hero .cta-block{margin-top:18px}
+.pc-sep{display:none}
+@media(min-width:768px){.pc-sep{display:inline}}
+.themes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;list-style:none}
+@media(min-width:768px){.themes{grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}}
+.th{position:relative;background:#fff;border:1px solid var(--stone-200);border-radius:16px;padding:18px 14px 18px;min-width:0;overflow:hidden;box-shadow:0 6px 22px rgba(28,25,23,.05)}
+.th::before{content:"";position:absolute;left:0;right:0;top:0;height:4px;background:var(--tc)}
+.th .ti{width:48px;height:48px;border-radius:14px;display:flex;align-items:center;justify-content:center;color:#fff;background:var(--tc)}
+.th .ti svg{width:26px;height:26px}
+.th.ink .ti{color:var(--gold-light)}
+.th h3{margin-top:12px;font-family:var(--serif);font-size:18px;line-height:1.4;font-weight:700;color:var(--stone-900)}
+.th .lb{display:block;margin-top:8px;font-size:11px;font-weight:700;letter-spacing:.06em;color:var(--tc)}
+.th.ink .lb{color:var(--gold-deep)}
+.th p{margin-top:2px;font-size:14px;line-height:1.8;color:var(--stone-600)}
+@media(min-width:768px){.th{padding:26px 24px 24px}.th .ti{width:56px;height:56px}.th .ti svg{width:30px;height:30px}.th h3{font-size:21px;margin-top:16px}.th p{font-size:15px}}
+.t-uranai{--tc:#6b5f8a}.t-corp{--tc:#5f7590}.t-yt{--tc:#9a5f4f}.t-af{--tc:#a07830}.t-auto{--tc:#4f8470}.t-sec{--tc:#141210}
+.themes-foot{margin-top:18px;padding:16px 18px;border-radius:14px;background:var(--gold-wash);border:1px solid rgba(201,168,76,.35);font-size:14.5px;line-height:1.9;color:var(--stone-700)}
+.themes-foot b{color:var(--stone-900)}
+@media(min-width:768px){.themes-foot{text-align:center;font-size:15.5px}}
+.together{margin-top:34px;position:relative;border-radius:20px;background:linear-gradient(160deg,#fff 0%,var(--gold-wash) 100%);border:1px solid rgba(201,168,76,.45);padding:26px 20px 22px;overflow:hidden}
+.together .kick{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.2em;color:var(--gold-deep)}
+.together h3{margin-top:6px;font-family:var(--serif);font-size:26px;line-height:1.45;color:var(--stone-900)}
+.together h3 .g{color:var(--gold-deep)}
+.together .ld{margin-top:12px;font-size:16px;line-height:1.95;color:var(--stone-700)}
+.together .ld strong{background:linear-gradient(transparent 62%,rgba(240,208,128,.6) 62%);padding:0 2px}
+.ring{display:block;width:100%;max-width:280px;margin:18px auto 4px;height:auto}
+.ring .lbl{font-family:'Noto Serif JP',serif;font-weight:700}
+.tg-points{margin-top:14px;list-style:none;display:grid;gap:8px}
+.tg-points li{display:flex;gap:10px;align-items:flex-start;font-size:15.5px;line-height:1.7;color:var(--stone-800);background:#fff;border:1px solid var(--stone-200);border-radius:12px;padding:12px 14px}
+.tg-points svg{flex-shrink:0;width:22px;height:22px;color:var(--gold-deep);margin-top:1px}
+.tg-ph{margin-top:14px;display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.tg-ph figure{position:relative;border-radius:12px;overflow:hidden;aspect-ratio:4/3;background:var(--stone-200)}
+.tg-ph img{width:100%;height:100%;object-fit:cover}
+.tg-ph figcaption{position:absolute;left:6px;bottom:6px;font-size:10.5px;color:#fff;background:rgba(20,18,16,.6);padding:2px 8px;border-radius:999px}
+.tg-fine{margin-top:6px;font-size:11px;color:var(--stone-500)}
+@media(min-width:900px){
+  .together{padding:40px 44px 34px;display:grid;grid-template-columns:1.15fr 1fr;gap:10px 44px;align-items:center}
+  .together .tg-text{grid-column:1}
+  .together .tg-visual{grid-column:2;grid-row:1}
+  .together h3{font-size:34px}
+  .together .ld{font-size:17px}
+  .ring{max-width:340px;margin:0 auto}
+}
+.feature .when{font-size:14px}
+.feature h3{font-size:30px}
+.feature p.d{font-size:16px;line-height:1.95}
+.jinfo{margin-top:18px;display:grid;grid-template-columns:1fr;gap:8px}
+.jinfo div{display:flex;align-items:center;gap:12px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:12px;padding:12px 14px}
+.jinfo svg{flex-shrink:0;width:24px;height:24px;color:var(--gold-light)}
+.jinfo dt{font-size:12.5px;font-weight:700;color:rgba(255,255,255,.6);min-width:4.2em}
+.jinfo dd{font-size:16px;font-weight:700;color:#fff;line-height:1.5}
+.steps-h{margin-top:26px;font-family:var(--serif);font-size:20px;color:#fff;line-height:1.5}
+.steps-h span{color:var(--gold-light)}
+.steps{margin-top:12px;list-style:none;display:grid;gap:0}
+.step{position:relative;background:#fff;color:var(--stone-700);border-radius:16px;padding:20px 18px 20px;border-top:4px solid var(--gold)}
+.step .sn{display:flex;align-items:center;gap:12px}
+.step .sn b{flex-shrink:0;width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--gold),var(--gold-deep));color:#fff;font-family:var(--serif);font-size:22px;display:flex;align-items:center;justify-content:center}
+.step .sn small{display:block;font-size:11.5px;font-weight:700;letter-spacing:.14em;color:var(--gold-deep)}
+.step h4{font-size:19px;line-height:1.45;font-weight:700;color:var(--stone-900)}
+.step p{margin-top:12px;font-size:16px;line-height:1.85;color:var(--stone-700)}
+.step-arrow{display:flex;justify-content:center;padding:6px 0;color:var(--gold-light)}
+.step-arrow svg{width:26px;height:26px}
+.feature .tags span{font-size:13.5px;padding:4px 12px}
+@media(min-width:768px){
+  .feature h3{font-size:38px}
+  .jinfo{grid-template-columns:repeat(3,1fr)}
+  .steps{grid-template-columns:1fr auto 1fr auto 1fr;align-items:stretch}
+  .step-arrow{align-items:center;padding:0 6px}
+  .step-arrow svg{transform:rotate(-90deg)}
+  .step{padding:24px 20px}
+}
+.js .fade{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+.js .fade.in{opacity:1;transform:none}
 @media (prefers-reduced-motion: reduce){
   html{scroll-behavior:auto}
   *{animation:none!important;transition:none!important}
-  .fade-in{opacity:1;transform:none}
-  .gold-rule{width:120px}
+  .js .fade{opacity:1;transform:none}
+  .js .plot:not(.on) .fill{height:var(--h)}
 }
-
-/* 追従CTA（スマホ）：ヒーローのCTAから料金まで72ポイントぶん、申し込む手段が画面から消えていたので常に出す */
-.sticky-cta{position:fixed;left:0;right:0;bottom:0;z-index:60;display:none;
-  padding:10px 14px calc(10px + env(safe-area-inset-bottom));
-  background:rgba(20,18,16,.94);backdrop-filter:blur(10px);border-top:1px solid rgba(212,175,55,.35)}
-.sticky-cta a{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;
-  min-height:52px;border-radius:6px;font-size:15px;font-weight:700;text-decoration:none;
-  background:linear-gradient(135deg,#d4af37,#b8952e);color:#141210}
-.sticky-cta .sc-sub{font-size:12px;font-weight:400;opacity:.85}
-@media(max-width:820px){
-  .sticky-cta{display:block}
-  body{padding-bottom:84px}   /* バーが本文の末尾を隠さないようにする */
-}
-/* 中盤に置いた料金の要点 */
-.peek-card{border:1px solid var(--stone-200);border-radius:10px;padding:28px 24px;text-align:center;background:#fff}
-.peek-price{font-size:34px;letter-spacing:.02em}
-.peek-unit{font-size:14px;opacity:.7;margin-left:4px}
-.peek-list{list-style:none;padding:0;margin:16px 0 22px;font-size:14px;line-height:2}
-.peek-btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 28px}
 </style>
+<script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
-
-<!-- NAV -->
-<nav class="nav">
-  <div class="nav-inner">
-    <a href="#top" class="nav-logo">S<span>S</span>S</a>
-    <button class="nav-mobile-btn" onclick="document.getElementById('mm').classList.toggle('open')" aria-label="メニュー">
-      <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
-    </button>
+<nav class="nav" aria-label="メイン">
+  <div class="nav-in">
+    <a href="#top" class="logo">S<span>S</span>S</a>
     <div class="nav-links">
+      <span class="nav-count">参加メンバー100名突破</span>
+      <a href="#themes">テーマ</a>
+      <a href="#week">1週間</a>
       <a href="#founders">運営</a>
-      <a href="#axes">2つの軸</a>
-      <a href="#practice">実践・仕組み化</a>
-      <a href="#community">コミュニティ</a>
+      <a href="#offkai">オフ会</a>
+      <a href="#voices">声</a>
+      <a href="#present">プレゼント</a>
       <a href="#pricing">料金</a>
       <a href="#faq">FAQ</a>
       <a href="https://univa.cc/SlJd_Q" target="_blank" rel="noopener noreferrer" class="nav-cta">参加する</a>
     </div>
+    <button class="nav-btn" type="button" aria-label="メニュー" aria-expanded="false" aria-controls="mm" id="mmBtn">
+      <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+    </button>
   </div>
-  <div class="nav-mobile-menu" id="mm">
+  <div class="nav-menu" id="mm">
+    <a href="#numbers">数字で見るSSS</a>
+    <a href="#themes">扱っているテーマ</a>
+    <a href="#week">SSSの1週間</a>
     <a href="#founders">運営</a>
-    <a href="#axes">2つの軸</a>
-    <a href="#practice">実践・仕組み化</a>
-    <a href="#community">コミュニティ</a>
+    <a href="#offkai">オフ会の様子</a>
+    <a href="#voices">メンバーの声</a>
+    <a href="#present">参加特典プレゼント</a>
     <a href="#pricing">料金</a>
     <a href="#faq">FAQ</a>
     <a href="https://univa.cc/SlJd_Q" target="_blank" rel="noopener noreferrer" class="nav-cta">参加する</a>
   </div>
 </nav>
-
-<!-- HERO -->
-<section id="top" class="hero">
-  <div class="hero-grid"></div>
-  <div class="hero-glow"></div>
-  <div class="hero-inner">
-    <div class="hero-badges">
-      <span class="hero-badge run">共同運営｜松任谷 × ゴリラ</span>
-      <span class="hero-badge"><span class="dot"></span>スキルゼロ・顔出しなし・個人でOK</span>
-    </div>
-    <h1 class="mincho">
-      AIで稼ぐ。<br>
-      そして、<span class="hero-hl"><span class="t">仕組みまでつくる。</span><span class="u"></span></span>
-    </h1>
-    <p class="hero-sub">
-      note・アフィリエイト・AI動画で稼ぐルートも、<br>
-      日々の作業をAIで効率化して、自分の仕組みをつくるところまで。<br>
-      <strong>「何から始めて、どう組み合わせるか」</strong>を、実践しながら一緒に設計していく場です。
-    </p>
-    <div class="hero-stats">
-      <div class="hero-stat"><div class="n">50<span style="font-size:.6em">名超</span></div><div class="l">一緒に学ぶ仲間</div></div>
-      <div class="hero-stat"><div class="n">2<span style="font-size:.6em">人</span></div><div class="l">運営が伴走</div></div>
-      <div class="hero-stat"><div class="n">月6<span style="font-size:.6em">回超</span></div><div class="l">ZOOM・実践会</div></div>
-      <div class="hero-stat"><div class="n">毎日</div><div class="l">AI情報を配信</div></div>
-    </div>
-    <div class="hero-cta">
-      <a href="https://univa.cc/SlJd_Q" target="_blank" rel="noopener noreferrer" class="btn-gold" style="animation:glow 2.4s infinite alternate">今すぐSSSに参加する</a>
-      <p class="hero-note">月額2,980円（税込）・いつでも解約OK・違約金なし</p>
-    </div>
-    <div class="scroll-hint"><span>scroll</span><span class="arr">↓</span></div>
-  </div>
-</section>
-
-<!-- FOUNDERS -->
-
-
-<!-- PAIN -->
-<section class="sec bg-s50">
-  <div class="w760">
-    <div class="sec-head"><span class="kicker c">Problem</span></div>
-    <h2 class="sec-t mincho mt-16">こんな引っかかり、ありませんか。</h2>
-    <div class="gold-rule mt-24"></div>
-    <div class="pain-g mt-32 fade-in">
-      <div class="pain-c"><div class="lbl">PROBLEM 01</div>AIで稼ぎたいけど、何から始めればいいか分からない</div>
-      <div class="pain-c"><div class="lbl">PROBLEM 02</div>ノウハウを買っても、結局行動できず積ん読になっている</div>
-      <div class="pain-c"><div class="lbl">PROBLEM 03</div>AIには触っているが、作業の効率化・仕組み化ができていない</div>
-      <div class="pain-c"><div class="lbl">PROBLEM 04</div>AIに記事を書かせているのに、1円にもなっていない</div>
-      <div class="pain-c"><div class="lbl">PROBLEM 05</div>副業スクールに高額を払うのが怖い</div>
-      <div class="pain-c"><div class="lbl">PROBLEM 06</div>一人だと孤独で、続けられない</div>
-    </div>
-    <div class="callout fade-in">
-      この引っかかりを一つずつほどいていく場所として、<strong>SSSを作りました。</strong><br>
-      月2,980円という手の届く価格で、稼ぐノウハウも、AIで効率化して仕組みをつくる方法も、日々のアップデートごと共有していきます。
-    </div>
-  </div>
-</section>
-
-<!-- VOICE-EARLY：判断材料を上位40%に入れるため、声を2件だけ前倒しした（残りは下の「参加メンバーの声。」に置いたまま） -->
-<section id="voice-early" class="sec bg-w">
-  <div class="w1040">
-    <div class="sec-head"><span class="kicker c">Voice</span></div>
-    <h2 class="sec-t mincho mt-16">先に入った人は、こう言っています。</h2>
-    <div class="gold-rule mt-24"></div>
-    <div class="voice-g mt-32">
-      <div class="voice-c fade-in">
-        <div class="meta"><div class="avatar">K</div><div><div class="name">Kさん</div><div class="attr">海外在住・Webフリーランス</div></div></div>
-        <div class="stars">★★★★★</div>
-        <p>スピ系のショート動画を毎日、自動で作っています。SSSに入ってから作業の幅が広がって、もくもく会にも顔を出すように。海外にいても置いていかれない距離感がありがたいです。</p>
+<header id="top" class="hero">
+  <div class="hero-photo" aria-hidden="true"><img src="img/offkai/offkai-2-toast.jpg" alt="" fetchpriority="high"></div>
+  <span class="hero-cap" aria-hidden="true">2026年9月 第2回オフ会</span>
+  <div class="hero-in">
+    <div>
+      <div class="count-chip" aria-label="参加メンバー100名突破">
+        <span class="lbl"><span class="live" aria-hidden="true"></span>参加メンバー</span><span class="big">100</span><span class="suf">名突破</span>
       </div>
-      <div class="voice-c fade-in">
-        <div class="meta"><div class="avatar">Y</div><div><div class="name">Yさん</div><div class="attr">滋賀・AI動画/開発</div></div></div>
-        <div class="stars">★★★★★</div>
-        <p>外注なしで、リサーチから投稿まで全部AIに任せるYouTubeチャンネルに挑戦しています。稼ぐより先に、仕組みをつくること自体が面白い。実践会でその場で詰まりを聞けるのが大きいです。</p>
+      <p class="hero-note">※Discordコミュニティ参加者数（無料招待枠を含む）・2026年9月時点</p>
+      <h1>AIで稼ぐ。<br>仕組みまでつくる。<br><span class="g">仲間と、毎週手を動かす。</span></h1>
+      <p class="hero-sub"><strong>実践的なAI Tipsが、毎日Discordに届く。</strong><br>毎週水曜のZOOM講義、毎日開催のもくもく作業会、日中のAI実践会で、<strong>「何から始めて、どう組み合わせるか」</strong>を一緒に形にするコミュニティです。</p>
+      <div class="hero-cta cta-block">
+        <p class="say">まずは1か月、仲間と手を動かしてみる</p>
+        <a href="https://univa.cc/SlJd_Q" target="_blank" rel="noopener noreferrer" class="btn btn-block">今すぐSSSに参加する<span class="arr" aria-hidden="true">→</span></a>
+        <p class="hero-fine">月額2,980円（税込）・いつでも解約OK・違約金なし</p>
+        <p class="cta-note">SSSはDiscordで運営しています</p>
       </div>
+      <div class="hero-by"><span>共同運営｜松任谷×ゴリラ</span><span>スキルゼロ・顔出しなし・個人でOK</span><span>2026年4月スタート</span></div>
     </div>
-    <p class="sec-s mt-24" style="text-align:center">ほかのメンバーの声は<a href="#voices" style="text-decoration:underline">こちら</a>。</p>
+    <figure class="hero-visual">
+      <div class="main"><img src="img/offkai/offkai-2-toast.jpg" alt="第2回オフ会で参加メンバーが乾杯している様子（顔はモザイク処理済み）"></div>
+      <div class="sub"><img src="img/offkai/offkai-1-izakaya.jpg" alt="第1回オフ会の乾杯" loading="lazy"></div>
+      <figcaption>2026年9月 第2回オフ会</figcaption>
+    </figure>
+  </div>
+</header>
+<section id="numbers" class="sec bg-paper">
+  <div class="wrap">
+    <div class="head">
+      <span class="no">01</span><span class="en">Numbers</span>
+      <h2>開設から5か月で、<br><span class="g">ここまで動いてきました。</span></h2>
+    </div>
+    <div class="stats fade">
+      <div class="stat wide"><div class="v"><span data-count="121">121</span><small>名</small></div><div class="k">開設5か月で<br>累計121名が参加</div></div>
+      <div class="stat"><div class="v"><span data-count="35">35</span><small>回</small></div><div class="k">講義・実践会<br>累計開催数</div></div>
+      <div class="stat"><div class="v"><span data-count="150">150</span><small>本以上</small></div><div class="k">講義アーカイブ・動画</div></div>
+      <div class="stat"><div class="v"><span data-count="19">19</span><small>都道府県</small></div><div class="k">全国19都道府県と<br>海外から参加</div></div>
+      <div class="stat"><div class="v"><span data-count="93">93</span><small>%</small></div><div class="k">副業経験者</div></div>
+    </div>
+    <div class="chart fade">
+      <div class="chart-t"><h3>参加メンバー数の推移</h3><span>単位：名（運営含む・在籍者ベース）</span></div>
+      <div class="plot" id="plot" role="img" aria-label="参加メンバー数の推移。4月34名、5月65名、6月68名、7月79名、8月96名、9月103名。">
+        <div class="gridline" style="bottom:0"><i>0</i></div>
+        <div class="gridline" style="bottom:33.333%"><i>40</i></div>
+        <div class="gridline" style="bottom:66.666%"><i>80</i></div>
+        <div class="gridline" style="bottom:100%"><i>120</i></div>
+        <div class="bars" aria-hidden="true">
+          <div class="bar"><span class="num">34</span><div class="fill" style="--h:28.33%"></div></div>
+          <div class="bar"><span class="num">65</span><div class="fill" style="--h:54.17%"></div></div>
+          <div class="bar"><span class="num">68</span><div class="fill" style="--h:56.67%"></div></div>
+          <div class="bar"><span class="num">79</span><div class="fill" style="--h:65.83%"></div></div>
+          <div class="bar"><span class="num">96</span><div class="fill" style="--h:80%"></div></div>
+          <div class="bar last"><span class="num">103</span><div class="fill" style="--h:85.83%"></div></div>
+        </div>
+      </div>
+      <div class="months" aria-hidden="true"><span>4月</span><span>5月</span><span>6月</span><span>7月</span><span>8月</span><span>9月</span></div>
+      <p class="fine">※いま在籍しているメンバーを参加月ごとに積み上げた人数（運営含む）。縦軸は0から。9月は2026年9月14日時点。</p>
+    </div>
+    <p class="fine">※累計参加数は2026年4月の開設以来の参加者数。講義・実践会の回数は2026年4月8日〜9月9日の告知ベース（ZOOM講義・グルコン28回＋昼の実践会7回）。アーカイブ・教材は講義録画・動画・資料の合計。副業経験者の割合と地域は、自己紹介を書いたメンバー95名の集計。</p>
   </div>
 </section>
-
-
-<!-- AXES (2本柱) -->
-<section id="axes" class="sec bg-w">
-  <div class="w1040">
-    <div class="sec-head"><span class="kicker c">Two Axes</span></div>
-    <h2 class="sec-t mincho mt-16">SSSで手に入る、<span class="g">2つの軸</span>。</h2>
-    <div class="gold-rule mt-24"></div>
-    <p class="sec-s">「AIで稼ぐ」だけではありません。<br>稼ぐ力と、AIで効率化して仕組みをつくる力。この両方を、実践しながら身につけていきます。</p>
+<section id="problem" class="sec bg-ink pain">
+  <div class="wrap">
+    <div class="head">
+      <span class="no">02</span><span class="en">Your Voice</span>
+      <h2>ひとつでも当てはまったら、<br><span class="g">SSSが合うかもしれません。</span></h2>
+      <p class="lead">AIが気になりはじめた人の、よくある心の声です。<br class="sp-br">それぞれに、SSSでの答えを並べました。</p>
+    </div>
+    <ol class="pn-list">
+      <li class="pn fade">
+        <div class="pn-voice">
+          <span class="pn-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9.4 9.2a2.7 2.7 0 0 1 5.2 1c0 1.8-2.6 2.3-2.6 3.8"/><path d="M12 17.2h.01"/></svg></span>
+          <div><span class="pn-no">01</span><p class="pn-q">ChatGPTは触った。<br>で、次は何を？</p></div>
+        </div>
+        <svg class="pn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v17M5.5 13.5 12 20l6.5-6.5"/></svg>
+        <p class="pn-ans"><span class="pn-tag">SSSなら</span><span class="pn-a">水曜のZOOM講義で、次の一手が見える</span></p>
+      </li>
+      <li class="pn fade">
+        <div class="pn-voice">
+          <span class="pn-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.2 2"/></svg></span>
+          <div><span class="pn-no">02</span><p class="pn-q">情報を追うだけで、<br>1日が終わる。</p></div>
+        </div>
+        <svg class="pn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v17M5.5 13.5 12 20l6.5-6.5"/></svg>
+        <p class="pn-ans"><span class="pn-tag">SSSなら</span><span class="pn-a">実践的なAI Tipsが、毎日Discordに届く</span></p>
+      </li>
+      <li class="pn fade">
+        <div class="pn-voice">
+          <span class="pn-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="7.5" r="3.5"/><path d="M5 20.5a7 7 0 0 1 14 0"/></svg></span>
+          <div><span class="pn-no">03</span><p class="pn-q">ひとりだと、<br>3日で手が止まる。</p></div>
+        </div>
+        <svg class="pn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v17M5.5 13.5 12 20l6.5-6.5"/></svg>
+        <p class="pn-ans"><span class="pn-tag">SSSなら</span><span class="pn-a">毎日のもくもく作業会で、一緒に進む</span></p>
+      </li>
+      <li class="pn fade">
+        <div class="pn-voice">
+          <span class="pn-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="4"/><path d="M10 8.5v7M14 8.5v7"/></svg></span>
+          <div><span class="pn-no">04</span><p class="pn-q">作ってはみた。<br>でも、そこで止まる。</p></div>
+        </div>
+        <svg class="pn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v17M5.5 13.5 12 20l6.5-6.5"/></svg>
+        <p class="pn-ans"><span class="pn-tag">SSSなら</span><span class="pn-a">日中のAI実践会で、その場で形にする</span></p>
+      </li>
+      <li class="pn fade">
+        <div class="pn-voice">
+          <span class="pn-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7.5" width="18" height="12.5" rx="2.5"/><path d="M8.5 7.5V5.5a1.5 1.5 0 0 1 1.5-1.5h4a1.5 1.5 0 0 1 1.5 1.5v2"/><path d="M3 13h18"/></svg></span>
+          <div><span class="pn-no">05</span><p class="pn-q">自分の仕事や副業に、<br>どう使えばいいの？</p></div>
+        </div>
+        <svg class="pn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v17M5.5 13.5 12 20l6.5-6.5"/></svg>
+        <p class="pn-ans"><span class="pn-tag">SSSなら</span><span class="pn-a"><span style="display:inline-block">占い、AI秘書など、</span><span style="display:inline-block">0から成果につなげる</span><span style="display:inline-block">実践的な内容がたくさん</span></span></p>
+      </li>
+      <li class="pn fade">
+        <div class="pn-voice">
+          <span class="pn-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7.5V18a2 2 0 0 0 2 2h13a1 1 0 0 0 1-1v-9a1 1 0 0 0-1-1H6a2 2 0 0 1-2-2 2 2 0 0 1 2-2h11"/><path d="M16 14.5h.01"/></svg></span>
+          <div><span class="pn-no">06</span><p class="pn-q">高額スクールは、<br>正直こわい。</p></div>
+        </div>
+        <svg class="pn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v17M5.5 13.5 12 20l6.5-6.5"/></svg>
+        <p class="pn-ans"><span class="pn-tag">SSSなら</span><span class="pn-a">月2,980円。動画150本以上も見放題</span></p>
+      </li>
+    </ol>
+    <div class="pn-next fade">
+      <p class="pn-next-t">うなずいたものがあったら、<br><span class="g">この先の中身を見てください。</span></p>
+      <p class="pn-next-s">この引っかかりを一つずつほどく場所として、<br class="sp-br"><strong>SSSを作りました。</strong><br>まずは、メンバーと一緒に形にしている<br class="sp-br">テーマから。</p>
+      <a class="pn-next-a" href="#themes">SSSで扱っているテーマを見る<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v15M6 13l6 6 6-6"/></svg></a>
+    </div>
+  </div>
+</section>
+<section id="themes" class="sec bg-white">
+  <div class="wrap">
+    <div class="head">
+      <span class="no">03</span><span class="en">Themes</span>
+      <h2>SSSでは、<span class="g">こんなテーマ</span>を<br>一緒に形にしています。</h2>
+      <p class="lead">「AIで何ができるの？」を、話だけで終わらせない。<br class="sp-br">メンバーと実際に手を動かしているテーマの一例です。</p>
+    </div>
+    <ul class="themes">
+      <li class="th t-uranai fade">
+        <span class="ti" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="10" r="6.5"/><path d="M6.5 21h11M8.5 16.2 7 21M15.5 16.2 17 21"/><path d="M10.5 6.8l.6 1.6 1.6.6-1.6.6-.6 1.6-.6-1.6-1.6-.6 1.6-.6z"/></svg></span>
+        <h3>占い</h3>
+        <span class="lb">SSSでやっていること</span>
+        <p>AIで鑑定文や商品ページをつくり、販売の形まで一緒に組み立てます。</p>
+      </li>
+      <li class="th t-corp fade">
+        <span class="ti" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V5a1 1 0 0 1 1-1h9a1 1 0 0 1 1 1v16"/><path d="M15 9h4a1 1 0 0 1 1 1v11"/><path d="M3 21h18M8 8h3M8 12h3M8 16h3"/></svg></span>
+        <h3>企業へのAI導入</h3>
+        <span class="lb">SSSでやっていること</span>
+        <p>会社の業務にAIを入れる進め方と、提案の組み立て方を共有します。</p>
+      </li>
+      <li class="th t-yt fade">
+        <span class="ti" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5" width="19" height="14" rx="4"/><path d="M10 9.3v5.4l4.6-2.7z"/></svg></span>
+        <h3>YouTube</h3>
+        <span class="lb">SSSでやっていること</span>
+        <p>顔出しなしのチャンネルづくりや、AIで動画をつくる流れを一緒に試します。</p>
+      </li>
+      <li class="th t-af fade">
+        <span class="ti" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 14a4 4 0 0 0 5.66 0l3-3a4 4 0 0 0-5.66-5.66l-1 1"/><path d="M14 10a4 4 0 0 0-5.66 0l-3 3a4 4 0 0 0 5.66 5.66l1-1"/></svg></span>
+        <h3>アフィリエイト</h3>
+        <span class="lb">SSSでやっていること</span>
+        <p>記事の設計・テンプレート・プロンプトを使い、AIと記事を組み立てます。</p>
+      </li>
+      <li class="th t-auto fade">
+        <span class="ti" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 12a8.5 8.5 0 0 1-14.9 5.6"/><path d="M3.5 12a8.5 8.5 0 0 1 14.9-5.6"/><path d="M18.6 2.8v3.8h-3.8M5.4 21.2v-3.8h3.8"/><path d="M10 9.5v5l4-2.5z"/></svg></span>
+        <h3>AI自動化</h3>
+        <span class="lb">SSSでやっていること</span>
+        <p>毎日くり返す作業をAIに任せる仕組みを、Claude Code などで一緒につくります。</p>
+      </li>
+      <li class="th t-sec ink fade">
+        <span class="ti" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9.5 4V2.8h5V4"/><path d="M8.8 11.5l2.2 2.2 4.2-4.2M9 17.5h6"/></svg></span>
+        <h3>AI秘書</h3>
+        <span class="lb">SSSでやっていること</span>
+        <p>日々のタスクや連絡をAIに任せる、自分専用の秘書の仕組みをつくります。</p>
+      </li>
+    </ul>
+    <p class="themes-foot fade">どれか1つからでも、組み合わせても大丈夫。<br class="sp-br"><b>講義で学び、<br class="sp-br">実践会でその場で形にしていきます。</b></p>
+    <p class="fine">※掲載しているのはSSSで扱っているテーマの一例です。取り組みの成果や収益をお約束するものではありません。</p>
+  </div>
+</section>
+<section id="week" class="sec bg-paper">
+  <div class="wrap">
+    <div class="head">
+      <span class="no">04</span><span class="en">A Week in SSS</span>
+      <h2>入ったら、<br>こんな<span class="g">1週間</span>になります。</h2>
+      <p class="lead">実践的なAI Tipsが毎日届き、もくもく作業会は毎日開催。毎週水曜のZOOM講義に、日中のAI実践会。<span class="mk">見るだけの教材ではなく、毎週どこかで一緒に手を動かしています。</span></p>
+    </div>
+    <div class="rhythm"><span>実践的AI Tips <b>毎日配信</b></span><span>もくもく作業会 <b>毎日開催</b></span><span>ZOOM・実践会 <b>月6回超</b></span></div>
+    <figure class="cal fade" aria-labelledby="calTitle">
+      <div class="cal-title"><h3 id="calTitle">SSSの1週間</h3><span>色の帯＝その曜日にあるもの</span></div>
+      <p class="sr">SSSの1週間。実践的なAI Tipsが毎日（月〜日）Discordに届く。もくもく作業会は毎日開催（月〜日、Discordボイス）。ZOOM講義は毎週水曜。曜日が決まっていない会として、日中のAI実践会が不定期で月4〜5回、オフ会が不定期。</p>
+      <div aria-hidden="true">
+        <div class="lane days"><div class="lane-label"></div>
+          <div class="dayhead"><span>月</span><span>火</span><span class="wed">水</span><span>木</span><span>金</span><span class="we">土</span><span class="we">日</span></div>
+        </div>
+        <div class="lane news">
+          <div class="lane-label"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h13v14H6a2 2 0 0 1-2-2z"/><path d="M17 9h3v8a2 2 0 0 1-2 2"/><path d="M8 9h5M8 13h5M8 16h3"/></svg></span><span class="nm">実践的AI Tips</span><span class="fq">毎日配信</span></div>
+          <div class="track"><i class="c"></i><i class="c"></i><i class="c"></i><i class="c"></i><i class="c"></i><i class="c we"></i><i class="c we"></i>
+            <span class="band full"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h13v14H6a2 2 0 0 1-2-2z"/><path d="M17 9h3v8a2 2 0 0 1-2 2"/><path d="M8 9h5M8 13h5M8 16h3"/></svg>実践的なAI Tipsが、毎日届く</span>
+          </div>
+        </div>
+        <div class="lane moku">
+          <div class="lane-label"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15v-3a8 8 0 0 1 16 0v3"/><rect x="3" y="14" width="4" height="6" rx="1.5"/><rect x="17" y="14" width="4" height="6" rx="1.5"/></svg></span><span class="nm">もくもく作業会</span><span class="fq">毎日開催</span></div>
+          <div class="track"><i class="c"></i><i class="c"></i><i class="c"></i><i class="c"></i><i class="c"></i><i class="c we"></i><i class="c we"></i>
+            <span class="band full"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15v-3a8 8 0 0 1 16 0v3"/><rect x="3" y="14" width="4" height="6" rx="1.5"/><rect x="17" y="14" width="4" height="6" rx="1.5"/></svg>毎日開催・Discordボイス</span>
+          </div>
+        </div>
+        <div class="lane zoom">
+          <div class="lane-label"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="13" height="12" rx="2"/><path d="M16 10l5-3v10l-5-3z"/></svg></span><span class="nm">ZOOM講義</span><span class="fq">毎週水曜</span></div>
+          <div class="track"><i class="c"></i><i class="c"></i><i class="c"></i><i class="c"></i><i class="c"></i><i class="c we"></i><i class="c we"></i>
+            <span class="band wed"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="13" height="12" rx="2"/><path d="M16 10l5-3v10l-5-3z"/></svg>講義</span>
+          </div>
+        </div>
+        <p class="cal-sep">曜日が決まっていない会</p>
+        <div class="lane jissen">
+          <div class="lane-label"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5L18 18M6 18l2.5-2.5M15.5 8.5L18 6"/></svg></span><span class="nm">日中のAI実践会</span><span class="best">イチオシ</span></div>
+          <div class="float"><span class="dots"><i></i><i></i><i></i><i></i></span><span><b>不定期で月4〜5回</b>・日中にDiscordボイスで開催</span></div>
+        </div>
+        <div class="lane off">
+          <div class="lane-label"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h10l-1 8a4 4 0 0 1-8 0z"/><path d="M12 15v6M8 21h8"/></svg></span><span class="nm">オフ会</span></div>
+          <div class="float"><span class="dots"><i></i></span><span><b>不定期</b>・これまで2回開催</span></div>
+        </div>
+        <div class="legend">
+          <span class="news" style="--lc:var(--c-news)"><i></i>毎日（AI Tips）</span>
+          <span style="--lc:var(--c-moku)"><i></i>毎日（作業会）</span>
+          <span style="--lc:var(--c-zoom)"><i></i>毎週水曜</span>
+          <span class="dash"><i></i>不定期（曜日が決まっていない）</span>
+        </div>
+      </div>
+      <figcaption class="cal-fine">※AI実践会・オフ会の日程はDiscordでお知らせします。</figcaption>
+    </figure>
+    <div class="kai">
+      <article class="kc moku fade">
+        <div class="t"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15v-3a8 8 0 0 1 16 0v3"/><rect x="3" y="14" width="4" height="6" rx="1.5"/><rect x="17" y="14" width="4" height="6" rx="1.5"/></svg></span><div><h4>もくもく作業会</h4><span class="w">毎日開催｜Discordボイス</span></div></div>
+        <p>通話に集まって、それぞれの作業をもくもく進める会。毎日ひらいているので、自分のペースで参加できます。出入り自由・聞き専OK。ミュートで覗くだけでも大丈夫です。</p>
+      </article>
+      <article class="kc zoom fade">
+        <div class="t"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="13" height="12" rx="2"/><path d="M16 10l5-3v10l-5-3z"/></svg></span><div><h4>ZOOM講義</h4><span class="w">毎週水曜｜当日リンク</span></div></div>
+        <p>AIで稼ぐルートや仕組みづくりがテーマ。画面共有しながら質問・相談もできます。録画はアーカイブに残ります。</p>
+      </article>
+      <article class="kc news fade">
+        <div class="t"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h13v14H6a2 2 0 0 1-2-2z"/><path d="M17 9h3v8a2 2 0 0 1-2 2"/><path d="M8 9h5M8 13h5M8 16h3"/></svg></span><div><h4>実践的AI Tips</h4><span class="w">毎日｜Discord</span></div></div>
+        <p>今日から使えるAIのTipsを、毎日Discordへ。Claude / ChatGPT / Gemini などの新機能を、実際の使い方まで落として運営が届けるので、自分で追いかける時間を減らせます。</p>
+      </article>
+      <article class="kc off fade">
+        <div class="t"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h10l-1 8a4 4 0 0 1-8 0z"/><path d="M12 15v6M8 21h8"/></svg></span><div><h4>オフ会</h4><span class="w">不定期｜リアル</span></div></div>
+        <p>これまで2回開催。画面の向こうのメンバーと、直接話せる場です。<a href="#offkai">様子を見る</a></p>
+      </article>
+    </div>
+    <p class="kai-note">このほか、<b>月1回・30分のAI個別相談（松任谷）</b>もあります。</p>
+    <div class="together fade">
+      <div class="tg-text">
+        <span class="kick">TOGETHER</span>
+        <h3>みんなで手を取り合う、<br><span class="g">AI実践会。</span></h3>
+        <p class="ld"><strong>ひとりで悩まず、みんなと一緒に動く。</strong><br>AIは、ひとりで触っていると同じ所で止まりがちです。SSSの実践会では、詰まったらその場で声をかけ、うまくいったやり方はみんなで共有しながら進めます。</p>
+        <ul class="tg-points">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/><path d="M9 11h.01M12 11h.01M15 11h.01"/></svg><span>詰まったら、ひとりで抱えずその場で聞ける</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z"/></svg><span>ほかのメンバーの進め方が、そのまま自分のヒントになる</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.2"/><path d="M3 20a6 6 0 0 1 12 0"/><circle cx="17" cy="9" r="2.6"/><path d="M15.5 14.2A5 5 0 0 1 21 19"/></svg><span>オンラインで一緒に動いた仲間と、オフ会でも会える</span></li>
+        </ul>
+      </div>
+      <div class="tg-visual">
+<svg class="ring" viewBox="0 0 300 300" role="img" aria-label="メンバーのアイコンが輪になって手をつなぎ、真ん中にSSSがある図">
+<circle cx="150" cy="150" r="104" fill="none" stroke="#c9a84c" stroke-width="3"/>
+<circle cx="150" cy="150" r="78" fill="none" stroke="#f0d080" stroke-width="1.5" stroke-dasharray="2 6" opacity=".9"/>
+<g transform="translate(150.0 46.0)"><circle r="25" fill="#fff" stroke="#e7e5e4"/><circle cy="-8" r="7.5" fill="#6b5f8a"/><path d="M-13 15a13 13 0 0 1 26 0z" fill="#6b5f8a"/></g>
+<g transform="translate(223.5 76.5)"><circle r="25" fill="#fff" stroke="#e7e5e4"/><circle cy="-8" r="7.5" fill="#5f7590"/><path d="M-13 15a13 13 0 0 1 26 0z" fill="#5f7590"/></g>
+<g transform="translate(254.0 150.0)"><circle r="25" fill="#fff" stroke="#e7e5e4"/><circle cy="-8" r="7.5" fill="#9a5f4f"/><path d="M-13 15a13 13 0 0 1 26 0z" fill="#9a5f4f"/></g>
+<g transform="translate(223.5 223.5)"><circle r="25" fill="#fff" stroke="#e7e5e4"/><circle cy="-8" r="7.5" fill="#a07830"/><path d="M-13 15a13 13 0 0 1 26 0z" fill="#a07830"/></g>
+<g transform="translate(150.0 254.0)"><circle r="25" fill="#fff" stroke="#e7e5e4"/><circle cy="-8" r="7.5" fill="#4f8470"/><path d="M-13 15a13 13 0 0 1 26 0z" fill="#4f8470"/></g>
+<g transform="translate(76.5 223.5)"><circle r="25" fill="#fff" stroke="#e7e5e4"/><circle cy="-8" r="7.5" fill="#141210"/><path d="M-13 15a13 13 0 0 1 26 0z" fill="#141210"/></g>
+<g transform="translate(46.0 150.0)"><circle r="25" fill="#fff" stroke="#e7e5e4"/><circle cy="-8" r="7.5" fill="#5f7590"/><path d="M-13 15a13 13 0 0 1 26 0z" fill="#5f7590"/></g>
+<g transform="translate(76.5 76.5)"><circle r="25" fill="#fff" stroke="#e7e5e4"/><circle cy="-8" r="7.5" fill="#9a5f4f"/><path d="M-13 15a13 13 0 0 1 26 0z" fill="#9a5f4f"/></g>
+<circle cx="150" cy="150" r="50" fill="#141210"/>
+<circle cx="150" cy="150" r="50" fill="none" stroke="#c9a84c" stroke-width="2"/>
+<text class="lbl" x="150" y="148" text-anchor="middle" font-size="26" fill="#f0d080" letter-spacing="3">SSS</text>
+<text x="150" y="172" text-anchor="middle" font-size="11.5" font-weight="700" fill="#ffffff" font-family="Noto Sans JP, sans-serif">一緒に動く</text>
+</svg>
+        <div class="tg-ph">
+          <figure><img src="img/offkai/offkai-1-home-cheers2.jpg" alt="オフ会で乾杯するメンバー（顔はモザイク処理済み）" loading="lazy"><figcaption>オフ会</figcaption></figure>
+          <figure><img src="img/offkai/offkai-2-talk.jpg" alt="オフ会で歓談するメンバー（顔はモザイク処理済み）" loading="lazy"><figcaption>オフ会</figcaption></figure>
+        </div>
+        <p class="tg-fine">※写真の人物はモザイク処理をしています。</p>
+      </div>
+    </div>
+    <article class="feature fade">
+      <span class="ribbon">運営ゴリラのイチオシ</span>
+      <h3>日中のAI実践会</h3>
+      <p class="d">作業会のように、<strong>みんなで一緒に手を動かしながら、その場でリアルタイムに改善していく会</strong>です。聞くだけの講義ではなく、自分の作業をその場で一緒に前へ進めます。</p>
+      <dl class="jinfo">
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><dt>開催</dt><dd>不定期で月4〜5回</dd></div>
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15v-3a8 8 0 0 1 16 0v3"/><rect x="3" y="14" width="4" height="6" rx="1.5"/><rect x="17" y="14" width="4" height="6" rx="1.5"/></svg><dt>場所</dt><dd>Discordボイス</dd></div>
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg><dt>時間帯</dt><dd>日中</dd></div>
+      </dl>
+      <p class="steps-h">その場で、<span>こんなことをします</span></p>
+      <ol class="steps">
+        <li class="step">
+          <div class="sn"><b>1</b><div><small>STEP 01</small><h4>自分の作業を持ち寄る</h4></div></div>
+          <p>いま進めたい作業や、AIで詰まっていることをそのまま持ってきます。途中のものでも大丈夫です。</p>
+        </li>
+        <li class="step-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></li>
+        <li class="step">
+          <div class="sn"><b>2</b><div><small>STEP 02</small><h4>詰まりを、その場で相談</h4></div></div>
+          <p>Discordのボイスで声をかけ合い、画面共有しながら、つまずいた所をみんなで一緒に見ます。</p>
+        </li>
+        <li class="step-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></li>
+        <li class="step">
+          <div class="sn"><b>3</b><div><small>STEP 03</small><h4>その日のうちに形にする</h4></div></div>
+          <p>AIへの指示や使い方をリアルタイムに直しながら、動くところまで一緒に進めます。</p>
+        </li>
+      </ol>
+      <div class="tags"><span>出入り自由</span><span>聞き専OK</span><span>ミュートで覗くだけでも大丈夫</span></div>
+    </article>
+    <div class="work fade">
+      <h3>作業会・実践会の様子</h3>
+      <div class="work-g">
+        <figure>
+          <img src="img/work/work-1.jpg" alt="Discordボイスで開催中のもくもく作業会" loading="lazy" style="object-position:center"><figcaption>Discordボイスで開催中のもくもく作業会</figcaption>
+        </figure>
+        <figure>
+          <img src="img/work/work-2.jpg" alt="画面を共有しながら進める作業会" loading="lazy" style="object-position:left center"><figcaption>画面を共有しながら進める作業会</figcaption>
+        </figure>
+        <figure>
+          <img src="img/work/work-3.jpg" alt="作業会の日の作業画面" loading="lazy" style="object-position:center"><figcaption>作業会の日の作業画面</figcaption>
+        </figure>
+      </div>
+      <p class="work-note">※参加メンバーのお名前や画面の文字は、モザイク処理をしています。</p>
+    </div>
+    <div class="cta-block fade">
+      <p class="say">次の作業会から、一緒に手を動かす</p>
+      <a href="https://univa.cc/SlJd_Q" target="_blank" rel="noopener noreferrer" class="btn">SSSに参加する<span class="arr" aria-hidden="true">→</span></a>
+      <p class="cta-note">月額2,980円（税込）・いつでも解約OK<br class="sp-br"><span class="pc-sep"> ／ </span>SSSはDiscordで運営しています</p>
+    </div>
+  </div>
+</section>
+<section id="axes" class="sec bg-white">
+  <div class="wrap">
+    <div class="head">
+      <span class="no">05</span><span class="en">Two Axes</span>
+      <h2>SSSで手に入る、<span class="g">2つの軸</span>。</h2>
+      <p class="lead">「AIで稼ぐ」だけではありません。稼ぐ力と、AIで効率化して仕組みをつくる力。この両方を、実践しながら身につけていきます。</p>
+    </div>
     <div class="axes">
-      <div class="axis fade-in">
-        <div class="num">軸 01</div>
-        <h3>AIで、稼ぐ。</h3>
-        <p class="lead">note・アフィリエイト・動画。実際に試している収益化ルートを、設計から共有します。</p>
+      <div class="axis fade">
+        <div class="t"><i>軸 01</i><h3>AIで、稼ぐ。</h3></div>
+        <p>note・アフィリエイト・動画。実際に試している収益化ルートを、設計から共有します。</p>
         <ul>
-          <li><span class="mk">—</span>AI×noteの有料記事・メンバーシップ</li>
-          <li><span class="mk">—</span>アフィリエイトの記事設計とテンプレ</li>
-          <li><span class="mk">—</span>顔出しなしのYouTube・AI動画</li>
-          <li><span class="mk">—</span>複数の収入源を掛け合わせる考え方</li>
+          <li>AI×noteの有料記事・メンバーシップ</li>
+          <li>アフィリエイトの記事設計とテンプレ</li>
+          <li>顔出しなしのYouTube・AI動画</li>
+          <li>複数の収入源を掛け合わせる考え方</li>
         </ul>
       </div>
-      <div class="axis fade-in">
-        <div class="num">軸 02</div>
-        <h3>AIで、効率化して仕組みをつくる。</h3>
-        <p class="lead">稼ぐ手前の「作業」をAIに任せる。日々の実践会で、自分専用の仕組みまで一緒に組み上げます。</p>
+      <div class="axis fade">
+        <div class="t"><i>軸 02</i><h3>AIで、仕組みをつくる。</h3></div>
+        <p>稼ぐ手前の「作業」をAIに任せる。日中の実践会で、自分専用の仕組みまで一緒に組み上げます。</p>
         <ul>
-          <li><span class="mk">—</span>朝のAI実践会・もくもく作業会</li>
-          <li><span class="mk">—</span>作業の自動化・システム構築（Claude Code 等）</li>
-          <li><span class="mk">—</span>困りごと専用の個別AIキットづくり</li>
-          <li><span class="mk">—</span>月1・30分のAI個別相談（松任谷）</li>
+          <li>日中のAI実践会（作業会形式でその場で改善）</li>
+          <li>作業の自動化・システム構築（Claude Code 等）</li>
+          <li>困りごと専用の個別AIキットづくり</li>
+          <li>月1・30分のAI個別相談（松任谷）</li>
         </ul>
       </div>
     </div>
   </div>
 </section>
-
-<!-- FOUNDERS（価値提案のあとに置く。運営者は信頼の補強なので順序は後ろ） -->
-<section id="founders" class="sec bg-w">
-  <div class="w760">
-    <div class="sec-head"><span class="kicker c">Who runs SSS</span></div>
-    <h2 class="sec-t mincho mt-16">運営しているのは、<span class="g">松任谷とゴリラ</span>の二人です。</h2>
-    <div class="gold-rule mt-24"></div>
-    <p class="sec-s">「誰が中にいるか分からないサロン」ではありません。<br>実際にAIで稼ぎ、仕組みをつくってきた二人が、毎日いっしょに動いています。</p>
+<section id="founders" class="sec bg-white" style="padding-top:0">
+  <div class="wrap">
+    <div class="head">
+      <span class="no">06</span><span class="en">Who runs SSS</span>
+      <h2>運営しているのは、<br><span class="g">松任谷とゴリラ</span>の二人です。</h2>
+      <p class="lead">「誰が中にいるか分からないサロン」ではありません。二人で運営しているので、講義・実践会・個別相談・毎日の情報配信が、無理なく回り続けます。</p>
+    </div>
     <div class="founders">
-      <div class="founder fade-in">
-        <div class="founder-top">
-          <div class="mono">ゴ</div>
-          <div>
-            <div class="founder-name">ゴリラ</div>
-            <div class="founder-role">SSS運営 / 実践会ホスト</div>
-          </div>
-        </div>
-        <p>note・アフィリエイト・コンテンツ販売（Tips など）や占いといったジャンルで、AIを使った収益化を実践してきました。加えて、法人向けのAI導入の推進やDX化の支援も手がけています。稼ぐルートと、AIで作業を効率化して仕組みをつくるところ。その両方を、実例ごと共有します。毎朝のAI実践会・もくもく作業会のホストです。</p>
-        <div class="founder-tags"><span class="tag">note・アフィリエイト</span><span class="tag">コンテンツ販売（Tips等）</span><span class="tag">占い</span><span class="tag">法人AI・DX支援</span><span class="tag">実践会ホスト</span></div>
+      <div class="founder fade">
+        <div class="top"><div class="mono photo"><img src="img/founders/gorilla.jpg" alt="ゴリラのアイコン" width="84" height="84" loading="lazy"></div><div><div class="nm">ゴリラ</div><div class="rl">SSS運営 / 実践会ホスト</div></div></div>
+        <p>note・アフィリエイト・コンテンツ販売（Tips など）や占いといったジャンルで、AIを使った収益化を実践してきました。加えて、法人向けのAI導入の推進やDX化の支援も手がけています。稼ぐルートと、AIで作業を効率化して仕組みをつくるところ。その両方を、実例ごと共有します。日中のAI実践会のホストです。</p>
+        <div class="tags"><span>note・アフィリエイト</span><span>コンテンツ販売（Tips等）</span><span>占い</span><span>法人AI・DX支援</span><span>実践会ホスト</span></div>
       </div>
-      <div class="founder fade-in">
-        <div class="founder-top">
-          <div class="mono">松</div>
-          <div>
-            <div class="founder-name">松任谷</div>
-            <div class="founder-role">SSS共同運営 / コンテンツ・個別相談</div>
-          </div>
-        </div>
+      <div class="founder fade">
+        <div class="top"><div class="mono photo"><img src="img/founders/matsutoya.jpg" alt="松任谷のアイコン" width="84" height="84" loading="lazy"></div><div><div class="nm">松任谷</div><div class="rl">SSS共同運営 / コンテンツ・個別相談</div></div></div>
         <p>YouTube170万人チャンネルの運営で培ったコンテンツづくりと集客の知見を持ち、いまはAI教材の制作や、一人ひとりに合わせた個別サポートを担当。月1回・30分のAI個別相談で、いまやっていることとAI活用の可能性をすり合わせ、その人にとっての最適解を一緒に見つけます。「まず何を作るか」で迷う人の、最初の一歩の設計が得意です。</p>
-        <div class="founder-tags"><span class="tag">YouTube170万人運営</span><span class="tag">AI教材制作</span><span class="tag">月1・個別相談</span><span class="tag">初手の設計</span></div>
+        <div class="tags"><span>YouTube170万人運営</span><span>AI教材制作</span><span>月1・個別相談</span><span>初手の設計</span></div>
       </div>
     </div>
-    <p class="founders-note">二人で運営しているので、講義・実践会・個別相談・毎日の情報配信が、無理なく回り続けます。</p>
-  </div>
-</section>
-
-<!-- PILLAR 1: 稼ぎ方 -->
-<section id="earn" class="sec bg-s50">
-  <div class="w1040">
-    <div class="sec-head"><span class="kicker c">Axis 01 — How to Earn</span></div>
-    <h2 class="sec-t mincho mt-16">AIを活用した収益化のルート。</h2>
-    <div class="gold-rule mt-24"></div>
-    <p class="sec-s">「何から始めればいいか分からない」を、一緒にほどいていきます。<br>※AIコンテンツは順次拡充中。完成形ではなく、一緒に作っていく場としてご参加ください。</p>
-    <div class="feat-g">
-      <div class="feat-c fade-in">
-        <div class="idx">EARN 01</div>
-        <h3 class="mincho">noteで収益源を作る</h3>
-        <p>有料記事、有料マガジン、メンバーシップ。AIを活用した記事作成、売れるタイトルの付け方、値段設定のコツまで、noteの収益化ルートを共有していきます。</p>
-        <div class="results">実績：初月で月20万超えのメンバーあり</div>
-      </div>
-      <div class="feat-c fade-in">
-        <div class="idx">EARN 02</div>
-        <h3 class="mincho">アフィリエイトで収益化</h3>
-        <p>AIを活用した記事作成から、継続的に収益化していく仕組みづくりまで。ジャンル選定・キーワード設計・記事テンプレートを共有し、「100記事書いたのに月500円」にならない設計を一緒に考えます。</p>
-        <div class="results">実績：30記事で月3.8万円の継続収益</div>
-      </div>
-      <div class="feat-c fade-in">
-        <div class="idx">EARN 03</div>
-        <h3 class="mincho">AIを活用した動画収益化</h3>
-        <p>顔出しなし・声出しなし。AIを活用してYouTubeチャンネルを作る方法を取り上げます。台本作成・サムネ制作・編集など、AIで効率化できる工程を共有します。</p>
-        <div class="results">170万人チャンネル運営（松任谷）の知見も共有</div>
-      </div>
-      <div class="feat-c fade-in">
-        <div class="idx">EARN 04</div>
-        <h3 class="mincho">収入源を掛け合わせる</h3>
-        <p>note×アフィリ×動画×SNS。1つのコンテンツを複数の収益源に活かす考え方を共有します。「1記事書いたら複数箇所で活かせる」仕組みを一緒に組み立てます。</p>
-        <div class="results">掛け算で月収が伸びたケースも</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PRICE-PEEK：料金の要点だけを、読まれている範囲（上位40%）の中に置く。詳細は下の「料金」のまま -->
-<section id="price-peek" class="sec bg-w">
-  <div class="w760">
-    <div class="peek-card">
-      <p class="peek-price mincho">月額 ¥2,980<span class="peek-unit">（税込）</span></p>
-      <ul class="peek-list">
-        <li>いつでも解約できます</li>
-        <li>違約金はありません</li>
-        <li>1日あたり約100円。飲み会1回ぶんで、1ヶ月まるごと</li>
-      </ul>
-      <a class="btn btn-gold peek-btn" href="#pricing">料金の中身を見る</a>
-    </div>
-  </div>
-</section>
-
-<!-- PILLAR 2: 実践・仕組み化 (NEW) -->
-<section id="practice" class="sec bg-ink">
-  <div class="w1040">
-    <div class="sec-head"><span class="kicker c" style="color:var(--gold-light)">Axis 02 — Build with AI</span></div>
-    <h2 class="sec-t mincho mt-16" style="color:#fff">稼ぐ手前の「作業」を、<span style="color:var(--gold-light)">AIに任せる。</span></h2>
-    <div class="gold-rule mt-24"></div>
-    <p class="sec-s" style="color:rgba(255,255,255,.6)">SSSは、稼ぎ方だけを教える場所ではありません。<br>日々の実践会で手を動かしながら、自分の作業を効率化し、仕組み化するところまで一緒にやります。</p>
-    <div class="feat-g">
-      <div class="feat-c fade-in" style="background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.12)">
-        <div class="idx" style="color:var(--gold-light)">BUILD 01</div>
-        <h3 class="mincho" style="color:#fff">朝のAI実践会・もくもく作業会</h3>
-        <p style="color:rgba(255,255,255,.68)">通話に集まって、それぞれの作業をもくもく進める会。AIの使い方で詰まったこと、試したいことは、その場でいっしょに触ってみます。出入り自由・聞き専OK・ミュートで覗くだけでも大丈夫です。</p>
-        <div class="results" style="background:rgba(201,168,76,.12);color:var(--gold-light)">連日開催中。録画はアーカイブに残ります</div>
-      </div>
-      <div class="feat-c fade-in" style="background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.12)">
-        <div class="idx" style="color:var(--gold-light)">BUILD 02</div>
-        <h3 class="mincho" style="color:#fff">作業の自動化・システム構築</h3>
-        <p style="color:rgba(255,255,255,.68)">「毎回やっている手作業」をAIに任せる。Claude Code などを使って、投稿・集計・リサーチといった繰り返し作業を自動化し、発信や運用が止まらない仕組みを一緒に組み上げます。</p>
-        <div class="results" style="background:rgba(201,168,76,.12);color:var(--gold-light)">自分でBotや仕組みを作れるようになる</div>
-      </div>
-      <div class="feat-c fade-in" style="background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.12)">
-        <div class="idx" style="color:var(--gold-light)">BUILD 03</div>
-        <h3 class="mincho" style="color:#fff">困りごと専用の個別AIキット</h3>
-        <p style="color:rgba(255,255,255,.68)">「あなたの困りごと専用のAIキット」を用意する取り組みも進めています。X運用、動画のQC、集客の自動化など、その人の課題に合わせた形にして渡します。「AIってここまでできるんだ」を実感できます。</p>
-        <div class="results" style="background:rgba(201,168,76,.12);color:var(--gold-light)">メンバーごとに個別で対応</div>
-      </div>
-      <div class="feat-c fade-in" style="background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.12)">
-        <div class="idx" style="color:var(--gold-light)">BUILD 04</div>
-        <h3 class="mincho" style="color:#fff">月1・30分のAI個別相談</h3>
-        <p style="color:rgba(255,255,255,.68)">松任谷との1対1で、いまやっていることとAI活用の可能性をすり合わせ。「次に何を作るか」「どこを自動化すると効くか」を、あなたの状況に合わせて具体的に決めていきます。</p>
-        <div class="results" style="background:rgba(201,168,76,.12);color:var(--gold-light)">一人ひとりの最適解を一緒に探す</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-
-<!-- STORY -->
-<section id="story" class="sec bg-w">
-  <div class="w760">
-    <div class="sec-head"><span class="kicker c">Story</span></div>
-    <h2 class="sec-t mincho mt-16">行動できるノウハウと、続く環境を。</h2>
-    <div class="gold-rule mt-24"></div>
-    <div class="story-body fade-in">
-      <p>今まで色々なノウハウを買ってきましたが、<strong>使いながら一緒にアップデートしていく</strong>場所が必要だと感じてSSSを作りました。</p>
-      <p>noteの有料記事を出したら初週で売れて、アフィリエイト記事をAIで量産したら継続的な収益が生まれました。でも、ただAIに丸投げしても稼げません。<strong>何を作って、どこに出して、どう売るか</strong>の設計が全てです。</p>
-      <p>そして最近は、その設計の手前にある「作業」そのものをAIに任せられるようになりました。<strong>稼ぐことと、仕組みをつくること。</strong>この両方を、今日から自分でできる形に落として共有していきます。</p>
-    </div>
-    <div class="sec-head mt-40"><span class="kicker c">運営者の実績</span></div>
-    <div class="result-g">
-      <div><img src="result-2024.png" alt="2024年 年間総売上" class="result-img" loading="lazy"><p class="result-caption">2024年 年間総売上</p></div>
-      <div><img src="messageImage_1775449305619.jpg" alt="2025年 年間総売上" class="result-img" loading="lazy"><p class="result-caption">2025年 年間総売上</p></div>
-      <div><img src="messageImage_1775449292499.jpg" alt="月間最高売上" class="result-img" loading="lazy"><p class="result-caption">月間最高売上</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- WINS (メンバーの動き) -->
-<section id="wins" class="sec bg-s50">
-  <div class="w760">
-    <div class="sec-head"><span class="kicker c">Members in Action</span></div>
-    <h2 class="sec-t mincho mt-16">メンバーの、最近の動き。</h2>
-    <div class="gold-rule mt-24"></div>
-    <p class="sec-s">SSSの中では、毎日こんな報告が飛び交っています。<br>ここに載せているのは、ここ最近の実際の動きの一部です。</p>
-    <div class="wins-wrap fade-in">
-      <div class="win">
-        <div class="mk">占</div>
-        <div class="body">
-          <div class="h">スピリチュアル系の商品で、7万円のアップセルが成約</div>
-          <div class="d">実践会で学んだ売り方を自分の商材に応用。<span class="who">「まずは本業の給料を超える」</span>を目標に、単価の高い商品まで届いた報告。</div>
-        </div>
-      </div>
-      <div class="win">
-        <div class="mk">自</div>
-        <div class="body">
-          <div class="h">自分専用のBotを作って、運用スタート</div>
-          <div class="d">実践会でAIキットを一緒に組み、その日のうちに<span class="who">「早速Bot作れたので運用していきます」</span>と稼働報告。作って終わりではなく、動かすところまで。</div>
-        </div>
-      </div>
-      <div class="win">
-        <div class="mk">動</div>
-        <div class="body">
-          <div class="h">外注なし・ほぼフルAIのYouTube長尺チャンネルを構築中</div>
-          <div class="d">リサーチから投稿までAIに任せる仕組みづくりに挑戦。<span class="who">「形になれば量産して収益化できる」</span>と、仕組み化そのものを楽しんでいるメンバーも。</div>
+    <div class="proof fade">
+      <h3>運営者の実績</h3>
+      <div class="proof-g">
+        <figure><img src="result-2024.png" alt="2024年 年間総売上" loading="lazy"><figcaption>2024年 年間総売上</figcaption></figure>
+        <div class="stack">
+          <figure><img src="messageImage_1775449305619.jpg" alt="2025年 年間総売上" loading="lazy"><figcaption>2025年 年間総売上</figcaption></figure>
+          <figure><img src="messageImage_1775449292499.jpg" alt="月間最高売上" loading="lazy"><figcaption>月間最高売上</figcaption></figure>
         </div>
       </div>
     </div>
-    <p class="wins-foot">小さな一歩も、大きな成約も。報告し合える仲間がいると、続きます。</p>
-  </div>
-</section>
-
-<!-- COMMUNITY -->
-<section id="community" class="sec bg-w">
-  <div class="w1040">
-    <div class="sec-head"><span class="kicker c">Community</span></div>
-    <h2 class="sec-t mincho mt-16">一人でやると、続きません。</h2>
-    <div class="gold-rule mt-24"></div>
-    <p class="sec-s">やり方が分かっても、<strong>続けられない</strong>のが一番の壁です。<br>報告し合う仲間がいるだけで、継続率がまるで変わります。</p>
-    <div class="comm-g">
-      <div class="comm-c fade-in"><div class="idx">COMMUNITY 01</div><h3>Discordコミュニティ</h3><p>「今月これで稼げた」「このプロンプトが効いた」といったリアルタイムの共有が飛び交っています。ジャンル別チャンネルで、自分に関係ある情報だけ追えます。</p></div>
-      <div class="comm-c fade-in"><div class="idx">COMMUNITY 02</div><h3>LINEオープンチャット</h3><p>Discordが苦手な方向け。スマホでサクッと確認できます。「今日note1本出した」「初成果が出た」といった報告が毎日流れてきて、モチベーション維持になります。</p></div>
-      <div class="comm-c fade-in"><div class="idx">COMMUNITY 03</div><h3>月6回以上のZOOMセッション</h3><p>画面共有しながら「自分のnoteを見てほしい」を直接相談できます。他の方の相談を聞いているだけでも、「それ、自分もやろう」が見つかります。</p></div>
-      <div class="comm-c fade-in"><div class="idx">COMMUNITY 04</div><h3>リアル懇親会</h3><p>不定期開催。同じ方向を向いている人と会えるのは、大きな刺激になります。ここで出会った人同士でコラボが生まれることもあります。</p></div>
+    <div class="cta-block fade">
+      <p class="say">講義も実践会も、次の回から参加できます</p>
+      <a href="https://univa.cc/SlJd_Q" target="_blank" rel="noopener noreferrer" class="btn">SSSに参加する<span class="arr" aria-hidden="true">→</span></a>
+      <p class="cta-note">月額2,980円（税込）・いつでも解約OK<br class="sp-br"><span class="pc-sep"> ／ </span>SSSはDiscordで運営しています</p>
     </div>
   </div>
 </section>
-
-<!-- VOICES -->
-<section id="voices" class="sec bg-s50">
-  <div class="w1040">
-    <div class="sec-head"><span class="kicker c">Voice</span></div>
-    <h2 class="sec-t mincho mt-16">参加メンバーの声。</h2>
-    <div class="gold-rule mt-24"></div>
-    <p class="sec-s">SSSには、副業初挑戦の方から複数の事業を回している方まで、幅広いメンバーが集まっています。<br>実際に参加しているメンバーの声です。</p>
-    <div class="voice-g">
-      <div class="voice-c fade-in">
-        <div class="meta"><div class="avatar">K</div><div><div class="name">Kさん</div><div class="attr">海外在住・Webフリーランス</div></div></div>
-        <div class="stars">★★★★★</div>
-        <p>スピ系のショート動画を毎日、自動で作っています。SSSに入ってから作業の幅が広がって、もくもく会にも顔を出すように。海外にいても置いていかれない距離感がありがたいです。</p>
+<section id="offkai" class="sec bg-ink">
+  <div class="wrap">
+    <div class="head">
+      <span class="no">07</span><span class="en">Meetups</span>
+      <h2>画面の向こうに、<br>ちゃんと人がいます。</h2>
+      <p class="lead">オンラインで一緒に手を動かしている仲間と、リアルでも会っています。</p>
+    </div>
+    <div class="meets">
+      <div class="fade">
+        <div class="meet-h"><span class="n">第2回</span><span class="d">2026年9月5日（土）・新宿・11名</span></div>
+        <div class="ph">
+          <figure class="w2"><img src="img/offkai/offkai-2-cheers.jpg" alt="第2回オフ会の乾杯（顔はモザイク処理済み）" loading="lazy"></figure>
+          <figure class="w2"><img src="img/offkai/offkai-2-talk.jpg" alt="第2回オフ会で歓談するメンバー（顔はモザイク処理済み）" loading="lazy"><figcaption>歓談の様子</figcaption></figure>
+        </div>
       </div>
-      <div class="voice-c fade-in">
-        <div class="meta"><div class="avatar">Y</div><div><div class="name">Yさん</div><div class="attr">滋賀・AI動画/開発</div></div></div>
-        <div class="stars">★★★★★</div>
-        <p>外注なしで、リサーチから投稿まで全部AIに任せるYouTubeチャンネルに挑戦しています。稼ぐより先に、仕組みをつくること自体が面白い。実践会でその場で詰まりを聞けるのが大きいです。</p>
+      <p class="meet-arrow">さかのぼって</p>
+      <div class="fade">
+        <div class="meet-h"><span class="n">第1回</span><span class="d">2026年7月18日（土）・新宿・約10名</span></div>
+        <div class="ph">
+          <figure class="sq"><img src="img/offkai/offkai-1-izakaya.jpg" alt="第1回オフ会の乾杯" loading="lazy"></figure>
+          <figure class="sq"><img src="img/offkai/offkai-1-home-cheers.jpg" alt="第1回オフ会・二次会の乾杯" loading="lazy"><figcaption>二次会</figcaption></figure>
+        </div>
       </div>
-      <div class="voice-c fade-in">
-        <div class="meta"><div class="avatar">R</div><div><div class="name">Rさん</div><div class="attr">千葉・自営業（コンテンツ販売）</div></div></div>
-        <div class="stars">★★★★★</div>
-        <p>実践会で自分専用のBotを一緒に作ってもらって、その日のうちに運用まで入れました。作って終わりではなく、動かすところまでいけたのが自分でも驚きです。</p>
+    </div>
+    <div class="quotes fade">
+      <div class="quote"><p>「いろいろ話を聞けて、めちゃくちゃ有益でした」</p><span>オフ会に参加したメンバー</span></div>
+      <div class="quote"><p>「めちゃくちゃ楽しかったです」</p><span>オフ会に参加したメンバー</span></div>
+    </div>
+    <p class="next fade"><b>次回の開催</b>はDiscordで先行案内します。</p>
+    <p class="fine">※写真の人物はすべてモザイク処理をしています。</p>
+  </div>
+</section>
+<section id="voices" class="sec bg-paper">
+  <div class="wrap">
+    <div class="head">
+      <span class="no">08</span><span class="en">Voice</span>
+      <h2>参加メンバーの声。</h2>
+      <p class="lead">副業初挑戦の方から、複数の事業を回している方まで。実際に参加しているメンバーの声です。</p>
+    </div>
+    <div class="rail-wrap">
+      <div class="rail" id="rail" tabindex="0" aria-label="メンバーの声（横にスクロール）">
+        <article class="vc"><div class="m"><img class="av" src="img/voices/aitaro.jpg" alt="" width="38" height="38" loading="lazy"><div><div class="nm">AIたろ先生</div><div class="at">個人事業主</div></div></div><p class="hl">この月額で見ていいんですか？と思うほどの、資料の豊富さ。</p><p>AIでやれることが多すぎて、何から始めればいいのか、マネタイズにつなげる手順も自分よがりになりがちでした。入ってからはAI秘書を作ってタスク管理を整えたり、YouTube台本作成のエージェントやThreadsの投稿に挑戦。とにかくアーカイブと教材がすごいので、見まくりました。頑張っている仲間と、教えてくださるお二人のおかげで、モチベーション高く過ごせています。本当に一度、入ってみてほしいです。</p></article>
+        <article class="vc"><div class="m"><div class="av" aria-hidden="true">K</div><div><div class="nm">Kさん</div><div class="at">Udemy・SNS分析の自動化</div></div></div><p class="hl">こんなに売り込みがないのに、稼ぐことに特化している。</p><p>noteは文字が中心なのでわかりますが、動画が中心のUdemyまで自動化できるとは思っていませんでした。いまはUdemyの投稿や、ThreadsやXの分析と投稿の抜き出しを自動化しています。「こんなこともできるんだ！」という発見と、気軽に聞ける場所があるのがうれしい。サロンによっては「こんな質問しちゃいけないのかな」と迷う時もありますが、SSSはそのハードルを低くする雰囲気があります。絶対に入ったほうがいいし、とにかくみんな優しい！</p></article>
+        <article class="vc"><div class="m"><div class="av" aria-hidden="true">キ</div><div><div class="nm">キョンさん</div><div class="at">Webエンジニア</div></div></div><p class="hl">稼ぐだけじゃない、地に足のついた情報が得られる。</p><p>ひとりだと続きにくく、スモールビジネスの知識もあまりありませんでした。周りにAIを使いこなしている人がいなくて、どんなビジネスに使えるのかという発想も出てきませんでした。紹介されたときは「たぶん入らないな」と思っていたのですが、最初の無料セミナーで、攻めだけでなく守りや税金の話までしていて、決めました。紹介系の副業やnoteの自動記事作成に挑戦し、1か月ほどで成果が出ました。常にコミュニティが動いているので、質問もしやすいです。1か月だけでも入ってみれば、自分に合うかはわかると思います。</p></article>
+        <article class="vc"><div class="m"><img class="av" src="img/voices/manabi.jpg" alt="" width="38" height="38" loading="lazy"><div><div class="nm">マナビくん</div><div class="at">会社員・副業6か月目</div></div></div><p class="hl">悩んでいるなら、まずは入るべき！</p><p>いまの作業を自動化したかったのですが、そもそもどうすればいいのか、何をやるとよくないのかがわかりませんでした。求めているものが得られるか少し迷いましたが、値段の安さと、松任谷さんと直接話して楽しそうだと思えたことで入りました。アカウント運用をゲーム風に半自動化したり、AIでショート動画を自動で作れるようにしたり。AIのすごさを実感して、毎日触るようになりました。</p></article>
+        <article class="vc"><div class="m"><div class="av" aria-hidden="true">K</div><div><div class="nm">Kさん</div><div class="at">YouTube台本の作成</div></div></div><p class="hl">YouTube以外のマネタイズを知れて、安心できました。</p><p>ほかのサロンと違い、多角的なマネタイズの手法を知ることができました。いまはCodexでYouTube動画の台本を作っています。YouTube以外にもマネタイズがあると知れたので、心理的に安心できました。ここから広げていきます。さまざまなジャンルで実績を出している方がメンバーにいるので、マネタイズについての知識が網羅的に身につきます！</p></article>
+        <article class="vc"><div class="m"><img class="av" src="img/voices/osakana.jpg" alt="" width="38" height="38" loading="lazy"><div><div class="nm">おさかなくん</div><div class="at">GrokでXアカウント分析</div></div></div><p class="hl">AIを取り入れて、作業時間が短くなりました。</p><p>たくさんあるAIの中でChatGPTしか使っておらず、AIの活用方法で悩んでいました。SSSではGrokを使ったXアカウントの分析に挑戦。AIを取り入れたことで、作業時間を短縮できました。AIの活用方法で迷っている方は、ぜひ入ってほしいですね！</p></article>
+        <article class="vc"><div class="m"><div class="av" aria-hidden="true">P</div><div><div class="nm">Pさん</div><div class="at">noteの作成を自動化</div></div></div><p class="hl">0から1で悩んでいる方に、特におすすめ！</p><p>AIの使い方で、アイデアが広がりました。noteの作成を自動化して、AIに触れる機会が増え、業務も効率化しました。</p></article>
+        <article class="vc"><div class="m"><div class="av" aria-hidden="true">K</div><div><div class="nm">Kさん</div><div class="at">海外在住・Webフリーランス</div></div></div><p>スピ系のショート動画を毎日、自動で作っています。SSSに入ってから作業の幅が広がって、もくもく会にも顔を出すように。海外にいても置いていかれない距離感がありがたいです。</p></article>
+        <article class="vc"><div class="m"><div class="av" aria-hidden="true">Y</div><div><div class="nm">Yさん</div><div class="at">滋賀・AI動画/開発</div></div></div><p>外注なしで、リサーチから投稿まで全部AIに任せるYouTubeチャンネルに挑戦しています。稼ぐより先に、仕組みをつくること自体が面白い。実践会でその場で詰まりを聞けるのが大きいです。</p></article>
+        <article class="vc"><div class="m"><div class="av" aria-hidden="true">R</div><div><div class="nm">Rさん</div><div class="at">千葉・自営業（コンテンツ販売）</div></div></div><p>実践会で自分専用のBotを一緒に作ってもらって、その日のうちに運用まで入れました。作って終わりではなく、動かすところまでいけたのが自分でも驚きです。</p></article>
+        <article class="vc"><div class="m"><div class="av" aria-hidden="true">K</div><div><div class="nm">Kさん</div><div class="at">占い・コンテンツ販売</div></div></div><p>スピ系の商品で、7万円のアップセルが成約しました。SSSで学んだ売り方を自分の商材に当てはめた結果です。まずは本業の給料を超えるのが目標です。</p></article>
+        <article class="vc"><div class="m"><div class="av" aria-hidden="true">P</div><div><div class="nm">Pさん</div><div class="at">関東・自営業（TikTok・note）</div></div></div><p>TikTokショップやnoteの教材販売をしています。決済や集客で迷ったとき、運営がすぐ相談に乗ってくれる。実践会で困りごとをその場で片付けられるのが本当に助かります。</p></article>
+        <article class="vc"><div class="m"><div class="av" aria-hidden="true">K</div><div><div class="nm">Kさん</div><div class="at">埼玉・医療系会社員（副業初挑戦）</div></div></div><p>前に一度、副業で挫折した経験があります。でもここは毎日情報が流れて質問できるので、初心者でも置いていかれない。まずは月5万円を目標に、コツコツ進めています。</p></article>
+        <article class="vc"><div class="m"><div class="av" aria-hidden="true">S</div><div><div class="nm">Sさん</div><div class="at">東京・医師</div></div></div><p>本業が忙しいので、AIで効率化しながら新しい収入の柱を作れるのがありがたいです。時間のない人ほど、AIと仲間の力の恩恵は大きいと感じます。</p></article>
+        <article class="vc"><div class="m"><div class="av" aria-hidden="true">M</div><div><div class="nm">Mさん</div><div class="at">北陸・ヨガインストラクター</div></div></div><p>レッスンの合間に、インスタ毎日投稿と有料noteに挑戦中です。毎週やることをみんなで宣言し合えるので、一人だと続かない私でも手が止まりません。</p></article>
+        <article class="vc"><div class="m"><div class="av" aria-hidden="true">D</div><div><div class="nm">Dさん</div><div class="at">三重・小売業（YouTube運営）</div></div></div><p>YouTubeでは実績があるほうですが、収入源を分散したくて参加しました。AIを使ったマネタイズの引き出しが一気に増えて、次に作るものの解像度が上がりました。</p></article>
       </div>
-      <div class="voice-c fade-in">
-        <div class="meta"><div class="avatar">K</div><div><div class="name">Kさん</div><div class="attr">占い・コンテンツ販売</div></div></div>
-        <div class="stars">★★★★★</div>
-        <p>スピ系の商品で、7万円のアップセルが成約しました。SSSで学んだ売り方を自分の商材に当てはめた結果です。まずは本業の給料を超えるのが目標です。</p>
-      </div>
-      <div class="voice-c fade-in">
-        <div class="meta"><div class="avatar">P</div><div><div class="name">Pさん</div><div class="attr">関東・自営業（TikTok・note）</div></div></div>
-        <div class="stars">★★★★★</div>
-        <p>TikTokショップやnoteの教材販売をしています。決済や集客で迷ったとき、運営がすぐ相談に乗ってくれる。実践会で困りごとをその場で片付けられるのが本当に助かります。</p>
-      </div>
-      <div class="voice-c fade-in">
-        <div class="meta"><div class="avatar">K</div><div><div class="name">Kさん</div><div class="attr">埼玉・医療系会社員（副業初挑戦）</div></div></div>
-        <div class="stars">★★★★★</div>
-        <p>前に一度、副業で挫折した経験があります。でもここは毎日情報が流れて質問できるので、初心者でも置いていかれない。まずは月5万円を目標に、コツコツ進めています。</p>
-      </div>
-      <div class="voice-c fade-in">
-        <div class="meta"><div class="avatar">S</div><div><div class="name">Sさん</div><div class="attr">東京・医師</div></div></div>
-        <div class="stars">★★★★★</div>
-        <p>本業が忙しいので、AIで効率化しながら新しい収入の柱を作れるのがありがたいです。時間のない人ほど、AIと仲間の力の恩恵は大きいと感じます。</p>
-      </div>
-      <div class="voice-c fade-in">
-        <div class="meta"><div class="avatar">M</div><div><div class="name">Mさん</div><div class="attr">北陸・ヨガインストラクター</div></div></div>
-        <div class="stars">★★★★★</div>
-        <p>レッスンの合間に、インスタ毎日投稿と有料noteに挑戦中です。毎週やることをみんなで宣言し合えるので、一人だと続かない私でも手が止まりません。</p>
-      </div>
-      <div class="voice-c fade-in">
-        <div class="meta"><div class="avatar">D</div><div><div class="name">Dさん</div><div class="attr">三重・小売業（YouTube運営）</div></div></div>
-        <div class="stars">★★★★★</div>
-        <p>YouTubeでは実績があるほうですが、収入源を分散したくて参加しました。AIを使ったマネタイズの引き出しが一気に増えて、次に作るものの解像度が上がりました。</p>
+      <div class="rail-ctl">
+        <span class="rail-hint" id="railHint">横にスワイプして、ほかの声も（全16件）</span>
+        <div class="rail-btns"><button type="button" id="railPrev" aria-label="前の声へ">←</button><button type="button" id="railNext" aria-label="次の声へ">→</button></div>
       </div>
     </div>
   </div>
 </section>
-
-<!-- INFO CHANNELS -->
-
-
-<!-- PRICING -->
-<section id="pricing" class="sec bg-s50">
-  <div class="w760">
-    <div class="sec-head"><span class="kicker c">Pricing</span></div>
-    <h2 class="sec-t mincho mt-16">料金</h2>
-    <div class="gold-rule mt-24"></div>
-    <div class="pr-card fade-in">
-      <p class="pr-lbl">月額</p>
-      <p class="pr-price mincho">¥2,980<span class="unit">（税込）</span></p>
-      <p class="pr-daily">1日あたり約100円。飲み会1回ぶんで、1ヶ月まるごと。</p>
-      <div class="pr-inc">
-        <p class="pr-cat">軸01 — 稼ぐための教材</p>
-        <ul class="pr-items">
-          <li><span class="ck">✓</span><span>AI×note収益化の完全マニュアル</span></li>
-          <li><span class="ck">✓</span><span>アフィリエイト記事テンプレート＋プロンプト集</span></li>
-          <li><span class="ck">✓</span><span>顔出しなしYouTubeの始め方講座（20本以上）</span></li>
-          <li><span class="ck">✓</span><span>ZOOMセミナーのアーカイブ動画が見放題</span></li>
-        </ul>
-        <p class="pr-cat">軸02 — 効率化・仕組み化の実践</p>
-        <ul class="pr-items">
-          <li><span class="ck">✓</span><span>朝のAI実践会・もくもく作業会（連日開催）</span></li>
-          <li><span class="ck">✓</span><span>作業の自動化・システム構築のハンズオン</span></li>
-          <li><span class="ck">✓</span><span>困りごと専用の個別AIキットづくり</span></li>
-          <li><span class="ck">✓</span><span>月1・30分のAI個別相談（松任谷）</span></li>
-        </ul>
-        <p class="pr-cat">コミュニティ</p>
-        <ul class="pr-items">
-          <li><span class="ck">✓</span><span>毎日情報が流れるDiscordコミュニティ</span></li>
-          <li><span class="ck">✓</span><span>LINEオープンチャット</span></li>
-          <li><span class="ck">✓</span><span>月6回以上のZOOMセッション（質問・相談し放題）</span></li>
-          <li><span class="ck">✓</span><span>リアル懇親会への参加権（不定期開催）</span></li>
-        </ul>
-        <p class="pr-cat">毎日の情報配信</p>
-        <ul class="pr-items">
-          <li><span class="ck">✓</span><span>最新AI情報（Claude / ChatGPT / Gemini）</span></li>
-          <li><span class="ck">✓</span><span>楽天・Amazonお得情報、ポケカ情報</span></li>
-          <li><span class="ck">✓</span><span>高単価案件の優先紹介・メンバー限定のコラボ情報</span></li>
-        </ul>
+<section id="compare" class="sec bg-white">
+  <div class="wrap">
+    <div class="head">
+      <span class="no">09</span><span class="en">Compare</span>
+      <h2>独学・高額スクールと、<br>どう違う？</h2>
+    </div>
+    <p class="cmp-hint">表は横にスクロールできます</p>
+    <div class="cmp-scroll fade">
+      <table class="cmp">
+        <thead><tr><th scope="col">&nbsp;</th><th scope="col" class="sss">SSS</th><th scope="col">独学</th><th scope="col">高額スクール</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">費用</th><td class="sss">月2,980円（税込）</td><td>本・教材代だけ</td><td>数十万円〜の一括払いが多い</td></tr>
+          <tr><th scope="row">情報の新しさ</th><td class="sss">実践的なAI Tipsが毎日届く</td><td>自分で追いかける</td><td>カリキュラムの更新待ちになりがち</td></tr>
+          <tr><th scope="row">詰まった時</th><td class="sss">実践会・講義でその場で相談</td><td>一人で調べて止まりがち</td><td>質問の期間や回数に制限があることも</td></tr>
+          <tr><th scope="row">一緒に進む仲間</th><td class="sss">参加メンバー100名突破</td><td>いない</td><td>受講期間が終わると離れがち</td></tr>
+          <tr><th scope="row">やめやすさ</th><td class="sss">いつでも解約・違約金なし</td><td>いつでもやめられる</td><td>途中解約・返金の条件が厳しいことも</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="fine">※独学・高額スクールは一般的な傾向をまとめたもので、サービスによって異なります。</p>
+  </div>
+</section>
+<section id="present" class="sec bg-gift">
+  <div class="wrap">
+    <div class="head">
+      <span class="no">10</span><span class="en">Gift</span>
+      <h2>参加特典として、<br><span class="g">プレゼントを11個</span><br class="sp-br">ご用意しています。</h2>
+      <p class="lead">SSSに参加した方が受け取れます。</p>
+    </div>
+    <div class="gift-lead fade">
+      <span class="n">11<small>個</small></span>
+      <p><b>参加した方への特典です</b><br>会員サイトにまとめてあります。</p>
+    </div>
+    <ul class="gifts">
+      <li class="gift fade">
+        <div class="gift-img"><img src="img/present/present-01.jpg" alt="AI文章の直し方Tips" width="1280" height="853" loading="lazy"></div>
+        <div class="gift-body">
+          <p class="gift-num"><small>PRESENT</small><b>01</b></p>
+          <p class="gift-t">AI文章の直し方Tips</p>
+          <p class="gift-d">AIが書いた文章の「どこか不自然」を直すコツ集です。修正前と修正後を並べて、短く・具体的に・自然にする直し方を見ながら覚えられます。</p>
+        </div>
+      </li>
+      <li class="gift rev fade">
+        <div class="gift-img"><img src="img/present/present-02.jpg" alt="自分専用のAIアシスタントの育て方" width="1280" height="853" loading="lazy"></div>
+        <div class="gift-body">
+          <p class="gift-num"><small>PRESENT</small><b>02</b></p>
+          <p class="gift-t">自分専用のAIアシスタントの育て方</p>
+          <p class="gift-d">自分の仕事や好み、文体をAIに伝えて、返答を自分向けに育てていく方法です。最初の設定から、会話で少しずつ合わせていくコツまでまとめています。</p>
+        </div>
+      </li>
+      <li class="gift fade">
+        <div class="gift-img"><img src="img/present/present-03.jpg" alt="SNS自動化作成キット" width="1280" height="853" loading="lazy"></div>
+        <div class="gift-body">
+          <p class="gift-num"><small>PRESENT</small><b>03</b></p>
+          <p class="gift-t">SNS自動化作成キット</p>
+          <p class="gift-d">投稿のテーマ決めから下書き、予約までをAIで回すためのキットです。図解・比較・手順など、よく使う投稿の型をそのまま使えます。</p>
+        </div>
+      </li>
+      <li class="gift rev fade">
+        <div class="gift-img"><img src="img/present/present-04.jpg" alt="note記事 自動作成キット" width="1280" height="853" loading="lazy"></div>
+        <div class="gift-body">
+          <p class="gift-num"><small>PRESENT</small><b>04</b></p>
+          <p class="gift-t">note記事 自動作成キット</p>
+          <p class="gift-d">書きたいテーマを入れると、構成づくりから本文の下書きまで進められるキットです。何を書けばいいか分からない、で手が止まらなくなります。</p>
+        </div>
+      </li>
+      <li class="gift fade">
+        <div class="gift-img"><img src="img/present/present-05.jpg" alt="AI占いマネタイズ完全教材＋蓄積データ集＋ショート動画エンジン" width="1280" height="853" loading="lazy"></div>
+        <div class="gift-body">
+          <p class="gift-num"><small>PRESENT</small><b>05</b></p>
+          <p class="gift-t">AI占いマネタイズ完全教材＋蓄積データ集＋ショート動画エンジン</p>
+          <p class="gift-d">AI占いで鑑定・発信・販売まで進めるための教材に、鑑定に使える蓄積データ集と、占いのショート動画を作る仕組みをまとめてお渡しします。</p>
+        </div>
+      </li>
+    </ul>
+    <div class="cta-block gift-mid fade">
+      <p class="say">残りの6個も、この下に続きます</p>
+      <a href="https://univa.cc/SlJd_Q" target="_blank" rel="noopener noreferrer" class="btn">SSSに参加する<span class="arr" aria-hidden="true">→</span></a>
+      <p class="cta-note">月額2,980円（税込）・いつでも解約OK<br class="sp-br"><span class="pc-sep"> ／ </span>SSSはDiscordで運営しています</p>
+    </div>
+    <ul class="gifts gifts-2">
+      <li class="gift rev fade">
+        <div class="gift-img"><img src="img/present/present-06.jpg" alt="Udemy「20万円分AI教材の無料クーポン」" width="1280" height="853" loading="lazy"></div>
+        <div class="gift-body">
+          <p class="gift-num"><small>PRESENT</small><b>06</b></p>
+          <p class="gift-t">Udemy「20万円分AI教材の無料クーポン」</p>
+          <p class="gift-d">AIを学べるUdemy講座を、クーポンで無料で受講できます。気になる講座から、自分のペースで学べます。</p>
+        </div>
+      </li>
+      <li class="gift fade">
+        <div class="gift-img"><img src="img/present/present-07.jpg" alt="稼げるUdemyの作り方" width="1280" height="853" loading="lazy"></div>
+        <div class="gift-body">
+          <p class="gift-num"><small>PRESENT</small><b>07</b></p>
+          <p class="gift-t">稼げるUdemyの作り方</p>
+          <p class="gift-d">自分の経験や得意なことを、Udemy講座にして販売するまでの流れです。講座の構成、台本、収録、公開の準備を順番に進められます。</p>
+        </div>
+      </li>
+      <li class="gift rev fade">
+        <div class="gift-img"><img src="img/present/present-08.jpg" alt="アフィリエイト完全ロードマップ教材" width="1280" height="853" loading="lazy"></div>
+        <div class="gift-body">
+          <p class="gift-num"><small>PRESENT</small><b>08</b></p>
+          <p class="gift-t">アフィリエイト完全ロードマップ教材</p>
+          <p class="gift-d">テーマ選び、商品選び、記事づくり、読者の導線、改善まで。アフィリエイトで迷いやすいところを、道のりに沿って1つずつ進める教材です。</p>
+        </div>
+      </li>
+      <li class="gift fade">
+        <div class="gift-img"><img src="img/present/present-09.jpg" alt="LINE→Googleカレンダー登録Bot＋教材" width="1280" height="853" loading="lazy"></div>
+        <div class="gift-body">
+          <p class="gift-num"><small>PRESENT</small><b>09</b></p>
+          <p class="gift-t">LINE→Googleカレンダー登録Bot＋教材</p>
+          <p class="gift-d">LINEに「明日15時 打合せ」と送るだけで、Googleカレンダーに予定が入るBotです。導入の手順をまとめた教材つきです。</p>
+        </div>
+      </li>
+      <li class="gift rev fade">
+        <div class="gift-img"><img src="img/present/present-10.jpg" alt="毎月AI個別面談" width="1280" height="853" loading="lazy"></div>
+        <div class="gift-body">
+          <p class="gift-num"><small>PRESENT</small><b>10</b></p>
+          <p class="gift-t">毎月AI個別面談</p>
+          <p class="gift-d">月に1回、AIの使い方や作業の見直し、収益化の相談を個別に話せる時間です。今の悩みを一緒に整理して、次にやることまで決めます。</p>
+        </div>
+      </li>
+      <li class="gift fade">
+        <div class="gift-img"><img src="img/present/present-11.jpg" alt="AIで収益化 動画作成キット" width="1280" height="853" loading="lazy"></div>
+        <div class="gift-body">
+          <p class="gift-num"><small>PRESENT</small><b>11</b></p>
+          <p class="gift-t">AIで収益化 動画作成キット</p>
+          <p class="gift-d">解説動画・ショート動画・紹介動画など、AIで動画を作るためのキットです。台本づくりから素材、編集までの流れをまとめています。</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+<section id="pricing" class="sec bg-paper">
+  <div class="narrow">
+    <div class="head">
+      <span class="no">11</span><span class="en">Pricing</span>
+      <h2>料金</h2>
+    </div>
+    <div class="price fade">
+      <p class="lb">月額</p>
+      <p class="yen">¥2,980<small>（税込）</small></p>
+      <p class="per">1日あたり約100円。飲み会1回ぶんで、1ヶ月まるごと。</p>
+      <p class="social">参加メンバー100名突破</p>
+      <div class="inc">
+        <div>
+          <h4>軸01 — 稼ぐための教材</h4>
+          <ul>
+            <li>AI×note収益化の完全マニュアル</li>
+            <li>アフィリエイト記事テンプレート＋プロンプト集</li>
+            <li>顔出しなしYouTubeの始め方講座</li>
+            <li>講義アーカイブ・動画150本以上が見放題</li>
+          </ul>
+        </div>
+        <div>
+          <h4>軸02 — 効率化・仕組み化の実践</h4>
+          <ul>
+            <li>日中のAI実践会（Discordボイス・不定期で月4〜5回）</li>
+            <li>作業の自動化・システム構築のハンズオン</li>
+            <li>困りごと専用の個別AIキットづくり</li>
+            <li>月1・30分のAI個別相談（松任谷）</li>
+          </ul>
+        </div>
+        <div>
+          <h4>コミュニティ</h4>
+          <ul>
+            <li>毎日情報が流れるDiscordコミュニティ</li>
+            <li>毎日開催のもくもく作業会（Discordボイス）</li>
+            <li>LINEオープンチャット</li>
+            <li>毎週水曜のZOOM講義（ZOOM・実践会で月6回超）</li>
+            <li>リアル懇親会（オフ会）への参加権（不定期開催）</li>
+          </ul>
+        </div>
+        <div>
+          <h4>毎日の情報配信</h4>
+          <ul>
+            <li>実践的AI Tips（Claude / ChatGPT / Gemini）</li>
+            <li>楽天・Amazonお得情報、ポケカ情報</li>
+            <li>高単価案件の優先紹介・メンバー限定のコラボ情報</li>
+          </ul>
+        </div>
       </div>
-      <div class="pr-note">
-        <strong>最初は月30万円でやろうと思っていました。</strong>コンサルの相場を考えれば妥当ですが、それでは「本業だけじゃキツい」という方が払い続けられません。だから月2,980円という、手の届く価格にしました。<strong>学んだことを実践していけば、月額分は無理なく回収できる範囲だと考えています。</strong>
-      </div>
-      <div class="pr-warn fade-in">
+      <div class="warn">
         <h4>ご決済前に必ずお読みください</h4>
         <p>SSSは<strong>Discord上で運営する有料コミュニティ</strong>です。ご決済後、必ずDiscord認証ページでアカウント連携をお願いします。</p>
         <ul>
@@ -747,69 +1282,56 @@ img{max-width:100%;display:block}
         </ul>
         <p style="margin:0">※ Discordアカウント未保有の方は、ご決済前に<a href="https://discord.com/register" target="_blank" rel="noopener noreferrer">こちら</a>から作成してください。</p>
       </div>
-      <a href="https://univa.cc/SlJd_Q" target="_blank" rel="noopener noreferrer" class="btn-gold mt-32" style="display:inline-block">SSSに参加する</a>
-      <p class="pr-fine" style="margin-top:14px">解約はいつでも可能。違約金なし。初月から全コンテンツ利用可。</p>
-      <p class="pr-fine">※決済ページの店舗名が「ゴリ塾」となっておりますが、SSSの決済ページで間違いありませんのでご安心ください。</p>
+      <a href="https://univa.cc/SlJd_Q" target="_blank" rel="noopener noreferrer" class="btn btn-block">SSSに参加する<span class="arr" aria-hidden="true">→</span></a>
+      <p class="fn">解約はいつでも可能。違約金なし。初月から全コンテンツ利用可。</p>
+      <p class="fn">※決済ページの店舗名が「ゴリ塾」となっておりますが、SSSの決済ページで間違いありませんのでご安心ください。</p>
     </div>
   </div>
 </section>
-
-<!-- FAQ -->
-<section id="faq" class="sec bg-w">
-  <div class="w760">
-    <div class="sec-head"><span class="kicker c">FAQ</span></div>
-    <h2 class="sec-t mincho mt-16">よくある質問</h2>
-    <div class="gold-rule mt-24"></div>
-    <div class="faq-list">
-      <div class="faq-i"><button class="faq-q" onclick="toggleFaq(this)"><span>正直、怪しくないですか？</span><svg class="faq-ic" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg></button><div class="faq-a">「AIで稼ぐ」と聞くと身構えますよね。分かります。でもSSSは月2,980円で、高額商材を売りつける必要がありません。運営も松任谷とゴリラの二人で顔が見える形でやっています。合わないと思ったら初月で辞めていただいて大丈夫です。</div></div>
-      <div class="faq-i"><button class="faq-q" onclick="toggleFaq(this)"><span>スキルゼロでも大丈夫？</span><svg class="faq-ic" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg></button><div class="faq-a">むしろスキルゼロの方が結果を出しています。変にプライドがなく、テンプレ通りにやれるからです。毎朝の実践会で、詰まったところはその場で一緒に触れるので、置いていかれません。</div></div>
-      <div class="faq-i"><button class="faq-q" onclick="toggleFaq(this)"><span>プログラミングができなくても、仕組みづくりに参加できますか？</span><svg class="faq-ic" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg></button><div class="faq-a">大丈夫です。実践会では、コードが分からない方でもAIに指示を出しながら自分の作業を自動化できる形で進めます。「困りごと専用のAIキット」を一緒に組むところから始められるので、まずは覗いてみてください。</div></div>
-      <div class="faq-i"><button class="faq-q" onclick="toggleFaq(this)"><span>1日どれくらい時間が必要？</span><svg class="faq-ic" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg></button><div class="faq-a">1日1〜2時間あれば十分です。実践会は聞き専・出入り自由なので、作業のおともに置いておくだけでも進みます。本業をしながら参加している方がほとんどです。</div></div>
-      <div class="faq-i"><button class="faq-q" onclick="toggleFaq(this)"><span>途中で辞められますか？</span><svg class="faq-ic" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg></button><div class="faq-a">いつでも辞められます。違約金もありません。解約ページから数クリックで完了です。引き止めメールも送りません。</div></div>
-      <div class="faq-i"><button class="faq-q" onclick="toggleFaq(this)"><span>参加しない方がいい人は？</span><svg class="faq-ic" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg></button><div class="faq-a">「入れば自動で稼げる」と思っている方です。AIは魔法ではありません。ただ、手を動かす場と仲間はここに揃っています。1ヶ月本気でやれば「これはいけるな」という感覚は掴めるはずです。</div></div>
-      <div class="faq-i"><button class="faq-q" onclick="toggleFaq(this)"><span>決済後にやることは？Discord連携が必須って本当？</span><svg class="faq-ic" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg></button><div class="faq-a">はい必須です。SSSはDiscord上で運営しているため、決済後に届くメールに記載される<strong>認証ページ</strong>で、メール＋Discord ユーザーIDの登録をお願いしています。<strong>決済日から7日以内に認証されない場合は、自動解約となります（返金はございません）</strong>のでご注意ください。Discordアカウント未保有の方は<a href="https://discord.com/register" target="_blank" rel="noopener noreferrer">こちら</a>から作成できます。</div></div>
-      <div class="faq-i"><button class="faq-q" onclick="toggleFaq(this)"><span>Discord ユーザーIDはどうやって調べる？</span><svg class="faq-ic" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg></button><div class="faq-a">Discordの<strong>設定 → 詳細設定 → 開発者モードをON</strong>にしてから、自分のアカウントを右クリック（スマホは長押し）して「IDをコピー」を選ぶと、17〜19桁の数字が取得できます。これが認証ページに入力するDiscord ユーザーIDです。</div></div>
+<section id="faq" class="sec bg-white">
+  <div class="narrow">
+    <div class="head">
+      <span class="no">12</span><span class="en">FAQ</span>
+      <h2>よくある質問</h2>
+    </div>
+    <div class="faq">
+      <details><summary><span><span class="q">Q.</span>正直、怪しくないですか？</span></summary><div class="a">「AIで稼ぐ」と聞くと身構えますよね。分かります。でもSSSは月2,980円で、高額商材を売りつける必要がありません。運営も松任谷とゴリラの二人で顔が見える形でやっています。合わないと思ったら初月で辞めていただいて大丈夫です。</div></details>
+      <details><summary><span><span class="q">Q.</span>スキルゼロでも大丈夫？</span></summary><div class="a">大丈夫です。自己紹介を書いてくれたメンバー95名のうち、14名はほぼ未経験・経験なしからのスタートです。日中のAI実践会では、詰まったところをその場で一緒に触れるので、置いていかれません。</div></details>
+      <details><summary><span><span class="q">Q.</span>プログラミングができなくても、仕組みづくりに参加できますか？</span></summary><div class="a">大丈夫です。実践会では、コードが分からない方でもAIに指示を出しながら自分の作業を自動化できる形で進めます。「困りごと専用のAIキット」を一緒に組むところから始められるので、まずは覗いてみてください。</div></details>
+      <details><summary><span><span class="q">Q.</span>講義や作業会の時間に参加できない日は？</span></summary><div class="a">水曜のZOOM講義は録画がアーカイブに残るので、あとから見られます。毎日開催のもくもく作業会や日中の実践会は出入り自由・聞き専OKなので、来られる日に少しだけ顔を出す参加の仕方でも大丈夫です。</div></details>
+      <details><summary><span><span class="q">Q.</span>1日どれくらい時間が必要？</span></summary><div class="a">まとまった時間がなくても進められます。毎日開催のもくもく作業会や実践会は聞き専・出入り自由なので、作業のおともに置いておくだけでも進みます。本業をしながら参加している方もいます。</div></details>
+      <details><summary><span><span class="q">Q.</span>オフ会には参加しないといけませんか？</span></summary><div class="a">参加は自由です。オフ会は不定期開催で、次回の開催はDiscordで先行案内します。オンラインだけの参加でももちろん大丈夫です。</div></details>
+      <details><summary><span><span class="q">Q.</span>途中で辞められますか？</span></summary><div class="a">いつでも辞められます。違約金もありません。解約ページから数クリックで完了です。引き止めメールも送りません。</div></details>
+      <details><summary><span><span class="q">Q.</span>参加しない方がいい人は？</span></summary><div class="a">「入れば自動で稼げる」と思っている方です。AIは魔法ではありません。ただ、手を動かす場と仲間はここに揃っています。1ヶ月本気でやれば「これはいけるな」という感覚は掴めるはずです。</div></details>
+      <details><summary><span><span class="q">Q.</span>決済後にやることは？Discord連携が必須って本当？</span></summary><div class="a">はい必須です。SSSはDiscord上で運営しているため、決済後に届くメールに記載される<strong>認証ページ</strong>で、メール＋Discord ユーザーIDの登録をお願いしています。<strong>決済日から7日以内に認証されない場合は、自動解約となります（返金はございません）</strong>のでご注意ください。Discordアカウント未保有の方は<a href="https://discord.com/register" target="_blank" rel="noopener noreferrer">こちら</a>から作成できます。</div></details>
+      <details><summary><span><span class="q">Q.</span>Discord ユーザーIDはどうやって調べる？</span></summary><div class="a">Discordの<strong>設定 → 詳細設定 → 開発者モードをON</strong>にしてから、自分のアカウントを右クリック（スマホは長押し）して「IDをコピー」を選ぶと、17〜19桁の数字が取得できます。これが認証ページに入力するDiscord ユーザーIDです。</div></details>
     </div>
   </div>
 </section>
-
-<!-- CHANNELS（入会判断の材料としては弱いので、FAQのあとへ下げた） -->
-<section id="channels" class="sec bg-w">
-  <div class="w1040">
-    <div class="sec-head"><span class="kicker c">Daily Info</span></div>
-    <h2 class="sec-t mincho mt-16">毎日流れる、AI情報とお得情報。</h2>
-    <div class="gold-rule mt-24"></div>
-    <p class="sec-s">Discordに専用チャンネルを用意。<strong>運営が一次情報をキュレーション</strong>して共有しています。<br>「届いたらチェック」のスタンスで、情報収集の負担を軽くする運用です。</p>
-    <div class="comm-g">
-      <div class="comm-c fade-in"><div class="idx">CHANNEL 01</div><h3>最新AI情報</h3><p>Claude / ChatGPT / Geminiの新機能・新モデル・実用プロンプトを毎日共有。AIの最新動向を追う時間を、一緒に減らしていきます。</p></div>
-      <div class="comm-c fade-in"><div class="idx">CHANNEL 02</div><h3>楽天お得情報</h3><p>SPU・スーパーセール・ポイントアップ・ふるさと納税の旬をキュレーション。「気づいたら終わってた」を減らせます。</p></div>
-      <div class="comm-c fade-in"><div class="idx">CHANNEL 03</div><h3>Amazonお得情報</h3><p>タイムセール・プライム特典・クーポンをチェックして共有。買うタイミングの参考にしていただけます。</p></div>
-      <div class="comm-c fade-in"><div class="idx">CHANNEL 04</div><h3>ポケカ情報</h3><p>新弾発売・抽選販売スケジュール・相場の動きを共有。トレカに興味がある方には参考になる情報源です。</p></div>
+<section class="final">
+  <div class="bgimg" aria-hidden="true"><img src="img/offkai/offkai-2-cheers.jpg" alt="" loading="lazy"></div>
+  <div class="narrow in">
+    <p class="kick">MESSAGE</p>
+    <h2>さいごに</h2>
+    <div class="msg">
+      <p>ひとりだと、どうしても手が止まります。<br>情報を集めても、ノウハウを買っても、<br class="sp-br">続ける場所がなければ形になりません。</p>
+      <p>SSSは、毎日開催のもくもく作業会、<br class="sp-br">日中のAI実践会、水曜のZOOM講義で、<br><span class="mk">仲間と一緒に手を動かし続ける場所</span>です。</p>
+      <p><strong>月2,980円。稼ぐ力と、仕組みをつくる力を、<br class="sp-br">二人の運営と仲間と一緒に。</strong></p>
     </div>
-    <div class="callout fade-in" style="margin-top:32px;text-align:center">
-      情報チャンネルだけでも、節約や情報収集の時短に十分役立ちます。<br>
-      SSSは稼ぐだけでなく、<strong>賢く使う・賢く貯める・最新を知る</strong>まで、まとめてカバーする場です。
+    <div class="cta-block">
+      <span class="chip">参加メンバー100名突破</span>
+      <p class="say" style="margin-top:16px">次の作業会で、お待ちしています</p>
+      <a href="https://univa.cc/SlJd_Q" target="_blank" rel="noopener noreferrer" class="btn">SSSに参加する（月額2,980円）<span class="arr" aria-hidden="true">→</span></a>
+      <p class="cta-note">SSSはDiscordで運営しています</p>
     </div>
+    <p class="fn">いつでも解約OK・違約金なし・初月から全コンテンツ利用可</p>
+    <p class="fn">※決済ページの店舗名が「ゴリ塾」となっておりますが、SSSの決済ページで間違いありませんのでご安心ください。</p>
+    <p class="fn">※参加メンバー数はDiscordコミュニティ参加者数（無料招待枠を含む）・2026年9月時点</p>
   </div>
 </section>
-
-<!-- CTA -->
-<section class="sec bg-ink">
-  <div class="w760 cta-b">
-    <div class="sec-head"><span class="kicker c" style="color:var(--gold-light)">Join SSS</span></div>
-    <h2 class="mincho mt-16">「あの時始めてればよかった」を、なくす。</h2>
-    <div class="gold-rule mt-24"></div>
-    <p class="ds">AIの進化は待ってくれません。今日始めた人と、3ヶ月後に始めた人の差は、想像以上に大きくなります。<br><strong>月2,980円。稼ぐ力と、仕組みをつくる力を、二人の運営と一緒に。</strong></p>
-    <a href="https://univa.cc/SlJd_Q" target="_blank" rel="noopener noreferrer" class="btn-gold mt-40" style="display:inline-block">SSSに参加する（月額2,980円）</a>
-    <p style="margin-top:14px;font-size:13px;color:rgba(255,255,255,.32)">いつでも解約OK・違約金なし・初月から全コンテンツ利用可</p>
-    <p style="margin-top:8px;font-size:11px;color:rgba(255,255,255,.25)">※決済ページの店舗名が「ゴリ塾」となっておりますが、SSSの決済ページで間違いありませんのでご安心ください。</p>
-  </div>
-</section>
-
-<!-- FOOTER -->
 <footer class="ft">
   <div class="ft-in">
-    <p class="ft-logo mincho">S<span>S</span>S</p>
+    <p class="ft-logo">S<span>S</span>S</p>
     <div class="ft-lk">
       <a href="/tokushoho.html">特定商取引法に基づく表記</a>
       <a href="/privacy.html">プライバシーポリシー</a>
@@ -818,26 +1340,51 @@ img{max-width:100%;display:block}
   </div>
   <p class="ft-cp">&copy; 2026 SSS. All rights reserved.</p>
 </footer>
-
-<script>
-function toggleFaq(btn){
-  const item=btn.parentElement;
-  const isOpen=item.classList.contains('open');
-  document.querySelectorAll('.faq-i').forEach(e=>e.classList.remove('open'));
-  if(!isOpen)item.classList.add('open');
-}
-const obs=new IntersectionObserver(function(entries){
-  entries.forEach(function(el){if(el.isIntersecting){el.target.classList.add('visible');obs.unobserve(el.target);}});
-},{threshold:0.12,rootMargin:'0px 0px -40px 0px'});
-document.querySelectorAll('.fade-in,.gold-rule').forEach(function(el){obs.observe(el);});
-document.querySelectorAll('.nav-mobile-menu a').forEach(function(a){
-  a.addEventListener('click',function(){document.getElementById('mm').classList.remove('open');});
-});
-</script>
-
-<!-- 追従CTA（スマホのみ表示） -->
-<div class="sticky-cta">
-  <a href="#pricing">SSSに参加する<span class="sc-sub">月2,980円・いつでも解約OK</span></a>
+<div class="sticky" id="sticky">
+  <a href="#pricing">
+    <span class="l"><b>SSSに参加する</b><small>月2,980円・いつでも解約OK</small></span>
+    <span class="r">参加メンバー<br>100名突破</span>
+  </a>
 </div>
+<script>
+(function(){
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var hasIO = 'IntersectionObserver' in window;
+  var btn=document.getElementById('mmBtn'), mm=document.getElementById('mm');
+  btn.addEventListener('click',function(){var o=mm.classList.toggle('open');btn.setAttribute('aria-expanded',o?'true':'false');});
+  mm.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){mm.classList.remove('open');btn.setAttribute('aria-expanded','false');});});
+  var fades=document.querySelectorAll('.fade');
+  if(!hasIO||reduce){fades.forEach(function(e){e.classList.add('in')});}
+  else{
+    var fo=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');fo.unobserve(e.target);}});},{threshold:.1,rootMargin:'0px 0px -30px 0px'});
+    fades.forEach(function(e){fo.observe(e)});
+  }
+  var nums=document.querySelectorAll('[data-count]');
+  if(hasIO&&!reduce){
+    nums.forEach(function(n){n.textContent='0'});
+    var co=new IntersectionObserver(function(es){es.forEach(function(e){
+      if(!e.isIntersecting)return; co.unobserve(e.target);
+      var el=e.target,to=+el.getAttribute('data-count'),t0=null,dur=1200;
+      function step(t){if(!t0)t0=t;var p=Math.min((t-t0)/dur,1);el.textContent=Math.round(to*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(step);else el.textContent=to;}
+      requestAnimationFrame(step);
+    });},{threshold:.4});
+    nums.forEach(function(n){co.observe(n)});
+  }
+  var plot=document.getElementById('plot');
+  if(!hasIO||reduce){plot.classList.add('on');}
+  else{var po=new IntersectionObserver(function(es){if(es[0].isIntersecting){plot.classList.add('on');po.disconnect();}},{threshold:.3});po.observe(plot);}
+  var rail=document.getElementById('rail'),prev=document.getElementById('railPrev'),next=document.getElementById('railNext');
+  function stepW(){var c=rail.querySelector('.vc');return c?c.getBoundingClientRect().width+12:300;}
+  function upd(){var max=rail.scrollWidth-rail.clientWidth-2;prev.disabled=rail.scrollLeft<=2;next.disabled=rail.scrollLeft>=max;}
+  prev.addEventListener('click',function(){rail.scrollBy({left:-stepW(),behavior:reduce?'auto':'smooth'})});
+  next.addEventListener('click',function(){rail.scrollBy({left:stepW(),behavior:reduce?'auto':'smooth'})});
+  rail.addEventListener('scroll',upd,{passive:true});window.addEventListener('resize',upd);upd();
+  var sticky=document.getElementById('sticky'),heroCta=document.querySelector('.hero-cta');
+  if(hasIO&&heroCta){
+    var so=new IntersectionObserver(function(es){sticky.classList.toggle('hide',es[0].isIntersecting);},{threshold:0});
+    so.observe(heroCta);
+  }
+})();
+</script>
 </body>
 </html>
