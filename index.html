@@ -273,12 +273,11 @@ a{color:inherit}
 .proof-g figcaption{margin-top:4px;font-size:11.5px;color:var(--stone-400);text-align:center}
 .proof-g .stack{display:grid;gap:10px}
 .rail-wrap{position:relative}
-.rail{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-inline:20px;padding:4px 20px 18px;margin:0 -20px;scrollbar-width:thin;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain}
-.rail::-webkit-scrollbar{height:4px}
+.rail-wrap{max-width:760px}
+.rail{position:relative;display:flex;flex-direction:column;gap:12px;height:640px;max-height:70vh;overflow-y:auto;padding:2px 8px 2px 0;scrollbar-width:thin;-webkit-overflow-scrolling:touch}
+.rail::-webkit-scrollbar{width:4px}
 .rail::-webkit-scrollbar-thumb{background:var(--stone-300);border-radius:4px}
-.vc{flex:0 0 84%;scroll-snap-align:center;background:#fff;border:1px solid var(--stone-200);border-radius:16px;padding:20px 20px 22px;display:flex;flex-direction:column}
-@media(min-width:600px){.vc{flex-basis:46%;scroll-snap-align:start}}
-@media(min-width:1000px){.vc{flex-basis:calc((100% - 24px)/3)}}
+.vc{flex:0 0 auto;background:#fff;border:1px solid var(--stone-200);border-radius:16px;padding:20px 20px 22px;display:flex;flex-direction:column}
 .vc .m{display:flex;align-items:center;gap:10px}
 .vc .av{width:38px;height:38px;border-radius:50%;background:var(--stone-100);border:1px solid var(--stone-200);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-weight:700;color:var(--stone-500)}
 .vc .nm{font-size:13px;font-weight:700;color:var(--stone-800);line-height:1.4}
@@ -287,7 +286,7 @@ a{color:inherit}
 .vc img.av{object-fit:cover;padding:0}
 .vc .hl{margin-top:14px;font-family:var(--serif);font-weight:700;font-size:15.5px;line-height:1.65;color:var(--stone-900)}
 .vc .hl+p{margin-top:8px}
-.rail-ctl{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:4px}
+.rail-ctl{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:12px}
 .rail-hint{font-size:12px;color:var(--stone-500)}
 .rail-btns{display:flex;gap:8px}
 .rail-btns button{width:40px;height:40px;border-radius:50%;border:1px solid var(--stone-300);background:#fff;color:var(--stone-700);font-size:16px;cursor:pointer}
@@ -1072,7 +1071,7 @@ a{color:inherit}
       <p class="lead">副業初挑戦の方から、複数の事業を回している方まで。実際に参加しているメンバーの声です。</p>
     </div>
     <div class="rail-wrap">
-      <div class="rail" id="rail" tabindex="0" aria-label="メンバーの声（横にスクロール）">
+      <div class="rail" id="rail" tabindex="0" aria-label="メンバーの声（下にスクロール）">
         <article class="vc"><div class="m"><img class="av" src="img/voices/bonjin.jpg" alt="" width="38" height="38" loading="lazy"><div><div class="nm">凡人くん</div><div class="at">会社員・アカウント運用の自動化</div></div></div><p class="hl">この価格でこの情報量は、正直バグです。</p><p>アカウント運用のノウハウは解像度が高くて自動化もできていましたが、AIそのものに詳しいわけではありませんでした。ここでAIを体系的に学べたことで、自分の自動化アプリを改善できました。教材を見るうちに開発の効率も上がってきて、これから先も時間をかけずに直していけそうです。会費の桁が1桁2桁間違っているんじゃないかと思うくらいです。</p></article>
         <article class="vc"><div class="m"><img class="av" src="img/voices/aitaro.jpg" alt="" width="38" height="38" loading="lazy"><div><div class="nm">AIたろ先生</div><div class="at">個人事業主</div></div></div><p class="hl">この月額で見ていいんですか？と思うほどの、資料の豊富さ。</p><p>AIでやれることが多すぎて、何から始めればいいのか、マネタイズにつなげる手順も自分よがりになりがちでした。入ってからはAI秘書を作ってタスク管理を整えたり、YouTube台本作成のエージェントやThreadsの投稿に挑戦。とにかくアーカイブと教材がすごいので、見まくりました。頑張っている仲間と、教えてくださるお二人のおかげで、モチベーション高く過ごせています。本当に一度、入ってみてほしいです。</p></article>
         <article class="vc"><div class="m"><img class="av" src="img/voices/manabi.jpg" alt="" width="38" height="38" loading="lazy"><div><div class="nm">マナビくん</div><div class="at">会社員・副業6か月目</div></div></div><p class="hl">悩んでいるなら、まずは入るべき！</p><p>いまの作業を自動化したかったのですが、そもそもどうすればいいのか、何をやるとよくないのかがわかりませんでした。求めているものが得られるか少し迷いましたが、値段の安さと、松任谷さんと直接話して楽しそうだと思えたことで入りました。アカウント運用をゲーム風に半自動化したり、AIでショート動画を自動で作れるようにしたり。AIのすごさを実感して、毎日触るようになりました。</p></article>
@@ -1107,8 +1106,8 @@ a{color:inherit}
         <article class="vc"><div class="m"><div class="av" aria-hidden="true">T</div><div><div class="nm">Tさん</div><div class="at">noteを軸に発信を整理中</div></div></div><p class="hl">まず何に集中するかを、決められました。</p><p>noteやSNSなど、やってみたいことはたくさんあるのに、調べすぎて結局何に力を入れればいいのか迷っていました。個別相談をきっかけに、手を広げていたものを一度整理して、まずはnoteに力を入れることにしました。過去の記事やプロフィールを見直しながら、発信の方向性を整えています。ひとりで迷い続けるより、相談しながら方向修正できる環境があるほうが、動きやすいです。</p></article>
       </div>
       <div class="rail-ctl">
-        <span class="rail-hint" id="railHint">横にスワイプして、ほかの声も（全32件）</span>
-        <div class="rail-btns"><button type="button" id="railPrev" aria-label="前の声へ">←</button><button type="button" id="railNext" aria-label="次の声へ">→</button></div>
+        <span class="rail-hint" id="railHint">下にスクロールして、ほかの声も（全32件）</span>
+        <div class="rail-btns"><button type="button" id="railPrev" aria-label="前の声へ">↑</button><button type="button" id="railNext" aria-label="次の声へ">↓</button></div>
       </div>
     </div>
   </div>
@@ -1397,11 +1396,20 @@ a{color:inherit}
   if(!hasIO||reduce){plot.classList.add('on');}
   else{var po=new IntersectionObserver(function(es){if(es[0].isIntersecting){plot.classList.add('on');po.disconnect();}},{threshold:.3});po.observe(plot);}
   var rail=document.getElementById('rail'),prev=document.getElementById('railPrev'),next=document.getElementById('railNext');
-  function stepW(){var c=rail.querySelector('.vc');return c?c.getBoundingClientRect().width+12:300;}
-  function upd(){var max=rail.scrollWidth-rail.clientWidth-2;prev.disabled=rail.scrollLeft<=2;next.disabled=rail.scrollLeft>=max;}
-  prev.addEventListener('click',function(){rail.scrollBy({left:-stepW(),behavior:reduce?'auto':'smooth'})});
-  next.addEventListener('click',function(){rail.scrollBy({left:stepW(),behavior:reduce?'auto':'smooth'})});
-  rail.addEventListener('scroll',upd,{passive:true});window.addEventListener('resize',upd);upd();
+  var cards=rail.querySelectorAll('.vc');
+  /* 枠の高さ＝2人分＋3人目が少しのぞく分（続きがあると分かるように）。画面より高くはしない */
+  function fit(){if(cards.length<3)return;var h=cards[2].offsetTop-cards[0].offsetTop+44;rail.style.height=Math.min(h,Math.round(window.innerHeight*.7))+'px';}
+  function upd(){var max=rail.scrollHeight-rail.clientHeight-2;prev.disabled=rail.scrollTop<=2;next.disabled=rail.scrollTop>=max;}
+  function go(dir){var t=rail.scrollTop,base=cards[0].offsetTop,to=dir>0?rail.scrollHeight:0,i,y;
+    if(dir>0){for(i=0;i<cards.length;i++){y=cards[i].offsetTop-base;if(y>t+4){to=y;break;}}}
+    else{for(i=cards.length-1;i>=0;i--){y=cards[i].offsetTop-base;if(y<t-4){to=y;break;}}}
+    rail.scrollTo({top:to,behavior:reduce?'auto':'smooth'});}
+  prev.addEventListener('click',function(){go(-1)});
+  next.addEventListener('click',function(){go(1)});
+  rail.addEventListener('scroll',upd,{passive:true});
+  window.addEventListener('resize',function(){fit();upd();});window.addEventListener('load',function(){fit();upd();});
+  if(document.fonts&&document.fonts.ready){document.fonts.ready.then(function(){fit();upd();});}
+  fit();upd();
   /* 写真の拡大（デッドクリック対策・L-20260924-23）。失敗しても他の動きを止めない作りにする */
   var lb=document.getElementById('lightbox');
   if(lb){
