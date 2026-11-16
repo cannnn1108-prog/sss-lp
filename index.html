@@ -806,6 +806,20 @@ a{color:inherit}
 .more .gifts-2{margin-top:18px}
 .faq-more{margin-top:18px;font-size:14px;line-height:1.8;color:var(--stone-600);text-align:center}
 .faq-more a{color:#0d4a8a;text-decoration:underline}
+/* ブログ欄（カードは build-guide.js が guide-cards の印の間に書く・L-20261116-28） */
+.blog-cards{list-style:none;display:grid;gap:16px;grid-template-columns:minmax(0,1fr)}
+.blog-cards a{display:flex;flex-direction:column;height:100%;background:#fff;border:1px solid var(--stone-200);border-radius:14px;overflow:hidden;text-decoration:none;color:var(--stone-700);transition:box-shadow .2s,transform .2s}
+.blog-cards a:hover{box-shadow:0 10px 28px rgba(20,18,16,.12);transform:translateY(-2px)}
+.blog-cards img{display:block;width:100%;height:auto;aspect-ratio:1200/630;background:var(--ink)}
+.blog-cards .bd{display:block;padding:14px 16px 16px}
+.blog-cards time{display:block;font-size:12px;color:var(--stone-500)}
+.blog-cards b{display:block;margin-top:4px;font-family:var(--serif);font-size:16px;line-height:1.55;color:var(--stone-900)}
+.blog-cards .bd>span{display:block;margin-top:6px;font-size:13px;line-height:1.75;color:var(--stone-600)}
+.blog-more{margin-top:24px;text-align:center}
+.blog-more a{display:inline-flex;align-items:center;gap:8px;min-height:48px;padding:0 28px;border-radius:999px;border:1.5px solid var(--stone-900);color:var(--stone-900);font-size:15px;font-weight:700;text-decoration:none;background:#fff}
+.blog-more a:hover{background:var(--stone-900);color:#fff}
+@media(min-width:700px){.blog-cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(min-width:1000px){.blog-cards{grid-template-columns:repeat(4,minmax(0,1fr))}}
 </style>
 <script>document.documentElement.classList.add('js')</script>
 </head>
@@ -823,6 +837,7 @@ a{color:inherit}
       <a href="#pricing">料金</a>
       <a href="#present">プレゼント</a>
       <a href="#faq">FAQ</a>
+      <a href="/guide/">ブログ</a>
       <a href="https://univa.cc/bMYdr5" data-sss-position="desktop_nav" target="_blank" rel="noopener noreferrer" class="nav-cta">参加する</a>
     </div>
     <button class="nav-btn" type="button" aria-label="メニュー" aria-expanded="false" aria-controls="mm" id="mmBtn">
@@ -839,6 +854,7 @@ a{color:inherit}
     <a href="#pricing">料金</a>
     <a href="#present">参加特典プレゼント</a>
     <a href="#faq">FAQ</a>
+    <a href="/guide/">ブログ（入る前に読む記事）</a>
     <a href="https://univa.cc/bMYdr5" data-sss-position="mobile_nav" target="_blank" rel="noopener noreferrer" class="nav-cta">参加する</a>
   </div>
 </nav>
@@ -1600,6 +1616,24 @@ a{color:inherit}
     <p class="faq-more">入る前にもっと詳しく知りたい方へ：<a href="/guide/">SSSガイド（入る前に確かめること・料金の違い・1週間の記録）</a></p>
   </div>
 </section>
+<section id="blog" class="sec bg-paper">
+  <div class="wrap">
+    <div class="head">
+      <span class="no">14</span><span class="en">BLOG</span>
+      <h2>ブログ <span class="g">入る前に読む</span></h2>
+      <p class="lead">AIのオンラインサロンを選ぶときに確かめること、料金の違い、SSSの1週間の記録などを、運営の松任谷とゴリラが書いています。</p>
+    </div>
+    <!-- guide-cards:start -->
+    <ul class="blog-cards">
+      <li><a href="/guide/ai-salon-checklist/" data-umami-event="sss_blog_open" data-umami-event-slug="ai-salon-checklist"><img src="/guide/img/ai-salon-checklist.webp" width="1200" height="630" alt="クリップボードに並んだ7つの確認欄と虫めがねの絵。AIのオンラインサロンに入る前に確かめる7つのこと" loading="lazy" decoding="async"><span class="bd"><time datetime="2026-11-16">2026年11月16日</time><b>AIのオンラインサロンは怪しい？入る前に確かめる7つのこと（運営するSSSも同じ基準で自己採点）</b><span>運営者・料金の総額・解約の方法など、入る前に確かめる7項目と、SSS自身の自己採点。</span></span></a></li>
+      <li><a href="/guide/online-salon-pros-cons/" data-umami-event="sss_blog_open" data-umami-event-slug="online-salon-pros-cons"><img src="/guide/img/online-salon-pros-cons.webp" width="1200" height="630" alt="良いところ5つと悪いところ5つが釣り合っている天びんの絵。オンラインサロンの良いところと悪いところ" loading="lazy" decoding="async"><span class="bd"><time datetime="2026-11-16">2026年11月16日</time><b>オンラインサロンの良いところ・悪いところ。向いている人と向いていない人</b><span>オンラインサロンの良いところと悪いところを5つずつ、運営する側の目線で正直に整理しました。</span></span></a></li>
+      <li><a href="/guide/price-tiers/" data-umami-event="sss_blog_open" data-umami-event-slug="price-tiers"><img src="/guide/img/price-tiers.webp" width="1200" height="630" alt="月1,000円・3,000円・2万円の3段の階段の絵。情報配信型・実践コミュニティ型・スクール型の違い" loading="lazy" decoding="async"><span class="bd"><time datetime="2026-11-16">2026年11月16日</time><b>月1,000円・3,000円・2万円のAI学習は何が違う？種類ごとの選び方</b><span>AIを学ぶ有料サービスは、情報配信型・実践コミュニティ型・スクール型の3種類で中身も料金も大きく違います。</span></span></a></li>
+      <li><a href="/guide/sss-one-week/" data-umami-event="sss_blog_open" data-umami-event-slug="sss-one-week"><img src="/guide/img/sss-one-week.webp" width="1200" height="630" alt="Discordで開いているもくもく作業会の実際の画面と、月曜から日曜までの帯。毎日の作業会と水曜のZOOM講義" loading="lazy" decoding="async"><span class="bd"><time datetime="2026-11-16">2026年11月16日</time><b>SSSの1週間：作業会・水曜講義・実践会・毎日のAIニュースで何をしているか</b><span>月2,980円のDiscord型AIコミュニティSSSの1週間を運営者が記録。</span></span></a></li>
+    </ul>
+    <!-- guide-cards:end -->
+    <p class="blog-more"><a href="/guide/">記事一覧を見る<span aria-hidden="true">→</span></a></p>
+  </div>
+</section>
 <section class="final">
   <div class="bgimg" aria-hidden="true"><img src="img/offkai/offkai-2-cheers.jpg" alt="" loading="lazy"></div>
   <div class="narrow in">
@@ -1624,7 +1658,7 @@ a{color:inherit}
   <div class="ft-in">
     <p class="ft-logo">S<span>S</span>S</p>
     <div class="ft-lk">
-      <a href="/guide/">SSSガイド</a>
+      <a href="/guide/">ブログ（SSSガイド）</a>
       <a href="/tokushoho.html">特定商取引法に基づく表記</a>
       <a href="/privacy.html">プライバシーポリシー</a>
       <a href="/contact.html">お問い合わせ</a>

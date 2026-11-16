@@ -48,3 +48,118 @@ strong{color:var(--stone-900);font-weight:700}
 .ft-lk a{text-decoration:none;color:inherit}
 .ft-cp{font-size:12px;color:var(--stone-300);text-align:center;margin-top:12px}
 @media(min-width:768px){.g-art h1,.g-h1{font-size:30px}.g-art h2{font-size:23px}}
+
+/* ブログ（一覧のカード・アイキャッチ）L-20261116-28 */
+.nav-g{display:inline-flex;align-items:center;min-height:40px}
+.g-eye{margin:18px 0 0;border-radius:14px;overflow:hidden;background:var(--ink);aspect-ratio:1200/630}
+.g-eye img{display:block;width:100%;height:auto}
+.g-cards{margin-top:22px;list-style:none;display:grid;gap:16px;grid-template-columns:minmax(0,1fr)}
+.g-cards a{display:flex;flex-direction:column;height:100%;border:1px solid var(--stone-200);border-radius:14px;overflow:hidden;text-decoration:none;color:var(--stone-700);background:#fff;transition:box-shadow .2s,transform .2s}
+.g-cards a:hover{box-shadow:0 10px 28px rgba(20,18,16,.12);transform:translateY(-2px)}
+.g-cards img{display:block;width:100%;height:auto;aspect-ratio:1200/630;background:var(--ink)}
+.g-cards .bd{padding:14px 16px 16px}
+.g-cards time{display:block;font-size:12px;color:var(--stone-500)}
+.g-cards b{display:block;margin-top:4px;font-family:var(--serif);font-size:16.5px;line-height:1.55;color:var(--stone-900)}
+.g-cards span{display:block;margin-top:6px;font-size:13.5px;line-height:1.75;color:var(--stone-600)}
+@media(min-width:700px){.g-cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* ============================================================
+   本文の図（文字で描く図）L-20261116-28
+   部品はサンのブログの図（sun-blog daily/figures/fig.css）を、SSSの黒×金に色を置きかえて使う。
+   ============================================================ */
+.fg{--navy:var(--stone-900);--sun:var(--gold);--sun-deep:var(--gold-deep);--sun-soft:var(--gold-light);--sun-ink:#8a6420;
+  --soft:var(--stone-100);--soft2:var(--gold-wash);--line:var(--stone-200);--sub:var(--stone-600);--muted:var(--stone-500);--fink:var(--stone-800)}
+.g-art figure.fg{margin:30px 0;padding:20px 16px 14px;background:#fff;border:1px solid var(--stone-200);border-top:3px solid var(--gold);border-radius:14px;
+  box-shadow:0 4px 18px rgba(20,18,16,.06);line-height:1.6;letter-spacing:.01em}
+.fg *{box-sizing:border-box}
+.g-art .fg p{margin:0;font-size:inherit}
+.g-art .fg ol,.g-art .fg ul{margin:0;padding:0;display:block;font-size:inherit}
+.fg .fg-kicker{display:inline-block;font-size:11.5px;font-weight:700;letter-spacing:.14em;color:var(--sun-ink);margin:0 0 4px}
+.g-art .fg .fg-ttl{font-family:var(--serif);font-size:17px;font-weight:700;color:var(--navy);margin:0 0 14px;line-height:1.5}
+.fg figcaption{font-size:13px;color:var(--sub);text-align:left;margin-top:14px;padding-top:10px;border-top:1px dashed var(--line);line-height:1.7}
+.fg .fg-src{display:block;font-size:11.5px;color:var(--muted);margin-top:4px}
+.fg .fg-src a{color:var(--muted)}
+.fg b,.fg strong{color:var(--navy)}
+.fg .n{font-variant-numeric:tabular-nums;font-feature-settings:"tnum"}
+.fg .t,.fg .d,.fg .r,.fg .c,.fg .h,.fg li,.fg .l{overflow-wrap:anywhere;min-width:0}
+
+/* 手順 */
+.g-art .fg-flow ol{list-style:none;counter-reset:fg}
+.fg-flow li{counter-increment:fg;position:relative;padding:0 0 16px 46px}
+.fg-flow li::before{content:counter(fg);position:absolute;left:0;top:0;width:32px;height:32px;border-radius:50%;background:var(--navy);color:#fff;font-weight:700;font-size:15px;display:flex;align-items:center;justify-content:center}
+.fg-flow li::after{content:"";position:absolute;left:15px;top:36px;bottom:2px;width:2px;background:var(--line)}
+.fg-flow li:last-child{padding-bottom:0}
+.fg-flow li:last-child::after{display:none}
+.fg-flow .t{display:block;font-weight:700;color:var(--navy);font-size:15px;padding-top:4px}
+.fg-flow .d{display:block;font-size:13px;color:var(--sub);margin-top:2px}
+.fg-flow li.key::before{background:var(--sun);color:var(--navy)}
+
+/* 分かれ道 */
+.fg-branch .q{background:var(--navy);color:#fff;border-radius:10px;padding:11px 14px;font-weight:700;font-size:15px;text-align:center;position:relative;margin-bottom:22px}
+.fg-branch .q::after{content:"";position:absolute;left:50%;bottom:-16px;margin-left:-1px;width:2px;height:16px;background:var(--navy)}
+.fg-branch .outs{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:8px;border-top:2px solid var(--navy);padding-top:14px;position:relative}
+.fg-branch .out{border:1px solid var(--line);border-radius:10px;padding:10px 11px;background:#fff;position:relative}
+.fg-branch .out::before{content:"";position:absolute;left:50%;top:-15px;margin-left:-1px;width:2px;height:14px;background:var(--navy)}
+.fg-branch .out .c{display:block;font-size:12.5px;color:var(--sub);font-weight:700}
+.fg-branch .out .r{display:block;font-size:15px;font-weight:700;color:var(--navy);margin-top:3px;line-height:1.4}
+.fg-branch .out .d{display:block;font-size:12px;color:var(--sub);margin-top:4px;line-height:1.55}
+.fg-branch .out.fg-warn{background:var(--soft2);border-color:var(--sun)}
+.fg-branch .out.fg-warn .r{color:var(--sun-ink)}
+.fg-branch .outs.o3{grid-template-columns:minmax(0,1fr);border-top:0;padding-top:0}
+.fg-branch .outs.o3 .out::before{display:none}
+@media(min-width:641px){.fg-branch .outs.o3{grid-template-columns:repeat(3,minmax(0,1fr));border-top:2px solid var(--navy);padding-top:14px}.fg-branch .outs.o3 .out::before{display:block}}
+
+/* 時間の帯 */
+.g-art .fg-time ol{list-style:none;padding:0 0 0 18px;border-left:3px solid var(--line);margin-left:6px}
+.fg-time li{position:relative;padding:0 0 15px 16px}
+.fg-time li:last-child{padding-bottom:0}
+.fg-time li::before{content:"";position:absolute;left:-26.5px;top:5px;width:14px;height:14px;border-radius:50%;background:#fff;border:3px solid var(--navy)}
+.fg-time li.key::before{background:var(--sun);border-color:var(--sun-deep)}
+.fg-time li.past::before{border-color:var(--stone-400)}
+.fg-time li.past .t{color:var(--stone-600)}
+.fg-time .w{display:block;font-size:12.5px;font-weight:700;color:var(--sun-ink);letter-spacing:.03em}
+.fg-time .t{display:block;font-weight:700;color:var(--navy);font-size:15px}
+.fg-time .d{display:block;font-size:13px;color:var(--sub)}
+.fg-time li.sp{padding:0}
+.fg-time li.sp::before{display:none}
+.fg-time .span{margin:2px 0 14px -21px;padding:8px 12px 8px 14px;background:var(--soft2);border-left:3px solid var(--sun);font-size:13px;font-weight:700;color:var(--sun-ink)}
+
+/* 横棒 */
+.fg-bars .r{display:grid;grid-template-columns:7.2em minmax(0,1fr);gap:8px;align-items:center;margin:8px 0}
+.fg-bars .l{font-size:12.5px;font-weight:700;color:var(--sub);line-height:1.4}
+.fg-bars .b{display:flex;align-items:center;gap:8px;min-width:0}
+.fg-bars .bar{height:20px;border-radius:0 5px 5px 0;background:var(--stone-700);min-width:3px}
+.fg-bars .r.key .bar{background:linear-gradient(90deg,var(--gold),var(--gold-deep))}
+.fg-bars .r.key .l{color:var(--navy)}
+.fg-bars .fv{font-size:14px;font-weight:700;color:var(--navy);white-space:nowrap;font-variant-numeric:tabular-nums}
+.fg-bars .tag{display:inline-block;font-size:11.5px;font-weight:700;color:var(--sun-ink);background:var(--soft2);border-radius:4px;padding:1px 8px;margin-bottom:6px}
+
+/* 料金の幅（1本の物差し） */
+.fg-range .rr{margin:0 0 14px}
+.g-art .fg-range .l{font-size:13px;font-weight:700;color:var(--navy);display:flex;flex-wrap:wrap;gap:2px 10px;align-items:baseline;margin-bottom:4px}
+.fg-range .l .fv{font-weight:500;font-size:12.5px;color:var(--sub)}
+.fg-range .track{position:relative;height:22px;background:var(--soft);border-radius:4px}
+.fg-range .gl{position:absolute;top:0;bottom:0;width:1px;background:var(--stone-300)}
+.fg-range .bnd{position:absolute;top:3px;bottom:3px;border-radius:4px;background:var(--stone-600)}
+.fg-range .bnd.open{background:linear-gradient(90deg,var(--stone-600) 70%,rgba(87,83,78,.15))}
+.fg-range .rr.key .bnd{background:linear-gradient(90deg,var(--gold),var(--gold-deep))}
+.fg-range .mk{position:absolute;top:-5px;bottom:-5px;width:3px;margin-left:-1px;background:var(--navy);border-radius:2px}
+.fg-range .rr.key{margin-bottom:36px}
+.fg-range .mk em{position:absolute;left:-10px;top:calc(100% + 4px);white-space:nowrap;font-style:normal;font-size:11.5px;font-weight:700;color:var(--navy);background:#fff;border:1px solid var(--navy);border-radius:999px;padding:0 7px;line-height:1.6}
+.fg-range .axis{position:relative;height:18px;border-top:1px solid var(--stone-300);margin-top:2px}
+.fg-range .axis .tk{position:absolute;top:2px;transform:translateX(-50%);font-size:11px;color:var(--muted);white-space:nowrap}
+.fg-range .axis .tk[style="left:0"]{transform:none}
+
+/* 曜日の帯 */
+.fg-week .wr{display:grid;grid-template-columns:7.6em repeat(7,minmax(0,1fr));gap:4px;align-items:center;padding:6px 0;border-top:1px solid var(--line)}
+.fg-week .wr.wh{border-top:0;padding-top:0}
+.fg-week .wh .d{text-align:center;font-family:var(--serif);font-weight:700;color:var(--navy);font-size:14px}
+.fg-week .wr .l{font-size:12.5px;font-weight:700;color:var(--navy);line-height:1.35}
+.fg-week .wr .l small{display:block;font-size:10.5px;font-weight:500;color:var(--sub);line-height:1.4}
+.fg-week .c{height:22px;border-radius:5px;background:var(--soft)}
+.fg-week .c.on{background:var(--stone-700)}
+.fg-week .wr.key .c.on{background:linear-gradient(135deg,var(--gold),var(--gold-deep))}
+.fg-week .fl{grid-column:2/-1;border:2px dashed var(--gold);border-radius:6px;padding:3px 6px;font-size:11.5px;font-weight:700;color:var(--sun-ink);text-align:center;background:var(--soft2);line-height:1.5}
+
+/* 写真 */
+.fg-photo img{display:block;width:100%;height:auto;border-radius:10px;background:var(--ink)}
