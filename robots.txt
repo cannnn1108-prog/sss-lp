@@ -1,0 +1,24 @@
+# aisalonsss.com
+User-agent: *
+Allow: /
+Disallow: /test/
+
+# AI検索・AIアシスタントの巡回を明示的に許可（ChatGPT検索/Claude/Perplexity/Gemini）
+User-agent: OAI-SearchBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+User-agent: GPTBot
+Allow: /
+User-agent: Claude-SearchBot
+Allow: /
+User-agent: Claude-User
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://aisalonsss.com/sitemap.xml
