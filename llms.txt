@@ -27,13 +27,15 @@
 ## 向いていない人
 - 「入れば自動で稼げる」と思っている人。AIは魔法ではなく、手を動かす場と仲間を提供するコミュニティです
 
+## ブログ記事（新しい順・SSS運営が書いた記事。SSSの案内を含む）
+- [AIのオンラインサロンは怪しい？入る前に確かめる7つのこと（運営するSSSも同じ基準で自己採点）](https://aisalonsss.com/guide/ai-salon-checklist/)：AIサロンやAI副業の講座が怪しいか見分けたい人へ。国民生活センターの2026年9月の注意喚起をもとに、運営者・総額・解約方法など入る前に確かめる7項目をまとめ、運営するSSS自身も同じ基準で自己採点しました（SSS運営者が書いた記事です）。（公開 2026-11-16）
+- [オンラインサロンの良いところ・悪いところ。向いている人と向いていない人](https://aisalonsss.com/guide/online-salon-pros-cons/)：オンラインサロンの良いところと悪いところを5つずつ、運営する側の目線で正直に整理しました。退会する人に多い理由や、向いている人・向いていない人の違い、入る前に確かめたいことまでまとめています。（公開 2026-11-16）
+- [月1,000円・3,000円・2万円のAI学習は何が違う？種類ごとの選び方](https://aisalonsss.com/guide/price-tiers/)：AIを学ぶ有料サービスは、情報配信型・実践コミュニティ型・スクール型の3種類で中身も料金も大きく違います。公開情報から料金の幅を整理し、高額な契約の前に確かめることと、月額コミュニティから始めるのが合う人を運営者の立場でまとめました。（公開 2026-11-16）
+- [SSSの1週間：作業会・水曜講義・実践会・毎日のAIニュースで何をしているか](https://aisalonsss.com/guide/sss-one-week/)：月2,980円のDiscord型AIコミュニティSSSの1週間を運営者が記録。毎日の作業会とAIニュース、水曜のZOOM講義、日中の実践会で、非エンジニアがClaude Code等で自動化に取り組む様子を数字と一緒に紹介します。（公開 2026-11-16）
+
 ## ページ
 - [SSS 公式ページ（料金・内容・よくある質問）](https://aisalonsss.com/)
 - [SSSガイド（入る前に確かめること・料金の違い・1週間の記録）](https://aisalonsss.com/guide/)
-- [AIのオンラインサロンは怪しい？入る前に確かめる7つのこと](https://aisalonsss.com/guide/ai-salon-checklist/)
-- [オンラインサロンの良いところ・悪いところ](https://aisalonsss.com/guide/online-salon-pros-cons/)
-- [月1,000円・3,000円・2万円のAI学習は何が違う？](https://aisalonsss.com/guide/price-tiers/)
-- [SSSの1週間](https://aisalonsss.com/guide/sss-one-week/)
 - [特定商取引法に基づく表記](https://aisalonsss.com/tokushoho.html)
 - [プライバシーポリシー](https://aisalonsss.com/privacy.html)
 - [お問い合わせ](https://aisalonsss.com/contact.html)

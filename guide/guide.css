@@ -163,3 +163,10 @@ strong{color:var(--stone-900);font-weight:700}
 
 /* 写真 */
 .fg-photo img{display:block;width:100%;height:auto;border-radius:10px;background:var(--ink)}
+
+/* 関連記事（記事の下・3本）L-20261116-28 */
+.g-rel{margin-top:44px}
+.g-rel h2{padding-bottom:6px;border-bottom:2px solid var(--gold);font-family:var(--serif);font-size:20px;line-height:1.5;color:var(--stone-900)}
+.g-rel .g-cards{margin-top:16px;gap:10px}
+@media(max-width:699px){.g-rel .g-cards a{flex-direction:row;align-items:center}.g-rel .g-cards img{width:116px;flex:none}.g-rel .g-cards .bd{padding:8px 12px}.g-rel .g-cards b{font-size:14.5px;line-height:1.5}.g-rel .g-cards span span{display:none}}
+@media(min-width:700px){.g-rel .g-cards{grid-template-columns:repeat(3,minmax(0,1fr))}.g-rel .g-cards b{font-size:15px}.g-rel .g-cards span span{display:none}}
