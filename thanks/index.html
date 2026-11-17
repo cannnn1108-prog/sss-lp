@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>お申し込みありがとうございます｜SSS</title>
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/icon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#141210">
+<meta name="robots" content="noindex,nofollow">
+<meta name="referrer" content="no-referrer">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@700&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+<!-- Umami（自前）。決済画面から戻るURLの後ろに付く値は記録しない（data-exclude-search）。Clarityはこのページに入れない。L-20261117-06 -->
+<script defer crossorigin="anonymous" src="https://analytics.aisalonsss.com/script.js" data-website-id="b3ce03ea-2d2e-4fac-8942-688d0f0a4100" data-exclude-search="true" data-exclude-hash="true"></script>
+<style>
+:root{--stone-50:#fafaf9;--stone-200:#e7e5e4;--stone-300:#d6d3d1;--stone-400:#a8a29e;--stone-500:#78716c;--stone-600:#57534e;--stone-700:#44403c;--stone-900:#1c1917;--gold:#c9a84c;--red:#b91c1c}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Noto Sans JP',sans-serif;color:var(--stone-700);line-height:1.9;background:#fff;-webkit-font-smoothing:antialiased}
+.nav{border-bottom:1px solid var(--stone-200)}
+.nav-inner{max-width:1000px;margin:0 auto;padding:14px 16px}
+.nav-logo{font-family:'Noto Serif JP',serif;font-size:20px;font-weight:700;color:var(--stone-900);text-decoration:none;letter-spacing:.08em}
+.nav-logo span{color:var(--gold)}
+.head{padding:48px 16px 32px;background:var(--stone-50);border-bottom:1px solid var(--stone-200);text-align:center}
+.head h1{font-family:'Noto Serif JP',serif;font-size:21px;color:var(--stone-900);line-height:1.5}
+.head p{font-size:14px;color:var(--stone-500);margin-top:10px}
+.main{max-width:640px;margin:0 auto;padding:36px 16px 72px}
+ol{list-style:none;counter-reset:s;display:flex;flex-direction:column;gap:14px}
+ol li{counter-increment:s;position:relative;padding:16px 16px 16px 56px;border:1px solid var(--stone-200);border-radius:10px;font-size:15px}
+ol li::before{content:counter(s);position:absolute;left:16px;top:16px;width:28px;height:28px;border-radius:999px;background:var(--gold);color:#fff;font-weight:700;display:flex;align-items:center;justify-content:center;font-size:14px}
+ol li b{color:var(--stone-900)}
+.warn{margin-top:24px;padding:14px 16px;border-left:3px solid var(--red);background:#fef2f2;border-radius:0 8px 8px 0;font-size:14px}
+.btn{display:block;margin-top:28px;padding:15px 20px;border-radius:8px;background:var(--stone-900);color:#fff;text-align:center;font-weight:700;text-decoration:none}
+.btn:hover{background:var(--stone-700)}
+.note{margin-top:20px;font-size:13px;color:var(--stone-500)}
+.ft{border-top:1px solid var(--stone-200);padding:24px 16px;text-align:center;font-size:12px;color:var(--stone-400)}
+.ft a{color:inherit;margin:0 8px}
+@media(min-width:768px){.head h1{font-size:30px}}
+</style>
+</head>
+<body>
+<nav class="nav"><div class="nav-inner"><a href="/" class="nav-logo">S<span>S</span>S</a></div></nav>
+<header class="head">
+  <h1>お申し込みありがとうございます</h1>
+  <p>このあと「認証」を済ませると、SSSの有料の場所に入れます。</p>
+</header>
+<main class="main">
+  <ol>
+    <li><b>決済完了のメールを開く</b><br>申し込みのときに入れたメールアドレスに届きます。届かないときは迷惑メールのフォルダも見てください。</li>
+    <li><b>認証ページでメールアドレスとDiscordのユーザーIDを登録する</b><br>メールに書いてある認証ページと同じページです。下のボタンからも開けます。</li>
+    <li><b>有料会員のロールが付く</b><br>付いた時点から、作業会や実践会に参加できます。</li>
+  </ol>
+  <div class="warn">決済日から<b>7日以内</b>に認証しないと、自動で解約になります（返金はありません）。今日のうちに済ませるのがおすすめです。</div>
+  <a class="btn" href="https://member.aisalonsss.com/register" rel="noopener" data-umami-event="sss_register_open">認証ページを開く</a>
+  <p class="note">このページは、決済画面から戻ってきた方に表示しています。決済の成否はこのページでは判定していません。決済完了のメールが届いていれば手続きは完了しています。</p>
+</main>
+<footer class="ft"><a href="/">トップ</a><a href="/tokushoho.html">特定商取引法に基づく表記</a><a href="/privacy.html">プライバシー</a></footer>
+<script>
+/* 決済画面からの戻り（sss_payment_return）を1回だけ送る。個人・決済の値は送らない。L-20261117-06 */
+(function(){
+  var n=0;
+  (function send(){
+    var u=window.umami;
+    if(u&&typeof u.track==='function'){try{var r=u.track('sss_payment_return',{version:'1'});if(r&&r.catch)r.catch(function(){});}catch(_){}return;}
+    if(++n<20)setTimeout(send,250);
+  })();
+})();
+</script>
+</body>
+</html>
