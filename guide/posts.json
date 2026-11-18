@@ -1,5 +1,15 @@
 [
  {
+  "slug": "claude-code-beginner-first-automation",
+  "url": "https://aisalonsss.com/guide/claude-code-beginner-first-automation/",
+  "title": "Claude Code初心者の使い方：非エンジニアが最初の自動化に進む手順",
+  "lead": "Claude Codeを初心者の非エンジニアが始める手順を、公式ドキュメントで確かめてまとめました。",
+  "date": "2026-11-19",
+  "thumb": "/guide/img/claude-code-beginner-first-automation.webp",
+  "thumbAlt": "Claude Codeを入れてから、起動、ログイン、読むだけの質問、小さな作業の依頼まで進む順番を並べたサムネイル",
+  "og": "https://aisalonsss.com/guide/img/claude-code-beginner-first-automation-og.jpg"
+ },
+ {
   "slug": "tasks-in-gemini-free-japan",
   "url": "https://aisalonsss.com/guide/tasks-in-gemini-free-japan/",
   "title": "Tasks in Geminiとは？日本で無料になる内容と仕事・副業での使い方",

@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Claude Code初心者の使い方：非エンジニアが最初の自動化に進む手順｜SSS</title>
+<meta name="description" content="Claude Codeを初心者の非エンジニアが始める手順を、公式ドキュメントで確かめてまとめました。必要なアカウント、インストールから最初の起動、最初の自動化の選び方、つまずきやすい所までを解説します。">
+<link rel="canonical" href="https://aisalonsss.com/guide/claude-code-beginner-first-automation/">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/icon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#141210">
+<meta property="og:site_name" content="SSS">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Claude Code初心者の使い方：非エンジニアが最初の自動化に進む手順｜SSS">
+<meta property="og:description" content="Claude Codeを初心者の非エンジニアが始める手順を、公式ドキュメントで確かめてまとめました。必要なアカウント、インストールから最初の起動、最初の自動化の選び方、つまずきやすい所までを解説します。">
+<meta property="og:url" content="https://aisalonsss.com/guide/claude-code-beginner-first-automation/">
+<meta property="og:image" content="https://aisalonsss.com/guide/img/claude-code-beginner-first-automation-og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Claude Code初心者の使い方：非エンジニアが最初の自動化に進む手順｜SSS">
+<meta name="twitter:description" content="Claude Codeを初心者の非エンジニアが始める手順を、公式ドキュメントで確かめてまとめました。必要なアカウント、インストールから最初の起動、最初の自動化の選び方、つまずきやすい所までを解説します。">
+<meta name="twitter:image" content="https://aisalonsss.com/guide/img/claude-code-beginner-first-automation-og.jpg">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Article",
+   "@id": "https://aisalonsss.com/guide/claude-code-beginner-first-automation/#article",
+   "headline": "Claude Code初心者の使い方：非エンジニアが最初の自動化に進む手順",
+   "description": "Claude Codeを初心者の非エンジニアが始める手順を、公式ドキュメントで確かめてまとめました。必要なアカウント、インストールから最初の起動、最初の自動化の選び方、つまずきやすい所までを解説します。",
+   "datePublished": "2026-11-19",
+   "dateModified": "2026-11-19",
+   "inLanguage": "ja",
+   "image": "https://aisalonsss.com/guide/img/claude-code-beginner-first-automation-og.jpg",
+   "keywords": "claude code 初心者／claude code 使い方",
+   "mainEntityOfPage": "https://aisalonsss.com/guide/claude-code-beginner-first-automation/",
+   "author": {
+    "@type": "Organization",
+    "name": "SSS運営（松任谷・ゴリラ）",
+    "url": "https://aisalonsss.com/",
+    "parentOrganization": {
+     "@id": "https://aisalonsss.com/#org"
+    }
+   },
+   "publisher": {
+    "@id": "https://aisalonsss.com/#org"
+   },
+   "isPartOf": {
+    "@id": "https://aisalonsss.com/#website"
+   }
+  },
+  {
+   "@type": "Organization",
+   "@id": "https://aisalonsss.com/#org",
+   "name": "SSS",
+   "url": "https://aisalonsss.com/",
+   "logo": {
+    "@type": "ImageObject",
+    "url": "https://aisalonsss.com/icon-512.png"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "@id": "https://aisalonsss.com/guide/claude-code-beginner-first-automation/#breadcrumb",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "SSS",
+     "item": "https://aisalonsss.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "ブログ",
+     "item": "https://aisalonsss.com/guide/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Claude Code初心者の使い方：非エンジニアが最初の自動化に進む手順",
+     "item": "https://aisalonsss.com/guide/claude-code-beginner-first-automation/"
+    }
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://aisalonsss.com/guide/claude-code-beginner-first-automation/#faq",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Claude Codeは、プログラミングを知らない初心者でも使えますか。",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "公式の手順は、インストール、起動、ログイン、日本語での指示という流れで、プログラミングの知識を前提にしていません。公式のクイックスタートにも、同僚に頼むように、達成したいことを説明すればよいと書かれています。ただし、AIの出した変更を確認するのは自分です。変更の内容を読んで、分からない所は質問してから許可します。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "無料で使えますか。",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "公式のクイックスタートでは、Claudeのサブスクリプション（Pro、Max、Ultra、Team、Enterprise）か、Claude Consoleのアカウント、または対応するクラウド事業者経由のアクセスが前提とされています。デスクトップアプリは有料のサブスクリプションが必要と書かれています。料金や条件は変わることがあるので、公式の料金ページで最新の内容を確認してください。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "ターミナルが怖いのですが、ほかの始め方はありますか。",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "デスクトップアプリのCodeタブと、ブラウザのWeb版があります。デスクトップアプリはCLIを別に入れる必要がなく、Web版はパソコン側の設定なしで始められると公式に書かれています。ターミナルから始める場合も、公式のターミナルガイドが開き方から説明しています。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "最初にやってはいけないことはありますか。",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "大事なファイルや、他人の個人情報が入ったフォルダでいきなり試すのは避けてください。まず読むだけの質問をして、次にコピーしたフォルダで小さな変更を頼みます。変更の確認が出たら、内容を読んでから許可します。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "SSSでClaude Codeの相談はできますか。",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "SSSには、毎日のもくもく作業会と、日中のAI実践会があります。AI自動化やAI秘書のテーマで、手順や頼み方を持ち込んで一緒に試せます。入る前に確かめたい点は、[AIのオンラインサロンは怪しい？入る前に確かめる7つのこと](https://aisalonsss.com/guide/ai-salon-checklist/)にまとめています。"
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&family=Noto+Sans+JP:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&family=Noto+Sans+JP:wght@400;500;700&display=swap"></noscript>
+<!-- Microsoft Clarity（LPと同じプロジェクト。記事のスクロール・クリックの様子） -->
+<script>(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.crossOrigin="anonymous";t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","wk1r1aplnd");</script>
+<!-- Umami (self-hosted) -->
+<script defer crossorigin="anonymous" src="https://analytics.aisalonsss.com/script.js" data-website-id="b3ce03ea-2d2e-4fac-8942-688d0f0a4100"></script>
+<script defer src="/sss-attribution.js"></script>
+<script defer src="/guide/guide-measure.js"></script>
+<link rel="stylesheet" href="/guide/guide.css">
+</head>
+<body>
+<nav class="nav" aria-label="メイン"><div class="nav-in"><a href="/" class="logo">S<span>S</span>S</a><span class="nav-r"><a href="/guide/" class="nav-g">ブログ</a><a href="https://aisalonsss.com/?utm_source=blog&amp;utm_medium=owned&amp;utm_campaign=sss_blog&amp;utm_content=claude-code-beginner-first-automation_header" class="nav-sss" data-sss-position="guide_claude_code_beginner_first_automation_header">SSSとは</a></span></div></nav>
+<main class="g-main">
+<p class="g-bc"><a href="/">SSS（AIコミュニティ）</a> ／ <a href="/guide/">ブログ</a></p>
+<article class="g-art">
+<h1>Claude Code初心者の使い方：非エンジニアが最初の自動化に進む手順</h1>
+<p class="g-meta"><time datetime="2026-11-19">2026年11月19日</time>・SSS運営（松任谷・ゴリラ）・SSSの案内を含みます</p>
+<figure class="g-eye"><img src="/guide/img/claude-code-beginner-first-automation.webp" width="1200" height="630" alt="Claude Codeを入れてから、起動、ログイン、読むだけの質問、小さな作業の依頼まで進む順番を並べたサムネイル" fetchpriority="high" decoding="async"></figure>
+<p>この記事はSSS運営が書いた記事です。SSSの案内を含みます。</p>
+<h2>先に結論</h2>
+<p>Claude Code初心者の非エンジニアは、「インストールする、作業用のフォルダで起動する、ログインする、日本語で頼む」の順に進めれば、最初の一歩を踏み出せます。公式のクイックスタートも、この順番で案内しています。最初に自動化する作業は、毎回同じ手順で、結果を自分で確かめられて、失敗しても元に戻せる小さな物にします。</p>
+<ul><li>Claude Codeは、フォルダの中のファイルを読み、編集し、コマンドを実行するAIのツールです（公式の説明）</li><li>使うには、Claudeのサブスクリプション（Pro、Max、Ultra、Team、Enterprise）かClaude Consoleのアカウントなどが要ります</li><li>ターミナルに慣れていなければ、デスクトップアプリのCodeタブやブラウザ版という入口もあります</li><li>最初は大事なファイルを置いた場所ではなく、コピーしたフォルダで試すのが安全です</li><li>変更の前に確認が出たら、中身を読んでから許可します</li></ul>
+<p class="g-sss-top"><span>SSSでは、AI自動化やAI秘書のテーマを、毎日のもくもく作業会で一緒に試せます。</span><a href="https://aisalonsss.com/?utm_source=blog&amp;utm_medium=owned&amp;utm_campaign=sss_blog&amp;utm_content=claude-code-beginner-first-automation_top" class="g-sss-top-a" data-sss-position="guide_claude_code_beginner_first_automation_top">SSSを見る<span aria-hidden="true">→</span></a></p>
+<!-- fg:start fig-flow --><figure class="fg fg-flow" id="fig-flow" data-fig="flow" role="group" aria-label="Claude Codeを入れてから最初の自動化に進むまでの順番を、インストール、起動、ログイン、読むだけの質問、小さな作業の依頼の順に並べた図"><span class="fg-kicker">最初の一歩までの順番</span><p class="fg-ttl">入れて、開いて、ログインして、読むだけの質問から始める</p><ol><li><span class="t">インストール</span><span class="d">自分のOS用のコマンドを公式のページから</span></li><li><span class="t">作業用フォルダで起動</span><span class="d">cdで移って claude と打つ</span></li><li><span class="t">ログイン</span><span class="d">初回だけブラウザで認証</span></li><li class="key"><span class="t">読むだけの質問</span><span class="d">何も変更されない頼み方から</span></li><li><span class="t">小さな作業を頼む</span><span class="d">変更の確認が出たら中身を読む</span></li></ol><figcaption>いきなり変更を頼まず、読むだけの質問を挟むと、失敗の影響を小さくできます。</figcaption></figure><!-- fg:end fig-flow -->
+<h2>Claude Codeとは？プログラミングをしない人にも関係があるのか</h2>
+<p>Claude Codeは、Anthropicが出しているAIのツールです。公式の概要ページでは、コードベースを読み、ファイルを編集し、コマンドを実行し、開発のツールと連携する「エージェント型のコーディングツール」と説明されています。ターミナル、IDE、デスクトップアプリ、ブラウザのどこからでも使えます。</p>
+<p>名前に「Code」とあるので、エンジニアだけの道具に見えます。公式の例も、テストを書く、バグを直す、コミットを作るといった開発の作業が中心です。一方で、やりたいことを日本語の普通の文章で伝えると、AIが手順を考えて実行する、という使い方そのものは同じです。公式は「面倒で後回しにしている作業を自動化する」使い方も紹介しています。</p>
+<p>ただし、開発以外の作業にどこまで当てはまるかは、公式が保証している範囲ではありません。ファイルの整理、文章の下書き、データの整形など、パソコンの中で完結する作業を自分で試して確かめていくことになります。</p>
+<p>出典：<a href="https://docs.anthropic.com/en/docs/claude-code/overview" target="_blank" rel="noopener noreferrer">Claude Code overview（公式）</a></p>
+<h2>始める前に何が必要か？どの入口から入るか</h2>
+<p>必要な物は、パソコン、試すためのフォルダ、そしてアカウントです。公式のクイックスタートでは、アカウントはClaudeのサブスクリプション（Pro、Max、Ultra、Team、Enterprise）か、Claude Consoleのアカウント、または対応するクラウド事業者経由のアクセスとされています。</p>
+<p>入口は複数あります。ターミナルを使う方法のほか、デスクトップアプリのCodeタブ、ブラウザで使うWeb版があります。デスクトップアプリは有料のサブスクリプションが必要と公式に書かれています。Web版はパソコン側の設定が要らず、ブラウザやスマホのClaudeアプリから使えます。</p>
+<p>ターミナルを使ったことがない場合は、公式に<a href="https://docs.anthropic.com/en/docs/claude-code/terminal-guide" target="_blank" rel="noopener noreferrer">ターミナルガイド</a>があり、開き方とコマンドの貼り付け方から説明しています。</p>
+<!-- fg:start fig-entry --><figure class="fg fg-branch" id="fig-entry" data-fig="branch" role="group" aria-label="Claude Codeを使う入口を、ターミナルに慣れている人、慣れていない人、パソコンに何も入れたくない人に分けて示した分かれ道の図"><span class="fg-kicker">入口の選び方</span><p class="fg-ttl">ターミナルに慣れているかどうかで、入口が分かれる</p><div class="q">どの入口から始めるか</div><div class="outs o3"><div class="out"><span class="c">ターミナルを使ったことがある</span><span class="r">ターミナルで始める</span><span class="d">公式の推奨はネイティブインストール</span></div><div class="out"><span class="c">ターミナルは初めて</span><span class="r">ターミナルガイドか、デスクトップアプリのCodeタブ</span><span class="d">デスクトップアプリは有料のサブスクリプションが前提</span></div><div class="out"><span class="c">パソコンに何も入れたくない</span><span class="r">ブラウザのWeb版</span><span class="d">パソコン側の設定なしで始められる</span></div></div><figcaption>どの入口でも中身は同じClaude Codeです。自分が止まりにくい入口を選べば足ります。</figcaption></figure><!-- fg:end fig-entry -->
+<h2>Claude Codeはどうやって始めるか？最初の起動までの手順</h2>
+<p>ここではターミナルで始める手順を、公式のクイックスタートに沿って書きます。コマンドは更新されることがあるので、実際に打つ前に公式の最新のページで確認してください（<a href="https://docs.anthropic.com/en/docs/claude-code/quickstart" target="_blank" rel="noopener noreferrer">Quickstart</a>）。</p>
+<p><strong>ステップ1：インストールする。</strong> 公式の推奨はネイティブインストールです。macOS・Linux・WSL用、Windows PowerShell用、Windows CMD用でコマンドが別々に用意されています。自分の環境に合う物を、公式のページからそのままコピーして実行します。実行中は進捗が表示されません。</p>
+<p><strong>ステップ2：入ったか確かめる。</strong> 終わったら新しいターミナルを開き、`claude --version` と打ちます。版の番号が出れば成功です。</p>
+<p><strong>ステップ3：作業用のフォルダに移って起動する。</strong> `cd` で試したいフォルダへ移動し、`claude` と打ちます。初めての起動ではログインを求められ、ブラウザの画面に従って認証します。一度ログインすると、次からは不要です。</p>
+<p><strong>ステップ4：読むだけの質問から始める。</strong> 公式の例は「このプロジェクトは何をするものか」という質問です。フォルダの中身を説明してもらう、という頼み方から始めると、何も変更されないので安心です。</p>
+<p><strong>ステップ5：小さな作業を頼む。</strong> ファイルを変更する提案が出ると、実行前に確認が出ることがあります。内容を読んで、よければYesを選びます。どの操作を確認なしで進めてよいかは「権限モード」で決まり、Shift+Tabで切り替えられます。慣れないうちは、確認が出る設定のままにしておきます。</p>
+<p><strong>ステップ6：困ったら `/help`。</strong> 使えるコマンドの一覧が出ます。終わるときは `/exit` と打ちます。</p>
+<h2>最初の自動化はどう選ぶか？</h2>
+<p>最初の題材は、次の4つを満たす作業にします。</p>
+<ul><li>毎回ほぼ同じ手順になる</li><li>できあがりを自分の目で確かめられる</li><li>元に戻せる（コピーしたフォルダで試す）</li><li>ほかの人の個人情報や、外に出せない資料を含まない</li></ul>
+<p>例としては、フォルダの中のファイルを決めた名前の規則に整える、メモの束をひとつの一覧にまとめる、定型の文章の下書きを作る、といった作業が考えられます。これは公式が示した例ではなく、この記事の提案です。</p>
+<p>頼み方は、公式のヒントがそのまま使えます。「バグを直して」のような漠然とした頼み方より、何をどうしたいかを具体的に書きます。作業が複雑なら、番号を付けて順番に書きます。</p>
+<p>毎日同じ時間に動かしたい場合は、公式にスケジュール実行の機能があります。クラウドで動く物は、パソコンの電源が切れていても動きます。デスクトップで動く物は、自分のパソコンのファイルに直接触れます。ただ、いきなり定期実行にせず、まず手で一度通して、結果が合っているかを確かめてからにします。</p>
+<p>自動化の考え方や、毎日どんな場で進めているかは、<a href="https://aisalonsss.com/guide/sss-one-week/">SSSの1週間：作業会・水曜講義・実践会・毎日のAIニュースで何をしているか</a>にも書いています。</p>
+<h2>つまずきやすい所はどこか？</h2>
+<p>公式がエラーの文言つきで案内している所が、そのまま初心者のつまずきどころです。</p>
+<ul><li><strong>インストール後に `claude` が見つからない。</strong> 新しいターミナルを開き直してから、もう一度 `claude --version` を試します。それでも出ない時は、公式の最新のページで確認してください。</li><li><strong>PowerShellとCMDの取り違え。</strong> Windowsでは、画面の表示が `PS C:\` ならPowerShell、`PS` が付かない `C:\` ならCMDです。コマンドは両方で別々に用意されているので、自分の画面に合う方を使います。</li><li><strong>ログインの種類が合わない。</strong> アカウントの種類ごとに使える入口が違います。デスクトップアプリは有料のサブスクリプションが前提です。</li><li><strong>頼み方が曖昧で、思った結果にならない。</strong> 何をどうしたいか、どこまでやってほしいかを具体的に書き直します。</li><li><strong>確認画面を読まずに許可する。</strong> 変更の内容を読まずにYesを押し続けると、意図しない変更に気づけません。最初はコピーしたフォルダで試しておくと、失敗しても影響を抑えられます。</li></ul>
+<p>ひとりで進めていると、こうした小さな詰まりで手が止まりがちです。運営している作業会の様子は<a href="https://aisalonsss.com/guide/sss-activity-log-1118/">SSSの活動記録：オンラインAI勉強会と毎日のもくもく作業会の中身</a>にまとめています。</p>
+<h2>Claude CodeをSSSでどう実践するか？</h2>
+<p>SSSでは、Discordのボイスで開くもくもく作業会が毎日あります。毎週水曜にはZOOM講義があり、講義のアーカイブも残ります。それとは別に、日中のAI実践会を不定期で月4〜5回開いています。作業会のように一緒に手を動かし、その場で改善していく会です。毎日のAIニュースもDiscordに届きます。</p>
+<p>扱っているテーマには、占い、企業へのAI導入、YouTube、アフィリエイト、AI自動化、AI秘書があります。この記事の手順のうち、AI自動化やAI秘書に近い作業、たとえば最初の題材選びや、頼み方の組み立ては、作業会や実践会に持ち込んで運営やほかの参加者と一緒に試せます。成果や上達を約束する場ではありませんが、ひとりで止まりやすい所を、手を動かしながら確かめる場として使えます。</p>
+<p class="g-sss-body"><a href="https://aisalonsss.com/?utm_source=blog&amp;utm_medium=owned&amp;utm_campaign=sss_blog&amp;utm_content=claude-code-beginner-first-automation_body" data-sss-position="guide_claude_code_beginner_first_automation_body">SSSの中身を見てみる（月額2,980円）</a></p>
+<h2>よくある質問</h2>
+<h3>Q. Claude Codeは、プログラミングを知らない初心者でも使えますか。</h3>
+<p>公式の手順は、インストール、起動、ログイン、日本語での指示という流れで、プログラミングの知識を前提にしていません。公式のクイックスタートにも、同僚に頼むように、達成したいことを説明すればよいと書かれています。ただし、AIの出した変更を確認するのは自分です。変更の内容を読んで、分からない所は質問してから許可します。</p>
+<h3>Q. 無料で使えますか。</h3>
+<p>公式のクイックスタートでは、Claudeのサブスクリプション（Pro、Max、Ultra、Team、Enterprise）か、Claude Consoleのアカウント、または対応するクラウド事業者経由のアクセスが前提とされています。デスクトップアプリは有料のサブスクリプションが必要と書かれています。料金や条件は変わることがあるので、公式の料金ページで最新の内容を確認してください。</p>
+<h3>Q. ターミナルが怖いのですが、ほかの始め方はありますか。</h3>
+<p>デスクトップアプリのCodeタブと、ブラウザのWeb版があります。デスクトップアプリはCLIを別に入れる必要がなく、Web版はパソコン側の設定なしで始められると公式に書かれています。ターミナルから始める場合も、公式のターミナルガイドが開き方から説明しています。</p>
+<h3>Q. 最初にやってはいけないことはありますか。</h3>
+<p>大事なファイルや、他人の個人情報が入ったフォルダでいきなり試すのは避けてください。まず読むだけの質問をして、次にコピーしたフォルダで小さな変更を頼みます。変更の確認が出たら、内容を読んでから許可します。</p>
+<h3>Q. SSSでClaude Codeの相談はできますか。</h3>
+<p>SSSには、毎日のもくもく作業会と、日中のAI実践会があります。AI自動化やAI秘書のテーマで、手順や頼み方を持ち込んで一緒に試せます。入る前に確かめたい点は、<a href="https://aisalonsss.com/guide/ai-salon-checklist/">AIのオンラインサロンは怪しい？入る前に確かめる7つのこと</a>にまとめています。</p>
+<hr>
+<h2>参考にした出典</h2>
+<ul><li>Claude Code overview（公式）：<a href="https://docs.anthropic.com/en/docs/claude-code/overview" target="_blank" rel="noopener noreferrer">https://docs.anthropic.com/en/docs/claude-code/overview</a></li><li>Quickstart（公式）：<a href="https://docs.anthropic.com/en/docs/claude-code/quickstart" target="_blank" rel="noopener noreferrer">https://docs.anthropic.com/en/docs/claude-code/quickstart</a></li><li>ターミナルガイド（公式）：<a href="https://docs.anthropic.com/en/docs/claude-code/terminal-guide" target="_blank" rel="noopener noreferrer">https://docs.anthropic.com/en/docs/claude-code/terminal-guide</a></li></ul>
+<aside class="g-cta g-join" id="g-join" aria-labelledby="g-join-h">
+<h2 id="g-join-h">SSSで一緒にやってみる</h2>
+<p>この記事の手順で止まりやすい所は、SSSの毎日のもくもく作業会や、作業会形式でその場で改善する日中のAI実践会に持ち込めます。AI自動化やAI秘書のテーマを、運営やほかのメンバーと一緒に試せます。水曜のZOOM講義はアーカイブにも残ります。</p>
+<ul class="g-join-fx"><li><b>もくもく作業会</b>毎日開催（Discordボイス）</li><li><b>ZOOM講義</b>毎週水曜</li><li><b>AI実践会</b>日中に不定期・月4〜5回</li><li><b>AIニュース</b>AIの最前線が毎日届く</li></ul>
+<div class="g-join-btns"><a href="https://aisalonsss.com/?utm_source=blog&amp;utm_medium=owned&amp;utm_campaign=sss_blog&amp;utm_content=claude-code-beginner-first-automation_end" class="btn" data-sss-position="guide_claude_code_beginner_first_automation_end">SSSを詳しく見る<span class="arr" aria-hidden="true">→</span></a><a href="https://univa.cc/bMYdr5" class="btn btn-line" data-sss-position="guide_claude_code_beginner_first_automation_join" target="_blank" rel="noopener noreferrer">申し込む（月額2,980円）</a></div>
+<p class="cta-note">月額2,980円（税込）・毎月自動更新・いつでも解約OK・違約金なし・支払い済みの月の返金なし。収入や成果をお約束するものではありません。</p>
+</aside>
+</article>
+<!-- related:start -->
+<section class="g-rel" aria-labelledby="g-rel-h"><h2 id="g-rel-h">関連記事</h2><ul class="g-cards">
+<li><a href="/guide/sss-one-week/" data-umami-event="sss_blog_related" data-umami-event-slug="sss-one-week"><img src="/guide/img/sss-one-week.webp" width="1200" height="630" alt="Discordで開いているもくもく作業会の実際の画面と、月曜から日曜までの帯。毎日の作業会と水曜のZOOM講義" loading="lazy" decoding="async"><span class="bd"><time datetime="2026-11-16">2026年11月16日</time><b>SSSの1週間：作業会・水曜講義・実践会・毎日のAIニュースで何をしているか</b><span>月2,980円のDiscord型AIコミュニティSSSの1週間を運営者が記録。</span></span></a></li>
+<li><a href="/guide/sss-activity-log-1118/" data-umami-event="sss_blog_related" data-umami-event-slug="sss-activity-log-1118"><img src="/guide/img/sss-activity-log-1118.webp" width="1200" height="630" alt="水曜に印を付けた曜日の帯と、YouTube、AI実践会、ポケカ・トレカの講義、毎日の作業会の語を並べたサムネイル" loading="lazy" decoding="async"><span class="bd"><time datetime="2026-11-18">2026年11月18日</time><b>SSSの活動記録：オンラインAI勉強会と毎日のもくもく作業会の中身</b><span>SSSの直近2週間の活動記録。</span></span></a></li>
+<li><a href="/guide/ai-salon-checklist/" data-umami-event="sss_blog_related" data-umami-event-slug="ai-salon-checklist"><img src="/guide/img/ai-salon-checklist.webp" width="1200" height="630" alt="クリップボードに並んだ7つの確認欄と虫めがねの絵。AIのオンラインサロンに入る前に確かめる7つのこと" loading="lazy" decoding="async"><span class="bd"><time datetime="2026-11-16">2026年11月16日</time><b>AIのオンラインサロンは怪しい？入る前に確かめる7つのこと（運営するSSSも同じ基準で自己採点）</b><span>運営者・料金の総額・解約の方法など、入る前に確かめる7項目と、SSS自身の自己採点。</span></span></a></li>
+</ul></section>
+<!-- related:end -->
+<p class="g-quick"><a href="https://aisalonsss.com/?utm_source=blog&amp;utm_medium=owned&amp;utm_campaign=sss_blog&amp;utm_content=claude-code-beginner-first-automation_quick#quick" data-sss-position="guide_claude_code_beginner_first_automation_quick"><b>30秒でわかるSSS</b><span>どんな人が集まり、毎週なにをしているかをLPの要約で見る</span></a></p>
+<p class="g-back"><a href="/guide/">ほかの記事を見る（ブログ一覧）</a></p>
+</main>
+<div class="g-bar" id="g-bar" hidden><a href="https://aisalonsss.com/?utm_source=blog&amp;utm_medium=owned&amp;utm_campaign=sss_blog&amp;utm_content=claude-code-beginner-first-automation_bar" class="g-bar-go" data-sss-position="guide_claude_code_beginner_first_automation_bar">SSSを見る<small>月額2,980円・いつでも解約可</small></a><button type="button" class="g-bar-x" aria-label="案内を閉じる">×</button></div>
+<script>
+(function(){var b=document.getElementById('g-bar');if(!b||!('IntersectionObserver' in window))return;
+var k='sss_bar_closed',seen={},closed=false;try{closed=sessionStorage.getItem(k)==='1'}catch(e){}
+function upd(){var on=!closed&&window.scrollY>480&&!seen.j&&!seen.f;b.hidden=!on;document.body.classList.toggle('has-bar',on)}
+var io=new IntersectionObserver(function(es){es.forEach(function(e){seen[e.target.id==='g-join'?'j':'f']=e.isIntersecting});upd()});
+document.addEventListener('DOMContentLoaded',function(){['g-join','g-foot'].forEach(function(id){var el=document.getElementById(id);if(el)io.observe(el)})});
+b.querySelector('.g-bar-x').addEventListener('click',function(){closed=true;try{sessionStorage.setItem(k,'1')}catch(e){}upd()});
+window.addEventListener('scroll',upd,{passive:true});upd()})();
+</script>
+<footer class="ft" id="g-foot">
+  <div class="ft-in">
+    <p class="ft-logo">S<span>S</span>S</p>
+    <div class="ft-lk">
+      <a href="/">SSSトップ</a>
+      <a href="/guide/">ブログ（SSSガイド）</a>
+      <a href="/tokushoho.html">特定商取引法に基づく表記</a>
+      <a href="/privacy.html">プライバシーポリシー</a>
+      <a href="/contact.html">お問い合わせ</a>
+    </div>
+  </div>
+  <p class="ft-cp">&copy; 2026 SSS. All rights reserved.</p>
+</footer>
+</body>
+</html>

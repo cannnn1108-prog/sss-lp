@@ -22,5 +22,8 @@
  },
  "tasks-in-gemini-free-japan": {
   "alt": "ChatからTaskに切り替え、メールとカレンダーに連携して作業を任せ、最後に確認する流れを並べた、Tasks in Geminiの解説サムネイル"
+ },
+ "claude-code-beginner-first-automation": {
+  "alt": "Claude Codeを入れてから、起動、ログイン、読むだけの質問、小さな作業の依頼まで進む順番を並べたサムネイル"
  }
 }
