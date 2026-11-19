@@ -1,5 +1,15 @@
 [
  {
+  "slug": "github-copilot-fusion-guide",
+  "url": "https://aisalonsss.com/guide/github-copilot-fusion-guide/",
+  "title": "GitHub Copilot Fusionとは？使い方と仕事・副業で試す手順",
+  "lead": "GitHub Copilot Fusionとは何か、使い方、仕事や副業での試し方を、2026年11月17日の公式発表をもとに整理。",
+  "date": "2026-11-20",
+  "thumb": "/guide/img/github-copilot-fusion-guide.webp",
+  "thumbAlt": "GitHubの発表カード風の絵。Copilot Fusionをモデルピッカーで選び、労力レベルを決めて試す流れを示す",
+  "og": "https://aisalonsss.com/guide/img/github-copilot-fusion-guide-og.jpg"
+ },
+ {
   "slug": "claude-code-beginner-first-automation",
   "url": "https://aisalonsss.com/guide/claude-code-beginner-first-automation/",
   "title": "Claude Code初心者の使い方：非エンジニアが最初の自動化に進む手順",

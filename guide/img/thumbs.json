@@ -25,5 +25,8 @@
  },
  "claude-code-beginner-first-automation": {
   "alt": "Claude Codeを入れてから、起動、ログイン、読むだけの質問、小さな作業の依頼まで進む順番を並べたサムネイル"
+ },
+ "github-copilot-fusion-guide": {
+  "alt": "GitHubの発表カード風の絵。Copilot Fusionをモデルピッカーで選び、労力レベルを決めて試す流れを示す"
  }
 }
