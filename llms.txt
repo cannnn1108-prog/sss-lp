@@ -28,6 +28,7 @@
 - 「入れば自動で稼げる」と思っている人。AIは魔法ではなく、手を動かす場と仲間を提供するコミュニティです
 
 ## ブログ記事（新しい順・SSS運営が書いた記事。SSSの案内を含む）
+- [AIの作業が進まないときの対処とは？止まる原因と同じ時間に進める工夫](https://aisalonsss.com/guide/ai-sagyo-susumanai-taisho/)：AIを使った作業が進まないときの対処を、止まる原因の整理から順に解説。月額2,980円のDiscord型AIコミュニティSSSが、同じ時間に作業を進める場をどう使っているかも紹介します。（公開 2026-11-21）
 - [Gemini API Tool Retrievalとは？使い方と仕事・副業で試す手順](https://aisalonsss.com/guide/gemini-api-tool-retrieval/)：GeminiのAPIに加わったTool Retrievalとは何か、使い方の流れを整理。多数のツールを持つAIエージェントで必要なものだけを読み込む仕組みを、仕事や副業で試す手順と使う前の確認点と一緒に解説します。（公開 2026-11-21）
 - [GitHub Copilot Fusionとは？使い方と仕事・副業で試す手順](https://aisalonsss.com/guide/github-copilot-fusion-guide/)：GitHub Copilot Fusionとは何か、使い方、仕事や副業での試し方を、2026年11月17日の公式発表をもとに整理。対応する画面、発表に書かれていない料金や対象プラン、試す前の確認点まで運営がまとめました。（公開 2026-11-20）
 - [Claude Code初心者の使い方：非エンジニアが最初の自動化に進む手順](https://aisalonsss.com/guide/claude-code-beginner-first-automation/)：Claude Codeを初心者の非エンジニアが始める手順を、公式ドキュメントで確かめてまとめました。必要なアカウント、インストールから最初の起動、最初の自動化の選び方、つまずきやすい所までを解説します。（公開 2026-11-19）

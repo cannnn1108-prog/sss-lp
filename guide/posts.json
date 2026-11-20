@@ -1,5 +1,15 @@
 [
  {
+  "slug": "ai-sagyo-susumanai-taisho",
+  "url": "https://aisalonsss.com/guide/ai-sagyo-susumanai-taisho/",
+  "title": "AIの作業が進まないときの対処とは？止まる原因と同じ時間に進める工夫",
+  "lead": "AIを使った作業が進まないときの対処を、止まる原因の整理から順に解説。",
+  "date": "2026-11-21",
+  "thumb": "/guide/img/ai-sagyo-susumanai-taisho.webp",
+  "thumbAlt": "エラー、指示、次の一歩の3つで止まる場所を見分け、1文で書き出して小さく区切る手順の図",
+  "og": "https://aisalonsss.com/guide/img/ai-sagyo-susumanai-taisho-og.jpg"
+ },
+ {
   "slug": "gemini-api-tool-retrieval",
   "url": "https://aisalonsss.com/guide/gemini-api-tool-retrieval/",
   "title": "Gemini API Tool Retrievalとは？使い方と仕事・副業で試す手順",

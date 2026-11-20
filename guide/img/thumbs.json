@@ -31,5 +31,8 @@
  },
  "gemini-api-tool-retrieval": {
   "alt": "Gemini APIのTool Retrievalで、必要なツールだけを後から読み込む流れを手順の形で示したサムネイル"
+ },
+ "ai-sagyo-susumanai-taisho": {
+  "alt": "エラー、指示、次の一歩の3つで止まる場所を見分け、1文で書き出して小さく区切る手順の図"
  }
 }
