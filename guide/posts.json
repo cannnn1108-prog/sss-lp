@@ -1,5 +1,15 @@
 [
  {
+  "slug": "gemini-api-tool-retrieval",
+  "url": "https://aisalonsss.com/guide/gemini-api-tool-retrieval/",
+  "title": "Gemini API Tool Retrievalとは？使い方と仕事・副業で試す手順",
+  "lead": "GeminiのAPIに加わったTool Retrievalとは何か、使い方の流れを整理。",
+  "date": "2026-11-21",
+  "thumb": "/guide/img/gemini-api-tool-retrieval.webp",
+  "thumbAlt": "Gemini APIのTool Retrievalで、必要なツールだけを後から読み込む流れを手順の形で示したサムネイル",
+  "og": "https://aisalonsss.com/guide/img/gemini-api-tool-retrieval-og.jpg"
+ },
+ {
   "slug": "github-copilot-fusion-guide",
   "url": "https://aisalonsss.com/guide/github-copilot-fusion-guide/",
   "title": "GitHub Copilot Fusionとは？使い方と仕事・副業で試す手順",

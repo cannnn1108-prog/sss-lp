@@ -28,5 +28,8 @@
  },
  "github-copilot-fusion-guide": {
   "alt": "GitHubの発表カード風の絵。Copilot Fusionをモデルピッカーで選び、労力レベルを決めて試す流れを示す"
+ },
+ "gemini-api-tool-retrieval": {
+  "alt": "Gemini APIのTool Retrievalで、必要なツールだけを後から読み込む流れを手順の形で示したサムネイル"
  }
 }

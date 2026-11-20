@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Gemini API Tool Retrievalとは？使い方と仕事・副業で試す手順｜SSS</title>
+<meta name="description" content="GeminiのAPIに加わったTool Retrievalとは何か、使い方の流れを整理。多数のツールを持つAIエージェントで必要なものだけを読み込む仕組みを、仕事や副業で試す手順と使う前の確認点と一緒に解説します。">
+<link rel="canonical" href="https://aisalonsss.com/guide/gemini-api-tool-retrieval/">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/icon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#141210">
+<meta property="og:site_name" content="SSS">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Gemini API Tool Retrievalとは？使い方と仕事・副業で試す手順｜SSS">
+<meta property="og:description" content="GeminiのAPIに加わったTool Retrievalとは何か、使い方の流れを整理。多数のツールを持つAIエージェントで必要なものだけを読み込む仕組みを、仕事や副業で試す手順と使う前の確認点と一緒に解説します。">
+<meta property="og:url" content="https://aisalonsss.com/guide/gemini-api-tool-retrieval/">
+<meta property="og:image" content="https://aisalonsss.com/guide/img/gemini-api-tool-retrieval-og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Gemini API Tool Retrievalとは？使い方と仕事・副業で試す手順｜SSS">
+<meta name="twitter:description" content="GeminiのAPIに加わったTool Retrievalとは何か、使い方の流れを整理。多数のツールを持つAIエージェントで必要なものだけを読み込む仕組みを、仕事や副業で試す手順と使う前の確認点と一緒に解説します。">
+<meta name="twitter:image" content="https://aisalonsss.com/guide/img/gemini-api-tool-retrieval-og.jpg">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Article",
+   "@id": "https://aisalonsss.com/guide/gemini-api-tool-retrieval/#article",
+   "headline": "Gemini API Tool Retrievalとは？使い方と仕事・副業で試す手順",
+   "description": "GeminiのAPIに加わったTool Retrievalとは何か、使い方の流れを整理。多数のツールを持つAIエージェントで必要なものだけを読み込む仕組みを、仕事や副業で試す手順と使う前の確認点と一緒に解説します。",
+   "datePublished": "2026-11-21",
+   "dateModified": "2026-11-21",
+   "inLanguage": "ja",
+   "image": "https://aisalonsss.com/guide/img/gemini-api-tool-retrieval-og.jpg",
+   "keywords": "Tool Retrieval とは／Gemini API Tool Retrieval 使い方",
+   "mainEntityOfPage": "https://aisalonsss.com/guide/gemini-api-tool-retrieval/",
+   "author": {
+    "@type": "Organization",
+    "name": "SSS運営（松任谷・ゴリラ）",
+    "url": "https://aisalonsss.com/",
+    "parentOrganization": {
+     "@id": "https://aisalonsss.com/#org"
+    }
+   },
+   "publisher": {
+    "@id": "https://aisalonsss.com/#org"
+   },
+   "isPartOf": {
+    "@id": "https://aisalonsss.com/#website"
+   }
+  },
+  {
+   "@type": "Organization",
+   "@id": "https://aisalonsss.com/#org",
+   "name": "SSS",
+   "url": "https://aisalonsss.com/",
+   "logo": {
+    "@type": "ImageObject",
+    "url": "https://aisalonsss.com/icon-512.png"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "@id": "https://aisalonsss.com/guide/gemini-api-tool-retrieval/#breadcrumb",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "SSS",
+     "item": "https://aisalonsss.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "ブログ",
+     "item": "https://aisalonsss.com/guide/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Gemini API Tool Retrievalとは？使い方と仕事・副業で試す手順",
+     "item": "https://aisalonsss.com/guide/gemini-api-tool-retrieval/"
+    }
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://aisalonsss.com/guide/gemini-api-tool-retrieval/#faq",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Tool Retrievalとは、一言でいうと何ですか。",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "AIエージェントが持つ多数のツールのうち、必要になった物だけの詳しい情報をあとから読み込む、Gemini APIの機能です。毎回すべてのツールの説明を送らずに済むので、ツールが多い構成で入力を減らせる設計になっています。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "プログラミングをしない人にも関係がありますか。",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "この発表はAPIの機能なので、直接使うのは、APIでエージェントを作る人です。普段チャットのAIを使っているだけの方は、すぐに触る場面はありません。ただ、AI自動化や自分専用の秘書を作る段階に進むと関係してくるため、考え方だけ知っておくと役立ちます。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "使うと料金は上がりますか、下がりますか。",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "発表では、Tool Retrieval自体の別料金はなく、トークンは使うモデルの標準料金だと書かれています。減るか増えるかは、使われないツールがどれだけあるかで変わると説明されており、具体的な金額や割合は発表には書かれていません。自分の使用量で見比べて確かめてください。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "日本からでも使えますか。",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "提供する地域は、発表には書かれていません。試す前に、公式のドキュメントと、ご自身のアカウントでの表示を確認してください。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "ツールを自分で検索する方式は、どんなときに選びますか。",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "独自のツール置き場や、人ごとの権限で絞り込みたいときです。`execution: \"client\"` を指定すると、検索をアプリ側で動かせます。検索のたびにやり取りが一往復増える点は、公式が注意として書いています。"
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&family=Noto+Sans+JP:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&family=Noto+Sans+JP:wght@400;500;700&display=swap"></noscript>
+<!-- Microsoft Clarity（LPと同じプロジェクト。記事のスクロール・クリックの様子） -->
+<script>(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.crossOrigin="anonymous";t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","wk1r1aplnd");</script>
+<!-- Umami (self-hosted) -->
+<script defer crossorigin="anonymous" src="https://analytics.aisalonsss.com/script.js" data-website-id="b3ce03ea-2d2e-4fac-8942-688d0f0a4100"></script>
+<script defer src="/sss-attribution.js"></script>
+<script defer src="/guide/guide-measure.js"></script>
+<link rel="stylesheet" href="/guide/guide.css">
+</head>
+<body>
+<nav class="nav" aria-label="メイン"><div class="nav-in"><a href="/" class="logo">S<span>S</span>S</a><span class="nav-r"><a href="/guide/" class="nav-g">ブログ</a><a href="https://aisalonsss.com/?utm_source=blog&amp;utm_medium=owned&amp;utm_campaign=sss_blog&amp;utm_content=gemini-api-tool-retrieval_header" class="nav-sss" data-sss-position="guide_gemini_api_tool_retrieval_header">SSSとは</a></span></div></nav>
+<main class="g-main">
+<p class="g-bc"><a href="/">SSS（AIコミュニティ）</a> ／ <a href="/guide/">ブログ</a></p>
+<article class="g-art">
+<h1>Gemini API Tool Retrievalとは？使い方と仕事・副業で試す手順</h1>
+<p class="g-meta"><time datetime="2026-11-21">2026年11月21日</time>・SSS運営（松任谷・ゴリラ）・SSSの案内を含みます</p>
+<figure class="g-eye"><img src="/guide/img/gemini-api-tool-retrieval.webp" width="1200" height="630" alt="Gemini APIのTool Retrievalで、必要なツールだけを後から読み込む流れを手順の形で示したサムネイル" fetchpriority="high" decoding="async"></figure>
+<p>この記事はSSS運営が書いた記事です。SSSの案内を含みます。</p>
+<h2>先に結論</h2>
+<p>Tool Retrievalとは、GeminiのAPIで、AIエージェントが持つたくさんのツールのうち、その場の作業に必要なものだけを読み込ませる新機能です。2026年11月19日にGoogleが発表し、Interactions APIのプレビューとして提供されています。使い方は、リクエストに `tool_search` を足し、普段あまり使わないツールに `defer_loading: true` を付ける形で、検索用の仕組みを自分で作って置く必要はないと説明されています。</p>
+<ul><li>Gemini APIの機能です。チャットの画面で押すボタンではなく、APIでエージェントを作る人向けの発表です。</li><li>ツールが増えるほど、毎回モデルに渡す情報を減らせる設計です。</li><li>Tool Retrieval自体に別料金はなく、トークンは使うモデルの標準料金で数えられます。</li><li>対応モデルはGemini 3.6以降です。</li><li>提供する地域や、ツール数の上限は、発表には書かれていません。</li></ul>
+<p>図で順番を見ると、次のようになります。</p>
+<p class="g-sss-top"><span>SSSでは、Tool Retrievalのような新しい機能を、毎日の作業会や実践会に持ち込んで一緒に試せます。</span><a href="https://aisalonsss.com/?utm_source=blog&amp;utm_medium=owned&amp;utm_campaign=sss_blog&amp;utm_content=gemini-api-tool-retrieval_top" class="g-sss-top-a" data-sss-position="guide_gemini_api_tool_retrieval_top">SSSを見る<span aria-hidden="true">→</span></a></p>
+<!-- fg:start fig-flow --><figure class="fg fg-flow" id="fig-flow" data-fig="flow" role="group" aria-label="依頼を出してから、名前と説明だけを見て、必要なツールを選び、中身を読み込んで実行するまでを順に並べた図"><span class="fg-kicker">Tool Retrievalの流れ</span><p class="fg-ttl">ツールの中身は、必要になった順に読み込まれる</p><ol><li><span class="t">依頼を出す</span><span class="d">リクエストに tool_search を足しておく</span></li><li><span class="t">名前と説明だけを見る</span><span class="d">遅延させたツールの細かい入力の形は、まだ読み込まない</span></li><li class="key"><span class="t">必要なツールを名前で選ぶ</span><span class="d">モデルが、使いたい物を指定する</span></li><li><span class="t">中身を読み込んで実行する</span><span class="d">同じリクエストの中で、呼び出しまで進む</span></li></ol><figcaption>最初から全部を渡さず、選ばれた物だけを後から読むのが、この機能の順番です。</figcaption></figure><!-- fg:end fig-flow -->
+<h2>Tool Retrievalとは？何が発表されたか</h2>
+<p>発表元はGoogleの公式ブログで、日付は2026年11月19日です。題は、Gemini APIにTool Retrievalが入ったことを知らせる英語の記事で、出典は次のページです。</p>
+<p><a href="https://blog.google/innovation-and-ai/technology/developers-tools/gemini-api-tool-retrieval/" target="_blank" rel="noopener noreferrer">https://blog.google/innovation-and-ai/technology/developers-tools/gemini-api-tool-retrieval/</a></p>
+<p>発表の中身を、自分の言葉でまとめます。AIエージェントに「予定を入れる」「メールを下書きする」「表に転記する」のような仕事をさせるとき、それぞれの仕事を、ツール（関数）としてモデルに教えておきます。ツールが増えると、その説明を毎回まるごと送ることになり、トークンの消費と待ち時間が増えます。Tool Retrievalは、ここを変える機能です。</p>
+<p>仕組みは、サーバー側で検索する形です。遅延させたいツールは、名前と説明だけがモデルに見えて、細かい入力の形（パラメータスキーマ）は最初は読み込まれません。モデルが使いたいツールを名前で選ぶと、APIがその時点で中身を読み込み、同じリクエストの中で呼び出しまで進みます。検索用のインデックスを自分で作ってホストする必要はない、と書かれています。</p>
+<h2>何が変わるか？</h2>
+<p>変わるのは、ツールをたくさん持たせたときの重さの扱いです。これまでは、増やせば増やすほど毎回の入力が膨らむので、ツールを絞って持たせる工夫が要りました。Tool Retrievalを使うと、普段使わないツールは名前と説明だけを持たせておき、必要になったときだけ中身を呼ぶ形にできます。</p>
+<p>もう一つ、デバッグがしやすくなります。検索の流れは `interaction.steps` に `tool_search_call`、`tool_search_result`、`function_call` として残るので、モデルがどのツールを探して、何を呼んだかを後から見られます。</p>
+<p>自分の側で検索したい場合の道も用意されています。独自のツール置き場や、人ごとの権限による絞り込みを使いたいときは、`tool_search` に `&quot;execution&quot;: &quot;client&quot;` を指定します。この場合は検索がアプリ側で動くため、検索のたびにやり取りが一往復増えます。ツールを前もって宣言せず、会話の途中で新しく出すこともできます。</p>
+<h2>仕事や副業でどう使うか？</h2>
+<p>この機能が効くのは、ツールが多い自作のエージェントです。たとえば、小さな事業を一人で回している人が、予定の登録、問い合わせメールの下書き、スプレッドシートへの転記、請求書の文面づくり、SNS投稿の下準備を、一つの自分専用エージェントにまとめたい場面です。ツールが数個なら使わなくても困りませんが、増やしていく途中で重さが気になってきたら試す価値があります。</p>
+<p>プログラムは、コードを書ける人が自分で書くほか、<a href="https://aisalonsss.com/guide/claude-code-beginner-first-automation/">Claude Code初心者の使い方</a>で書いたように、ツールに日本語で指示して作る人もいます。そのうえでGemini APIを使うなら、次の手順で試せます。ここに書くのは公式の利用手順をもとにした進め方で、動くかどうかはご自身の環境で確かめてください。</p>
+<ol><li>手元のツールを書き出します。名前と、何をするかの一行説明を並べ、毎日の依頼で使う物と、たまにしか使わない物に分けます。</li><li>リクエストに `tool_search` を足し、たまにしか使わないツールに `defer_loading: true` を付けます。よく使うツールは遅延させません。</li><li>実際の仕事の依頼を一つ出し、`interaction.steps` を開いて、モデルが選んだツールが思った物か確かめます。</li><li>遅延させる前と後で、入力トークンの使用量を自分の画面で見比べます。節約が出やすいのは、使われないツールが多い大きな構成だと公式は書いています。自分の構成で効くかは、測るまで分かりません。</li></ol>
+<p>分かれ道を図にすると、次のとおりです。</p>
+<!-- fg:start fig-branch --><figure class="fg fg-branch" id="fig-branch" data-fig="branch" role="group" aria-label="ツールを毎回使うか、たまにしか使わないか、自分の側で検索したいかで、設定を分ける三つの分かれ道の図"><span class="fg-kicker">ツールごとの分かれ道</span><p class="fg-ttl">毎回使う物は遅延させず、たまに使う物だけ遅延させる</p><div class="q">そのツールは、遅延させて読み込む？</div><div class="outs o3"><div class="out"><span class="c">毎日の依頼で使う</span><span class="r">遅延させない</span><span class="d">よく使う物は、最初から渡しておく</span></div><div class="out"><span class="c">たまにしか使わない</span><span class="r">defer_loading: true を付ける</span><span class="d">名前と説明だけを持たせる</span></div><div class="out fg-warn"><span class="c">権限や独自の置き場で絞りたい</span><span class="r">execution: client で自分の側で検索</span><span class="d">検索のたびに、やり取りが一往復増える</span></div></div><figcaption>まず、たまにしか使わないツールだけを遅延させて、動きを見るところから始められます。</figcaption></figure><!-- fg:end fig-branch -->
+<h2>使う前に確かめること</h2>
+<p>公式の発表に書かれていることと、書かれていないことを分けて並べます。</p>
+<ul><li>提供状況：Interactions APIのプレビューです。プレビューなので、仕様が変わる可能性は頭に置いてください。</li><li>対応モデル：Gemini 3.6以降で、Gemini 4のモデルも含まれると書かれています。</li><li>料金：Tool Retrieval自体に別料金はありません。入力と出力のトークンは、使うモデルの標準料金です。`tool_search` を有効にすると少量の固定の入力が加わり、読み込まれたスキーマは、その会話の残りの間、入力として数えられます。</li><li>提供する地域：発表には書かれていません。</li><li>ツール数の上限やレートの制限：発表には書かれていません。</li><li>固定で加わる入力の量：具体的な数字は発表には書かれていません。</li></ul>
+<p>読み込まれたスキーマが会話の残りの間ずっと数えられる点は、見落としやすいところです。多くのツールが毎回読み込まれる使い方だと、期待したほど減らない場合があります。</p>
+<p>また、モデルが名前と説明を見てツールを選ぶ仕組みなので、名前や説明があいまいだと、思った物が選ばれにくくなると考えられます。これは発表に書かれた事ではなく、仕組みから考えた注意点です。一行説明は、何をする物かが分かる具体的な言葉で書いておくと安全です。</p>
+<p>なお、Googleの別の機能については<a href="https://aisalonsss.com/guide/tasks-in-gemini-free-japan/">Tasks in Geminiとは？日本で無料になる内容と仕事・副業での使い方</a>で、使う前の確認点を同じ形で整理しています。</p>
+<h2>Tool RetrievalをSSSでどう実践するか？</h2>
+<p>SSSは、Discordで運営しているAIコミュニティで、毎日のAIニュースが届きます。今回のような発表も、ここで知って、そのまま自分の作業で試す流れにできます。毎日開いているもくもく作業会では、自分の手元のツールの一覧を画面に出して、「どれを遅延させるか」を一緒に考えられます。日中のAI実践会は不定期で月4〜5回あり、作業会のように、その場でAIへの指示や構成を直しながら進める形です。`interaction.steps` の表示を見て、思った物が選ばれたかを、その場で一緒に確かめることもできます。</p>
+<p>SSSで扱っているテーマには、AI自動化とAI秘書があります。予定やタスク、連絡を任せる自分専用の秘書を作りたい人は、ツールを増やしていく途中でこの機能の出番を検討できます。水曜のZOOM講義は録画がアーカイブに残るので、あとから見て試すこともできます。</p>
+<p>ここに書いたのは、SSSで一緒に試せる場の紹介です。この機能を使えば成果が出る、という意味ではありません。</p>
+<p class="g-sss-body"><a href="https://aisalonsss.com/?utm_source=blog&amp;utm_medium=owned&amp;utm_campaign=sss_blog&amp;utm_content=gemini-api-tool-retrieval_body" data-sss-position="guide_gemini_api_tool_retrieval_body">SSSの中身を見てみる（月額2,980円）</a></p>
+<h2>よくある質問</h2>
+<h3>Q. Tool Retrievalとは、一言でいうと何ですか。</h3>
+<p>AIエージェントが持つ多数のツールのうち、必要になった物だけの詳しい情報をあとから読み込む、Gemini APIの機能です。毎回すべてのツールの説明を送らずに済むので、ツールが多い構成で入力を減らせる設計になっています。</p>
+<h3>Q. プログラミングをしない人にも関係がありますか。</h3>
+<p>この発表はAPIの機能なので、直接使うのは、APIでエージェントを作る人です。普段チャットのAIを使っているだけの方は、すぐに触る場面はありません。ただ、AI自動化や自分専用の秘書を作る段階に進むと関係してくるため、考え方だけ知っておくと役立ちます。</p>
+<h3>Q. 使うと料金は上がりますか、下がりますか。</h3>
+<p>発表では、Tool Retrieval自体の別料金はなく、トークンは使うモデルの標準料金だと書かれています。減るか増えるかは、使われないツールがどれだけあるかで変わると説明されており、具体的な金額や割合は発表には書かれていません。自分の使用量で見比べて確かめてください。</p>
+<h3>Q. 日本からでも使えますか。</h3>
+<p>提供する地域は、発表には書かれていません。試す前に、公式のドキュメントと、ご自身のアカウントでの表示を確認してください。</p>
+<h3>Q. ツールを自分で検索する方式は、どんなときに選びますか。</h3>
+<p>独自のツール置き場や、人ごとの権限で絞り込みたいときです。`execution: &quot;client&quot;` を指定すると、検索をアプリ側で動かせます。検索のたびにやり取りが一往復増える点は、公式が注意として書いています。</p>
+<aside class="g-cta g-join" id="g-join" aria-labelledby="g-join-h">
+<h2 id="g-join-h">SSSで一緒にやってみる</h2>
+<p>この記事のTool Retrievalのように、AIの新機能は発表されてすぐ試す人ほど、つまずく所も早く見つかります。SSSでは、毎日届くAIニュースで発表を知り、毎日開く作業会や日中のAI実践会に自分の作業を持ち込んで、画面を見せながら一緒に試せます。AI自動化やAI秘書のテーマで、手元のツールをどう整理するかを相談する使い方もできます。</p>
+<ul class="g-join-fx"><li><b>もくもく作業会</b>毎日開催（Discordボイス）</li><li><b>ZOOM講義</b>毎週水曜</li><li><b>AI実践会</b>日中に不定期・月4〜5回</li><li><b>AIニュース</b>AIの最前線が毎日届く</li></ul>
+<div class="g-join-btns"><a href="https://aisalonsss.com/?utm_source=blog&amp;utm_medium=owned&amp;utm_campaign=sss_blog&amp;utm_content=gemini-api-tool-retrieval_end" class="btn" data-sss-position="guide_gemini_api_tool_retrieval_end">SSSを詳しく見る<span class="arr" aria-hidden="true">→</span></a><a href="https://univa.cc/bMYdr5" class="btn btn-line" data-sss-position="guide_gemini_api_tool_retrieval_join" target="_blank" rel="noopener noreferrer">申し込む（月額2,980円）</a></div>
+<p class="cta-note">月額2,980円（税込）・毎月自動更新・いつでも解約OK・違約金なし・支払い済みの月の返金なし。収入や成果をお約束するものではありません。</p>
+</aside>
+</article>
+<!-- related:start -->
+<section class="g-rel" aria-labelledby="g-rel-h"><h2 id="g-rel-h">関連記事</h2><ul class="g-cards">
+<li><a href="/guide/tasks-in-gemini-free-japan/" data-umami-event="sss_blog_related" data-umami-event-slug="tasks-in-gemini-free-japan"><img src="/guide/img/tasks-in-gemini-free-japan.webp" width="1200" height="630" alt="ChatからTaskに切り替え、メールとカレンダーに連携して作業を任せ、最後に確認する流れを並べた、Tasks in Geminiの解説サムネイル" loading="lazy" decoding="async"><span class="bd"><time datetime="2026-11-19">2026年11月19日</time><b>Tasks in Geminiとは？日本で無料になる内容と仕事・副業での使い方</b><span>Tasks in Geminiとは、予約の調整や請求書の確認などをGeminiに任せる機能です。</span></span></a></li>
+<li><a href="/guide/claude-code-beginner-first-automation/" data-umami-event="sss_blog_related" data-umami-event-slug="claude-code-beginner-first-automation"><img src="/guide/img/claude-code-beginner-first-automation.webp" width="1200" height="630" alt="Claude Codeを入れてから、起動、ログイン、読むだけの質問、小さな作業の依頼まで進む順番を並べたサムネイル" loading="lazy" decoding="async"><span class="bd"><time datetime="2026-11-19">2026年11月19日</time><b>Claude Code初心者の使い方：非エンジニアが最初の自動化に進む手順</b><span>Claude Codeを初心者の非エンジニアが始める手順を、公式ドキュメントで確かめてまとめました。</span></span></a></li>
+<li><a href="/guide/github-copilot-fusion-guide/" data-umami-event="sss_blog_related" data-umami-event-slug="github-copilot-fusion-guide"><img src="/guide/img/github-copilot-fusion-guide.webp" width="1200" height="630" alt="GitHubの発表カード風の絵。Copilot Fusionをモデルピッカーで選び、労力レベルを決めて試す流れを示す" loading="lazy" decoding="async"><span class="bd"><time datetime="2026-11-20">2026年11月20日</time><b>GitHub Copilot Fusionとは？使い方と仕事・副業で試す手順</b><span>GitHub Copilot Fusionとは何か、使い方、仕事や副業での試し方を、2026年11月17日の公式発表をもとに整理。</span></span></a></li>
+</ul></section>
+<!-- related:end -->
+<p class="g-quick"><a href="https://aisalonsss.com/?utm_source=blog&amp;utm_medium=owned&amp;utm_campaign=sss_blog&amp;utm_content=gemini-api-tool-retrieval_quick#quick" data-sss-position="guide_gemini_api_tool_retrieval_quick"><b>30秒でわかるSSS</b><span>どんな人が集まり、毎週なにをしているかをLPの要約で見る</span></a></p>
+<p class="g-back"><a href="/guide/">ほかの記事を見る（ブログ一覧）</a></p>
+</main>
+<div class="g-bar" id="g-bar" hidden><a href="https://aisalonsss.com/?utm_source=blog&amp;utm_medium=owned&amp;utm_campaign=sss_blog&amp;utm_content=gemini-api-tool-retrieval_bar" class="g-bar-go" data-sss-position="guide_gemini_api_tool_retrieval_bar">SSSを見る<small>月額2,980円・いつでも解約可</small></a><button type="button" class="g-bar-x" aria-label="案内を閉じる">×</button></div>
+<script>
+(function(){var b=document.getElementById('g-bar');if(!b||!('IntersectionObserver' in window))return;
+var k='sss_bar_closed',seen={},closed=false;try{closed=sessionStorage.getItem(k)==='1'}catch(e){}
+function upd(){var on=!closed&&window.scrollY>480&&!seen.j&&!seen.f;b.hidden=!on;document.body.classList.toggle('has-bar',on)}
+var io=new IntersectionObserver(function(es){es.forEach(function(e){seen[e.target.id==='g-join'?'j':'f']=e.isIntersecting});upd()});
+document.addEventListener('DOMContentLoaded',function(){['g-join','g-foot'].forEach(function(id){var el=document.getElementById(id);if(el)io.observe(el)})});
+b.querySelector('.g-bar-x').addEventListener('click',function(){closed=true;try{sessionStorage.setItem(k,'1')}catch(e){}upd()});
+window.addEventListener('scroll',upd,{passive:true});upd()})();
+</script>
+<footer class="ft" id="g-foot">
+  <div class="ft-in">
+    <p class="ft-logo">S<span>S</span>S</p>
+    <div class="ft-lk">
+      <a href="/">SSSトップ</a>
+      <a href="/guide/">ブログ（SSSガイド）</a>
+      <a href="/tokushoho.html">特定商取引法に基づく表記</a>
+      <a href="/privacy.html">プライバシーポリシー</a>
+      <a href="/contact.html">お問い合わせ</a>
+    </div>
+  </div>
+  <p class="ft-cp">&copy; 2026 SSS. All rights reserved.</p>
+</footer>
+</body>
+</html>
