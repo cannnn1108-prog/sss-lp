@@ -34,5 +34,8 @@
  },
  "ai-sagyo-susumanai-taisho": {
   "alt": "エラー、指示、次の一歩の3つで止まる場所を見分け、1文で書き出して小さく区切る手順の図"
+ },
+ "chatgpt-next-step-by-purpose": {
+  "alt": "ChatGPTを触ったあとの次の一手を、Projects、Deep research、タスクなど目的別に並べた手順の絵"
  }
 }
