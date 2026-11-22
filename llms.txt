@@ -28,6 +28,7 @@
 - 「入れば自動で稼げる」と思っている人。AIは魔法ではなく、手を動かす場と仲間を提供するコミュニティです
 
 ## ブログ記事（新しい順・SSS運営が書いた記事。SSSの案内を含む）
+- [AI独学が続かない理由と、続ける方法。止まる場面別に整理](https://aisalonsss.com/guide/ai-dokugaku-tsuzukanai/)：AIの独学が続かない理由を、作るものが決まらない・聞く相手がいない・時間が決まらないの3場面に分けて整理し、続ける方法を6つの手順で紹介します。SSSの作業会や日中のAI実践会でどう試せるかも書きました。（公開 2026-11-23）
 - [ChatGPTは触った、次に何を？目的別の次の一手を公式機能で整理](https://aisalonsss.com/guide/chatgpt-next-step-by-purpose/)：ChatGPTを触ったあと次に何を試すかを、文章・調べもの・作業の自動化・副業の下準備の目的別に整理。Projects・タスク・Deep researchの公式ヘルプの内容と、SSSの作業会で一緒に試す方法も紹介します。（公開 2026-11-22）
 - [AIの作業が進まないときの対処とは？止まる原因と同じ時間に進める工夫](https://aisalonsss.com/guide/ai-sagyo-susumanai-taisho/)：AIを使った作業が進まないときの対処を、止まる原因の整理から順に解説。月額2,980円のDiscord型AIコミュニティSSSが、同じ時間に作業を進める場をどう使っているかも紹介します。（公開 2026-11-21）
 - [Gemini API Tool Retrievalとは？使い方と仕事・副業で試す手順](https://aisalonsss.com/guide/gemini-api-tool-retrieval/)：GeminiのAPIに加わったTool Retrievalとは何か、使い方の流れを整理。多数のツールを持つAIエージェントで必要なものだけを読み込む仕組みを、仕事や副業で試す手順と使う前の確認点と一緒に解説します。（公開 2026-11-21）

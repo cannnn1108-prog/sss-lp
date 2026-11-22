@@ -1,5 +1,15 @@
 [
  {
+  "slug": "ai-dokugaku-tsuzukanai",
+  "url": "https://aisalonsss.com/guide/ai-dokugaku-tsuzukanai/",
+  "title": "AI独学が続かない理由と、続ける方法。止まる場面別に整理",
+  "lead": "AIの独学が続かない理由を、作るものが決まらない・聞く相手がいない・時間が決まらないの3場面に分けて整理し、続ける方法を6つの手順で紹介します。",
+  "date": "2026-11-23",
+  "thumb": "/guide/img/ai-dokugaku-tsuzukanai.webp",
+  "thumbAlt": "AIの独学が止まる場面ごとに、作る物を決める、詰まりを見せる、時間の枠を置くという手順を並べた図",
+  "og": "https://aisalonsss.com/guide/img/ai-dokugaku-tsuzukanai-og.jpg"
+ },
+ {
   "slug": "chatgpt-next-step-by-purpose",
   "url": "https://aisalonsss.com/guide/chatgpt-next-step-by-purpose/",
   "title": "ChatGPTは触った、次に何を？目的別の次の一手を公式機能で整理",

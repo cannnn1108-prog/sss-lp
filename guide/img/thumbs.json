@@ -37,5 +37,8 @@
  },
  "chatgpt-next-step-by-purpose": {
   "alt": "ChatGPTを触ったあとの次の一手を、Projects、Deep research、タスクなど目的別に並べた手順の絵"
+ },
+ "ai-dokugaku-tsuzukanai": {
+  "alt": "AIの独学が止まる場面ごとに、作る物を決める、詰まりを見せる、時間の枠を置くという手順を並べた図"
  }
 }
