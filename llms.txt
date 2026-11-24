@@ -28,6 +28,7 @@
 - 「入れば自動で稼げる」と思っている人。AIは魔法ではなく、手を動かす場と仲間を提供するコミュニティです
 
 ## ブログ記事（新しい順・SSS運営が書いた記事。SSSの案内を含む）
+- [SSSの講義と実践会の内容は？2026年11月の記録を運営が公開](https://aisalonsss.com/guide/sss-lecture-log-2026-11/)：月額2,980円のDiscord型AIコミュニティSSSの講義と実践会の内容を、2026年11月11日と18日の記録から運営が紹介します。AI実践会の流れ、ポケカ・物販の講義、新着コンテンツ、忘年会の告知までを書きました。（公開 2026-11-25）
 - [Google検索のPersonal Intelligenceとは？使い方と試す手順](https://aisalonsss.com/guide/google-search-personal-intelligence/)：Google検索のPersonal Intelligenceとは何か、使い方を公式発表から整理。AIモードにWallet・Drive・Geminiアプリをつなぐと何が変わるか、仕事や副業で試す手順と使う前の注意をまとめます。（公開 2026-11-25）
 - [AI占いを副業にする前に：商品をつくる流れと売るときの注意](https://aisalonsss.com/guide/ai-uranai-fukugyo-tsukurikata/)：AI 占い 副業を考える人向けに、AIで占いの商品をつくる作り方を、鑑定文の下書きから商品ページ、販売前の確認まで順に整理します。公的機関の資料をもとに、売るときの表示の注意も解説。（公開 2026-11-24）
 - [AI独学が続かない理由と、続ける方法。止まる場面別に整理](https://aisalonsss.com/guide/ai-dokugaku-tsuzukanai/)：AIの独学が続かない理由を、作るものが決まらない・聞く相手がいない・時間が決まらないの3場面に分けて整理し、続ける方法を6つの手順で紹介します。SSSの作業会や日中のAI実践会でどう試せるかも書きました。（公開 2026-11-23）
