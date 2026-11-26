@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>AIエージェントとは？例と仕事で1つ使うまでの手順｜SSS</title>
+<meta name="description" content="AIエージェントとは何かを、総務省と経済産業省のガイドラインの定義から短く説明します。仕事で使う例、最初の1つを決めて試す手順、入力してはいけない情報など使う前の注意もまとめました。">
+<link rel="canonical" href="https://aisalonsss.com/guide/ai-agent-toha/">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/icon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#141210">
+<meta property="og:site_name" content="SSS">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:type" content="article">
+<meta property="og:title" content="AIエージェントとは？例と仕事で1つ使うまでの手順｜SSS">
+<meta property="og:description" content="AIエージェントとは何かを、総務省と経済産業省のガイドラインの定義から短く説明します。仕事で使う例、最初の1つを決めて試す手順、入力してはいけない情報など使う前の注意もまとめました。">
+<meta property="og:url" content="https://aisalonsss.com/guide/ai-agent-toha/">
+<meta property="og:image" content="https://aisalonsss.com/guide/img/ai-agent-toha-og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AIエージェントとは？例と仕事で1つ使うまでの手順｜SSS">
+<meta name="twitter:description" content="AIエージェントとは何かを、総務省と経済産業省のガイドラインの定義から短く説明します。仕事で使う例、最初の1つを決めて試す手順、入力してはいけない情報など使う前の注意もまとめました。">
+<meta name="twitter:image" content="https://aisalonsss.com/guide/img/ai-agent-toha-og.jpg">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Article",
+   "@id": "https://aisalonsss.com/guide/ai-agent-toha/#article",
+   "headline": "AIエージェントとは？例と仕事で1つ使うまでの手順",
+   "description": "AIエージェントとは何かを、総務省と経済産業省のガイドラインの定義から短く説明します。仕事で使う例、最初の1つを決めて試す手順、入力してはいけない情報など使う前の注意もまとめました。",
+   "datePublished": "2026-11-27",
+   "dateModified": "2026-11-27",
+   "inLanguage": "ja",
+   "image": "https://aisalonsss.com/guide/img/ai-agent-toha-og.jpg",
+   "keywords": "aiエージェントとは／aiエージェント 例",
+   "mainEntityOfPage": "https://aisalonsss.com/guide/ai-agent-toha/",
+   "author": {
+    "@type": "Organization",
+    "name": "SSS運営（松任谷・ゴリラ）",
+    "url": "https://aisalonsss.com/",
+    "parentOrganization": {
+     "@id": "https://aisalonsss.com/#org"
+    }
+   },
+   "publisher": {
+    "@id": "https://aisalonsss.com/#org"
+   },
+   "isPartOf": {
+    "@id": "https://aisalonsss.com/#website"
+   }
+  },
+  {
+   "@type": "Organization",
+   "@id": "https://aisalonsss.com/#org",
+   "name": "SSS",
+   "url": "https://aisalonsss.com/",
+   "logo": {
+    "@type": "ImageObject",
+    "url": "https://aisalonsss.com/icon-512.png"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "@id": "https://aisalonsss.com/guide/ai-agent-toha/#breadcrumb",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "SSS",
+     "item": "https://aisalonsss.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "ブログ",
+     "item": "https://aisalonsss.com/guide/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "AIエージェントとは？例と仕事で1つ使うまでの手順",
+     "item": "https://aisalonsss.com/guide/ai-agent-toha/"
+    }
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://aisalonsss.com/guide/ai-agent-toha/#faq",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "AIエージェントと生成AIは同じものですか？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "同じではありません。AI事業者ガイドラインでは、生成AIは文章、画像、プログラムなどを生成できるAIモデルにもとづくAIの総称です。AIエージェントは、目標のために状況を読み取って行動するAIシステムを指します。生成AIを部品にして作られるエージェントもあります。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "プログラミングができなくても使えますか？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "日本語の指示で試せる道具はあります。ただし、使える機能、料金、設定の難しさは道具ごとに違います。始める前に公式の説明を確かめ、元に戻せる作業から試してください。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "最初はどんな作業が向いていますか？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "自分で正しさを判断でき、失敗してもやり直せる作業です。自分用の下調べやメモの整理から始め、顧客に届く操作や支払いに関わる操作は後に回してください。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "任せきりにしても大丈夫ですか？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "任せきりは避けてください。結果の確認は人が行い、送信、公開、削除、支払いの前には自分で止めて確かめる形にしてください。"
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&family=Noto+Sans+JP:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&family=Noto+Sans+JP:wght@400;500;700&display=swap"></noscript>
+<!-- Microsoft Clarity（LPと同じプロジェクト。記事のスクロール・クリックの様子） -->
+<script>(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.crossOrigin="anonymous";t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","wk1r1aplnd");</script>
+<!-- Umami (self-hosted) -->
+<script defer crossorigin="anonymous" src="https://analytics.aisalonsss.com/script.js" data-website-id="b3ce03ea-2d2e-4fac-8942-688d0f0a4100"></script>
+<script defer src="/sss-attribution.js"></script>
+<script defer src="/guide/guide-measure.js"></script>
+<link rel="stylesheet" href="/guide/guide.css">
+</head>
+<body>
+<nav class="nav" aria-label="メイン"><div class="nav-in"><a href="/" class="logo">S<span>S</span>S</a><span class="nav-r"><a href="/guide/" class="nav-g">ブログ</a><a href="https://aisalonsss.com/?utm_source=blog&amp;utm_medium=owned&amp;utm_campaign=sss_blog&amp;utm_content=ai-agent-toha_header" class="nav-sss" data-sss-position="guide_ai_agent_toha_header">SSSとは</a></span></div></nav>
+<main class="g-main">
+<p class="g-bc"><a href="/">SSS（AIコミュニティ）</a> ／ <a href="/guide/">ブログ</a></p>
+<article class="g-art">
+<h1>AIエージェントとは？例と仕事で1つ使うまでの手順</h1>
+<p class="g-meta"><time datetime="2026-11-27">2026年11月27日</time>・SSS運営（松任谷・ゴリラ）・SSSの案内を含みます</p>
+<figure class="g-eye"><img src="/guide/img/ai-agent-toha.webp" width="1200" height="630" alt="AIエージェントを仕事で1つ使うまでの、作業選びから確認と直しまでの手順を並べたサムネイル" fetchpriority="high" decoding="async"></figure>
+<p>この記事はSSS運営が書いた記事です。SSSの案内を含みます。</p>
+<h2>先に結論</h2>
+<p>AIエージェントとは、目標を達成するために、周りの状況を読み取りながら自分で行動を進めるAIの仕組みです。質問に一度答えて終わる使い方と違い、次に何をするかをAIの側が判断しながら作業を進めます。仕事で最初に使うなら、小さくて結果を自分で確かめられる作業を1つ選んでください。</p>
+<ul><li>公的な定義は、総務省と経済産業省の「AI事業者ガイドライン」にあります。</li><li>例は、資料の下調べ、予定やタスクの整理、毎日の手作業の自動化などです。</li><li>手順があらかじめ決まる作業なら、エージェントを使わない方が合う場合があります。</li><li>最初は下書きまでを任せ、送信や削除などの操作は人が確かめてから行います。</li><li>個人情報や機密情報の入力には注意が必要です。</li></ul>
+<p class="g-sss-top"><span>SSSでは、AIエージェントに任せたい作業を、作業会やAI実践会に持ち寄って一緒に試せます。</span><a href="https://aisalonsss.com/?utm_source=blog&amp;utm_medium=owned&amp;utm_campaign=sss_blog&amp;utm_content=ai-agent-toha_top" class="g-sss-top-a" data-sss-position="guide_ai_agent_toha_top">SSSを見る<span aria-hidden="true">→</span></a></p>
+<!-- fg:start fig-overview --><figure class="fg fg-flow" id="fig-overview" data-fig="flow" role="group" aria-label="人が目標を決め、AIが状況を読み取り、次の行動を判断して進め、最後に人が結果を確かめるという順番を示した図"><span class="fg-kicker">全体像</span><p class="fg-ttl">AIエージェントは目標を決めて渡し、人が確かめて使う</p><ol><li><span class="t">人が目標を渡す</span><span class="d">終わりの条件も決める</span></li><li><span class="t">AIが状況を読み取る</span><span class="d">ファイルや操作の結果など</span></li><li><span class="t">AIが行動を進める</span><span class="d">決めた範囲の中で動く</span></li><li class="key"><span class="t">人が結果を確かめる</span><span class="d">外に出る操作はここで止める</span></li></ol><figcaption>任せる部分と人が確かめる部分を、始める前に分けておきます。</figcaption></figure><!-- fg:end fig-overview -->
+<h2>AIエージェントとは？公的な定義と開発元の説明</h2>
+<p>総務省と経済産業省の<a href="https://www.soumu.go.jp/main_content/001064279.pdf" target="_blank" rel="noopener noreferrer">AI事業者ガイドライン（第1.2版、令和8年3月31日公表）</a>は、AIエージェントを「特定の目標を達成するために、環境を感知し自律的に行動するAIシステム」と定めています。同じ資料の注には、自律的という言葉は高度な自律の状態だけを指すものではなく、ある程度の自律性を持つものも含むとあります。公表ページは<a href="https://www.soumu.go.jp/main_sosiki/kenkyu/ai_network/02ryutsu20_04000019.html" target="_blank" rel="noopener noreferrer">総務省のサイト</a>です。</p>
+<p>難しく聞こえますが、分けて読むと3つになります。目標がある、状況を読み取る、自分で行動する、の3つです。ここでの状況は、仕事に置きかえると、渡されたファイルの中身や、直前の操作の結果などが当たると考えると分かりやすくなります。</p>
+<p>AIを開発するAnthropicの<a href="https://www.anthropic.com/research/building-effective-agents" target="_blank" rel="noopener noreferrer">公式の解説（2024年12月公開、英語）</a>では、仕組みを2つに分けています。人があらかじめ決めた道筋どおりにAIや道具を動かすものがワークフロー、進め方や道具の使い方をAI自身がその都度決めるものがエージェントです。公開から時間がたち、道具の事情は変わったとページにも書かれていますが、考え方の区別として参考になります。</p>
+<p>なお、エージェントという言葉の使い方は、サービスによって幅があります。名前だけで判断せず、どこまでをAIが決めて、どこを人が確かめるのかを見てください。</p>
+<h2>AIエージェントの例は？チャットや自動化と何が違う？</h2>
+<p>ふだんのチャット、決まった手順の自動化、AIエージェントは、次に何をするかを誰が決めるかで分けると整理できます。</p>
+<div class="g-table"><table><thead><tr><th scope="col">使い方</th><th scope="col">次の一手を決めるのは</th><th scope="col">仕事の例</th></tr></thead><tbody><tr><td>チャットで質問する</td><td>人</td><td>メールの文面を1通直してもらう</td></tr><tr><td>決まった手順の自動化</td><td>事前に決めた道筋</td><td>毎朝、同じ形式で表をまとめる</td></tr><tr><td>AIエージェント</td><td>目標に合わせてAI</td><td>調べる先を選びながら下調べをまとめる</td></tr></tbody></table></div>
+<p>エージェントに任せる仕事の例を、作業の形で挙げます。どれも考え方を示す例で、道具や設定によってできる範囲は変わります。</p>
+<ul><li><strong>下調べ：</strong> 知りたいことを伝え、調べる、読む、足りなければ調べ直す、要点を出典つきでまとめる、という流れを任せます。</li><li><strong>ファイルの整理：</strong> フォルダの中身を読み、分け方の案を作り、了承した後に名前をそろえます。</li><li><strong>予定とタスク：</strong> 決めた範囲の予定やメモを読み、今日やることの案を作ります。</li><li><strong>発信の下準備：</strong> 過去の下書きを読み、次の構成案と確認が必要な点を書き出します。</li></ul>
+<p>反対に、毎回同じ順番で終わる作業は、決まった手順の自動化で足りることがあります。先ほどのAnthropicの解説も、まず一番単純な方法を探し、必要なときだけ複雑にすることを勧めています。エージェント型の仕組みは、時間や費用が増える代わりに作業の出来を高める形になりやすい、という説明もあります。</p>
+<p>チャットの次の使い方を広く知りたい方は、<a href="https://aisalonsss.com/guide/chatgpt-next-step-by-purpose/">ChatGPTは触った、次に何を？目的別の次の一手を公式機能で整理</a>も参考になります。</p>
+<!-- fg:start fig-choose --><figure class="fg fg-branch" id="fig-choose" data-fig="branch" role="group" aria-label="作業の手順を先に決められるなら決まった手順の自動化、状況によって次の一手が変わるならAIエージェントを検討する分かれ道の図"><span class="fg-kicker">使い分け</span><p class="fg-ttl">手順が先に決まるかどうかで、使う形が分かれる</p><div class="q">作業の順番を、始める前に全部決められるか</div><div class="outs o2"><div class="out"><span class="c">決められる</span><span class="r">決まった手順の自動化</span><span class="d">毎朝同じ形式で表をまとめるなど</span></div><div class="out"><span class="c">状況で変わる</span><span class="r">AIエージェントを検討</span><span class="d">調べ直しが必要な下調べなど</span></div></div><figcaption>まず単純な方法で足りるかを考え、足りないときにエージェントを検討します。</figcaption></figure><!-- fg:end fig-choose -->
+<h2>どうやって仕事で最初の1つを使うか？</h2>
+<p>最初の目標は、立派な仕組みを作ることではなく、1つの作業を最後まで試して、任せられる範囲を知ることです。</p>
+<!-- fg:start fig-first --><figure class="fg fg-time" id="fig-first" data-fig="time" role="group" aria-label="最初のAIエージェントを試す流れを、動かす前の準備、小さく試す段階、直してもう一度動かす段階の順に並べた時間の図"><span class="fg-kicker">最初の1つ</span><p class="fg-ttl">動かす前に、作業と条件と確認の場所を決める</p><ol><li><span class="w">動かす前</span><span class="t">作業を<span class="n">1</span>つ選ぶ</span><span class="d">終わりの条件と触ってよい範囲も書く</span></li><li><span class="w">動かす前</span><span class="t">確認の場所を決める</span><span class="d">送信、公開、削除、支払いの手前</span></li><li class="key"><span class="w">初回</span><span class="t">小さく試して記録する</span><span class="d">数件の材料で動かす</span></li><li><span class="w">次の回</span><span class="t">指示を直して動かす</span><span class="d">違っていた点を条件に足す</span></li></ol><figcaption>準備を文にしておくと、結果が違ったときに直す場所が分かります。</figcaption></figure><!-- fg:end fig-first -->
+<ol><li><strong>作業を1つ選ぶ：</strong> 繰り返し発生し、間違えてもやり直せて、出来を自分で判断できる作業にします。社内向けの下調べや、自分用のメモの整理が候補です。</li><li><strong>目標と終わりの条件を書く：</strong> 何ができたら終わりかを文にします。「集めた情報を見出しごとにまとめ、出典を付けたら終了」のように書きます。</li><li><strong>渡す材料と触ってよい範囲を決める：</strong> 読んでよいファイルを限り、元のデータは写しを使います。</li><li><strong>人が確かめる場所を決める：</strong> 送信、公開、削除、支払いは、実行の前に自分の確認を必須にします。</li><li><strong>小さく試して記録する：</strong> 数件の材料で動かし、合っていた点と違っていた点を書き残します。</li><li><strong>指示を直してもう一度動かす：</strong> 違っていた点を、条件や手順として指示に足します。</li></ol>
+<p>指示は、長くするより具体的にする方が直しやすくなります。たとえば下調べなら、次のような形です。</p>
+<p>&gt; 目標は、社内勉強会で使う下調べのメモを作ること。公的機関と公式の発表だけを調べる。出典のURLを付ける。分からない点は推測で埋めず、分からないと書く。メモができたら止めて、私の確認を待つ。</p>
+<p>コードを書かずに指示を出して作業を進める道具の入口は、<a href="https://aisalonsss.com/guide/claude-code-beginner-first-automation/">Claude Code初心者の使い方：非エンジニアが最初の自動化に進む手順</a>で扱っています。</p>
+<h2>つまずきやすい所はどこ？</h2>
+<h3>任せる範囲が広すぎる</h3>
+<p>「営業の仕事をやって」のような指示では、終わりが決まりません。入力と出力が1つずつ言える大きさまで分けてください。</p>
+<h3>出てきた結果をそのまま使う</h3>
+<p>AIの出力には誤りが混ざることがあります。Anthropicの解説も、エージェントは誤りが積み重なる可能性があるため、安全に区切った環境で十分に試し、適切な歯止めを置くことを勧めています。数字、固有の名前、出典のリンク先は自分で開いて確かめます。</p>
+<h3>入れてはいけない情報を渡す</h3>
+<p>先ほどのAI事業者ガイドラインは、AIを利用する側に向けて、個人情報を不適切に入力しないこと、機密情報の扱いに注意することを挙げています。顧客の名前や連絡先が入ったファイルは、試す材料にしないでください。勤め先で使う場合は、社内の決まりを先に確認します。</p>
+<h3>人の確認を外してしまう</h3>
+<p>同じガイドラインには、人間の判断を介在させることで、予期せぬ事故を防ぐことも可能になるという趣旨の記述があります。慣れてきても、外に出る操作の前の確認は残してください。</p>
+<h3>途中で止まって進まない</h3>
+<p>エラーや確認の画面で手が止まったら、何をしようとして、どの画面で、何が表示されたかを書き残すと、AIにも人にも相談しやすくなります。詳しくは<a href="https://aisalonsss.com/guide/ai-sagyo-susumanai-taisho/">AIの作業が進まないときの対処とは？止まる原因と同じ時間に進める工夫</a>にまとめています。</p>
+<h2>このテーマをSSSでどう実践するか？</h2>
+<p>SSSで扱っているテーマには、AI自動化とAI秘書があります。この記事の手順なら、まず任せたい作業を1つと、終わりの条件を1文で書き出し、毎日開催のもくもく作業会で指示を試せます。</p>
+<p>日中のAI実践会は、不定期で月4〜5回、Discordのボイスで開いています。作業会のように手を動かしながら、その場でリアルタイムに改善していく会です。思った結果にならなかった指示や、人の確認をどこに置くか迷っている手順を持ち込めます。</p>
+<p>ほかに毎週水曜のZOOM講義と講義アーカイブがあり、Discordには毎日AIニュースが配信されます。次に試す題材を探す材料にできます。</p>
+<p class="g-sss-body"><a href="https://aisalonsss.com/?utm_source=blog&amp;utm_medium=owned&amp;utm_campaign=sss_blog&amp;utm_content=ai-agent-toha_body" data-sss-position="guide_ai_agent_toha_body">SSSの中身を見てみる（月額2,980円）</a></p>
+<h2>よくある質問</h2>
+<h3>Q. AIエージェントと生成AIは同じものですか？</h3>
+<p>同じではありません。AI事業者ガイドラインでは、生成AIは文章、画像、プログラムなどを生成できるAIモデルにもとづくAIの総称です。AIエージェントは、目標のために状況を読み取って行動するAIシステムを指します。生成AIを部品にして作られるエージェントもあります。</p>
+<h3>Q. プログラミングができなくても使えますか？</h3>
+<p>日本語の指示で試せる道具はあります。ただし、使える機能、料金、設定の難しさは道具ごとに違います。始める前に公式の説明を確かめ、元に戻せる作業から試してください。</p>
+<h3>Q. 最初はどんな作業が向いていますか？</h3>
+<p>自分で正しさを判断でき、失敗してもやり直せる作業です。自分用の下調べやメモの整理から始め、顧客に届く操作や支払いに関わる操作は後に回してください。</p>
+<h3>Q. 任せきりにしても大丈夫ですか？</h3>
+<p>任せきりは避けてください。結果の確認は人が行い、送信、公開、削除、支払いの前には自分で止めて確かめる形にしてください。</p>
+<aside class="g-cta g-join" id="g-join" aria-labelledby="g-join-h">
+<h2 id="g-join-h">SSSで一緒にやってみる</h2>
+<p>AIエージェントに任せる作業を1つ決めたら、毎日開催のもくもく作業会で手を動かせます。日中のAI実践会は不定期で月4〜5回あり、作業会のように進めながら、その場で改善していく会です。扱うテーマにはAI自動化とAI秘書もあります。</p>
+<ul class="g-join-fx"><li><b>もくもく作業会</b>毎日開催（Discordボイス）</li><li><b>ZOOM講義</b>毎週水曜</li><li><b>AI実践会</b>日中に不定期・月4〜5回</li><li><b>AIニュース</b>AIの最前線が毎日届く</li></ul>
+<div class="g-join-btns"><a href="https://aisalonsss.com/?utm_source=blog&amp;utm_medium=owned&amp;utm_campaign=sss_blog&amp;utm_content=ai-agent-toha_end" class="btn" data-sss-position="guide_ai_agent_toha_end">SSSを詳しく見る<span class="arr" aria-hidden="true">→</span></a><a href="https://univa.cc/bMYdr5" class="btn btn-line" data-sss-position="guide_ai_agent_toha_join" target="_blank" rel="noopener noreferrer">申し込む（月額2,980円）</a></div>
+<p class="cta-note">月額2,980円（税込）・毎月自動更新・いつでも解約OK・違約金なし・支払い済みの月の返金なし。収入や成果をお約束するものではありません。</p>
+</aside>
+</article>
+<!-- related:start -->
+<section class="g-rel" aria-labelledby="g-rel-h"><h2 id="g-rel-h">関連記事</h2><ul class="g-cards">
+<li><a href="/guide/chatgpt-next-step-by-purpose/" data-umami-event="sss_blog_related" data-umami-event-slug="chatgpt-next-step-by-purpose"><img src="/guide/img/chatgpt-next-step-by-purpose.webp" width="1200" height="630" alt="ChatGPTを触ったあとの次の一手を、Projects、Deep research、タスクなど目的別に並べた手順の絵" loading="lazy" decoding="async"><span class="bd"><time datetime="2026-11-22">2026年11月22日</time><b>ChatGPTは触った、次に何を？目的別の次の一手を公式機能で整理</b><span>ChatGPTを触ったあと次に何を試すかを、文章・調べもの・作業の自動化・副業の下準備の目的別に整理。</span></span></a></li>
+<li><a href="/guide/ai-sagyo-susumanai-taisho/" data-umami-event="sss_blog_related" data-umami-event-slug="ai-sagyo-susumanai-taisho"><img src="/guide/img/ai-sagyo-susumanai-taisho.webp" width="1200" height="630" alt="エラー、指示、次の一歩の3つで止まる場所を見分け、1文で書き出して小さく区切る手順の図" loading="lazy" decoding="async"><span class="bd"><time datetime="2026-11-21">2026年11月21日</time><b>AIの作業が進まないときの対処とは？止まる原因と同じ時間に進める工夫</b><span>AIを使った作業が進まないときの対処を、止まる原因の整理から順に解説。</span></span></a></li>
+<li><a href="/guide/claude-code-beginner-first-automation/" data-umami-event="sss_blog_related" data-umami-event-slug="claude-code-beginner-first-automation"><img src="/guide/img/claude-code-beginner-first-automation.webp" width="1200" height="630" alt="Claude Codeを入れてから、起動、ログイン、読むだけの質問、小さな作業の依頼まで進む順番を並べたサムネイル" loading="lazy" decoding="async"><span class="bd"><time datetime="2026-11-19">2026年11月19日</time><b>Claude Code初心者の使い方：非エンジニアが最初の自動化に進む手順</b><span>Claude Codeを初心者の非エンジニアが始める手順を、公式ドキュメントで確かめてまとめました。</span></span></a></li>
+</ul></section>
+<!-- related:end -->
+<p class="g-quick"><a href="https://aisalonsss.com/?utm_source=blog&amp;utm_medium=owned&amp;utm_campaign=sss_blog&amp;utm_content=ai-agent-toha_quick#quick" data-sss-position="guide_ai_agent_toha_quick"><b>30秒でわかるSSS</b><span>どんな人が集まり、毎週なにをしているかをLPの要約で見る</span></a></p>
+<p class="g-back"><a href="/guide/">ほかの記事を見る（ブログ一覧）</a></p>
+</main>
+<div class="g-bar" id="g-bar" hidden><a href="https://aisalonsss.com/?utm_source=blog&amp;utm_medium=owned&amp;utm_campaign=sss_blog&amp;utm_content=ai-agent-toha_bar" class="g-bar-go" data-sss-position="guide_ai_agent_toha_bar">SSSを見る<small>月額2,980円・いつでも解約可</small></a><button type="button" class="g-bar-x" aria-label="案内を閉じる">×</button></div>
+<script>
+(function(){var b=document.getElementById('g-bar');if(!b||!('IntersectionObserver' in window))return;
+var k='sss_bar_closed',seen={},closed=false;try{closed=sessionStorage.getItem(k)==='1'}catch(e){}
+function upd(){var on=!closed&&window.scrollY>480&&!seen.j&&!seen.f;b.hidden=!on;document.body.classList.toggle('has-bar',on)}
+var io=new IntersectionObserver(function(es){es.forEach(function(e){seen[e.target.id==='g-join'?'j':'f']=e.isIntersecting});upd()});
+document.addEventListener('DOMContentLoaded',function(){['g-join','g-foot'].forEach(function(id){var el=document.getElementById(id);if(el)io.observe(el)})});
+b.querySelector('.g-bar-x').addEventListener('click',function(){closed=true;try{sessionStorage.setItem(k,'1')}catch(e){}upd()});
+window.addEventListener('scroll',upd,{passive:true});upd()})();
+</script>
+<footer class="ft" id="g-foot">
+  <div class="ft-in">
+    <p class="ft-logo">S<span>S</span>S</p>
+    <div class="ft-lk">
+      <a href="/">SSSトップ</a>
+      <a href="/guide/">ブログ（SSSガイド）</a>
+      <a href="/tokushoho.html">特定商取引法に基づく表記</a>
+      <a href="/privacy.html">プライバシーポリシー</a>
+      <a href="/contact.html">お問い合わせ</a>
+    </div>
+  </div>
+  <p class="ft-cp">&copy; 2026 SSS. All rights reserved.</p>
+</footer>
+</body>
+</html>

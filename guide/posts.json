@@ -1,5 +1,15 @@
 [
  {
+  "slug": "ai-agent-toha",
+  "url": "https://aisalonsss.com/guide/ai-agent-toha/",
+  "title": "AIエージェントとは？例と仕事で1つ使うまでの手順",
+  "lead": "AIエージェントとは何かを、総務省と経済産業省のガイドラインの定義から短く説明します。",
+  "date": "2026-11-27",
+  "thumb": "/guide/img/ai-agent-toha.webp",
+  "thumbAlt": "AIエージェントを仕事で1つ使うまでの、作業選びから確認と直しまでの手順を並べたサムネイル",
+  "og": "https://aisalonsss.com/guide/img/ai-agent-toha-og.jpg"
+ },
+ {
   "slug": "copilot-code-review-billing-change",
   "url": "https://aisalonsss.com/guide/copilot-code-review-billing-change/",
   "title": "Copilot code reviewの料金は誰に？12月30日の変更",
