@@ -1,5 +1,15 @@
 [
  {
+  "slug": "ai-jissenkai-mochikomi",
+  "url": "https://aisalonsss.com/guide/ai-jissenkai-mochikomi/",
+  "title": "AI実践会の持ち込みはどう進む？指示の直し方とSSSの場",
+  "lead": "AI実践会に持ち込みたい作業がある人へ、SSS運営が日中の会の進み方を紹介します。",
+  "date": "2026-11-28",
+  "thumb": "/guide/img/ai-jissenkai-mochikomi.webp",
+  "thumbAlt": "AI実践会で、作業を持ち寄り、相談し、AIに指示して結果を見ながら直す順番を並べた段階の図",
+  "og": "https://aisalonsss.com/guide/img/ai-jissenkai-mochikomi-og.jpg"
+ },
+ {
   "slug": "ai-agent-toha",
   "url": "https://aisalonsss.com/guide/ai-agent-toha/",
   "title": "AIエージェントとは？例と仕事で1つ使うまでの手順",
