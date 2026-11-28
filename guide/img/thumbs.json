@@ -61,5 +61,8 @@
  },
  "ai-jissenkai-mochikomi": {
   "alt": "AI実践会で、作業を持ち寄り、相談し、AIに指示して結果を見ながら直す順番を並べた段階の図"
+ },
+ "ai-benkyokai-online-erabikata": {
+  "alt": "オンラインのAI勉強会に参加する前の準備を、作業決めから相談メモまでの段で示した絵"
  }
 }
